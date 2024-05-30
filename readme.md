@@ -34,3 +34,17 @@ _ejemplo: `<p>parrafo</p>`_
 
 * __CSS (Cascading Styles Sheets)__ Las hojas de estilo en cascada se utilizan para definir el diseño de los elementos representados en la pagina web, utilizando selectores y reglas para esto. El diseño debe planificarse en funcion de la estructura, teniendo en cuenta que este aspecto de la pagina esta destinado para mejorar la Experiencia de usuario mediante la interfaz.
 _ejemplo: `p{color:blue;}`_
+
+___
+
+## Actividades
+
+En este apartado se podran realizar diferentes ejercicios relacionados con los temas dictados en clase, organizados por contenido y donde se pondra a prueba su experiencia en el mundo del desarrollo web.
+
+### Conceptos Basicos
+
+1. Realizar el tipo de lista que corresponda y ordenar, en caso que sea necesario, los siguientes elementos:
+   * "edad media(3300 A.C. – 476 D.C)",  "edad antigua (476 – 1492)", "edad contemporanea (1789 – actualidad)", "edad moderna (1492 – 1789)"
+   * "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
+   * "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
+   * "Casper Ruud(4960pts)", "Novak Djokovic (7595pts)", "Carlos Alcaraz (7675pts)", "Daniil Mendeleev (5890pts)", "Stefanos Tsitsipas(4670pts)"
