@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <!-- Cabecera de Pagina: Contenido Introductorio -->
+    <header>
+        <h1>Fundamentos Web</h1>
+        <p>HTML y CSS</p>
+        <!-- Navegacion Principal: Links mas Importantes -->
+        <nav>
+            <ul>
+                <li>
+                    <!-- Ruta Relativa (Interna) -->
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <!-- Ruta ancla (Recargar) -->
+                    <a href="#">Galeria</a>
+                </li>
+                <li>
+                    <!-- Ruta ancla | marcador (#id) -->
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido Principal: Relevante para el usuario -->
+    <main>
+        <h2>Contenido Multimedia</h2>
+        <p>
+            Dentro de los elementos que podemos utilizar en un sitio web, se encuentran las imagenes, las cuales se incorporan dentro de las paginas gracias a la etiqueta <strong>&lt;img></strong>. Dentro de dicha etiqueta podemos colocar los atributos <em>src y alt</em> que indican donde se encuentra el recurso y una descripcion en caso que este no sea accesible.
+        </p>
+        <div class="box">
+            <img src="assets/img/jjba-theworld-01.jpg" alt="JoJo's Bizarre Adventure - The World">
+            <img src="assets/img/jjba-theworld-02.jpg" alt="JoJo's Bizarre Adventure - The World">
+            <img src="assets/img/jjba-theworld-03.jpg" alt="JoJo's Bizarre Adventure - The World">
+            <img src="assets/img/jjba-theworld-04.jpg" alt="JoJo's Bizarre Adventure - The World">
+        </div>
+    </main>
+    <!-- Pie de Pagina: Contenido Complementario -->
+    <footer>
+        <p id="contact">&copy;2024 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
