@@ -4,6 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'calibri', 'segoe ui', sans-serif;
+        }
+        img{
+            max-width: 320px;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            text-align: center;
+            color: #eee;
+            background-color: #448;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav ul{
+            padding: 0;
+            background-color: rgb(34,34,68);
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        nav a{
+            color: rgb(192, 192, 192);
+            text-decoration: none;
+        }
+        /* :Pseudoclase Instancia o caracteristica de un elemento */
+        nav li:hover{
+            background-color: #66c;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
@@ -44,7 +80,7 @@
         <p>
             Si bien, la compatibilidad de los navegadores fue aumentando con el paso del tiempo, en lo que respecta a imagenes. Hoy en dia se aconseja utilizar los siguiente formatos de imagen:
         </p>
-        <ul>
+        <ul class="box">
             <li>
                 <strong>JPG</strong> Joint Photographic's Expert Group es un formato de imagen mapa de bits, que admite compresion y soporta hasta 16.777.216 colores. Es ideal para el uso de fotografias o galerias.
             </li>
