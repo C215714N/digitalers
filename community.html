@@ -73,7 +73,39 @@
         <!-- Mapa de Contacto -->
 
         <!-- Formulario de Contacto -->
-
+        <form id="contact" action="" method="GET">
+            <h2>¿Necesitas Ayuda?</h2>
+            <!-- Nombre de Contacto -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text"
+                maxlength="50">
+            <!-- Correo de Contacto -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8">
+            <!-- Tipo de Consulta -->
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Estilos con CSS</option>
+                <option value="js">Logica con JS</option>
+            </select>
+            <!-- Detalle de Consulta -->
+            <label for="contact_consult">Escriba su consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="30"
+                maxlength="3000"></textarea>
+            <!-- Botones de Accion -->
+            <input type="submit" value="Aceptar">
+        </form>
         <!-- Redes Sociales -->
 
         <!-- Derechos de Autor -->
