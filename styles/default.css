@@ -17,3 +17,11 @@ header p{
 /* Contenido Principal */
 
 /* Pie de Pagina */
+
+/* Formulario de Contacto */
+#contact{
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    margin: auto;
+}
