@@ -74,7 +74,7 @@
         <!-- Mapa de Contacto -->
 
         <!-- Formulario de Contacto -->
-        <form id="contact" action="" method="GET">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>¿Necesitas Ayuda?</h2>
             <!-- Nombre de Contacto -->
             <label for="contact_name">Ingrese su Nombre</label>
@@ -82,14 +82,18 @@
                 id="contact_name" 
                 name="name" 
                 type="text"
-                maxlength="50">
+                placeholder="Nombre(*): Cristian Racedo"
+                maxlength="50"
+                required>
             <!-- Correo de Contacto -->
             <label for="contact_email">Ingrese su Correo</label>
             <input 
                 id="contact_email"
                 name="email"
                 type="email"
-                minlength="8">
+                placeholder="Correo(*): cristiandracedo@hotmail.com"
+                minlength="8"
+                required>
             <!-- Tipo de Consulta -->
             <label for="contact_subject">Seleccione el Asunto</label>
             <select id="contact_subject" name="subject">
@@ -102,8 +106,10 @@
             <textarea 
                 id="contact_consult" 
                 name="consult"
+                placeholder="Buenas, tengo una consulta sobre el siguiente tema..."
                 minlength="30"
-                maxlength="3000"></textarea>
+                maxlength="3000"
+                required></textarea>
             <!-- Botones de Accion -->
             <input type="submit" value="Aceptar">
         </form>
