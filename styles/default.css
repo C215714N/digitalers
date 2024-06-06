@@ -25,3 +25,22 @@ header p{
     max-width: 480px;
     margin: auto;
 }
+label{
+    margin-top: .5rem;
+}
+input,
+textarea,
+select{
+    outline: none;
+    border: 1px solid #448; /*SHORTHAND: width style color*/
+    border-radius: .25rem;
+    padding: .5rem; /*Root EM (Ancho de M en el contenedor Raiz)*/
+    font-size: 1rem;
+}
+textarea{
+    resize: vertical;
+    min-height: 5rem;
+}
+form :focus{
+    box-shadow: 0 0 .5rem #448; /* -x+ -y+ (blur) (color) */
+}
