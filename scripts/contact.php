@@ -7,15 +7,16 @@ $consult = $_POST['consult'];
 
 // generacion del mensaje
 mail(
-    "usuario@mihosting.com", # destinatario
+    "usuario@misitio.com", # destinatario
     $subject, # asunto
     $consult, # cuerpo
     "From: $name<$email>" # remitente
 );
 
-// redireccionamiento
+// redireccionamiento automatico
 header("location: ../community.html");
 ?>
+<!-- redireccionamiento manual -->
 <h1>Fundamentos Web</h1>
 <p>
     Le agradecemos por confiar en nosotros, su consulta sera contestada a la brevedad. Mientras puede <a href="../community.html">Volver a la pagina anterior</a> para ver mas novedades.

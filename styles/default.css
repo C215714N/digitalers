@@ -13,7 +13,26 @@ header p{
 /* Navegacion */
 
 /* Cabecera de Pagina */
-
+/* Etiqueta con id="header" */
+#header{
+    padding: min(20%, 240px) 1rem; /* top right bottom left */
+    text-align: center;
+    /* Propiedades de Fondo */
+    background-image: url("../assets/bg/osx-monterrey-dark.jpg");
+    background-position: center; /* x y | top bottom center left right*/
+    background-size: cover; /* width height | cover contain */
+}
+/* Etiquetas con class="header" */
+.header{
+    padding: 1rem;
+    color: #eee; /* RGB(238,238,238) */
+    background-color: #448; /* RGB(68,68,136) */
+}
+/* Etiqetas <header> */
+header{
+    border-bottom: .1rem solid;
+    color: #448; /*DEC[0-255]: RGB(68,68,136) | HEX[00-FF]: #444488 */
+}
 /* Contenido Principal */
 
 /* Pie de Pagina */
