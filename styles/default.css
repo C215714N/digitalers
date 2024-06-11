@@ -7,11 +7,34 @@ body,
 h1,
 h2,
 h3,
-header p{
+header p,
+.menu{
     margin: 0;
 }
+.menu,
+.example{
+    list-style: none;
+}
+nav a,
+footer a{
+    text-decoration: none;
+}
 /* Navegacion */
-
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding: .5rem;
+    background-color: #448;
+}
+.menu a{
+    color: #ccc;
+}
+.menu a:hover,
+.menu a.active{
+    color: white;
+    text-shadow: 0 0 .25rem;
+}
 /* Cabecera de Pagina */
 /* Etiqueta con id="header" */
 #header{
