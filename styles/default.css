@@ -76,3 +76,28 @@ form :focus{
     border-radius: .25rem;
     background-color: #ccc;
 }
+/* Iconos Redes sociales */
+.tiktok{
+    background-image: url("../assets/icon/tik-tok.svg");
+}
+.instagram{
+    background-image: url("../assets/icon/instagram.svg");
+}
+.linkedin{
+    background-image: url("../assets/icon/linkedin.svg");
+}
+.github{
+    background-image: url("../assets/icon/github.svg");
+}
+.whatsapp{
+    background-image: url("../assets/icon/whatsapp.svg");
+}
+.youtube{
+    background-image: url("../assets/icon/youtube.svg");
+}
+.telegram{
+    background-image: url("../assets/icon/telegram.svg");
+}
+.snapchat{
+    background-image: url("../assets/icon/snapchat.svg");
+}
