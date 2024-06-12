@@ -89,7 +89,10 @@ header{
     */
 }
 /* Pie de Pagina */
-
+#footer iframe{
+    width: 100%;
+    min-height: 320px;
+}
 /* Formulario de Contacto */
 #contact{
     display: flex;
