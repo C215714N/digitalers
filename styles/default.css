@@ -8,8 +8,12 @@ h1,
 h2,
 h3,
 header p,
+.example figure,
 .menu{
     margin: 0;
+}
+iframe{
+    border: 0;
 }
 .menu,
 .example{
@@ -57,7 +61,33 @@ header{
     color: #448; /*DEC[0-255]: RGB(68,68,136) | HEX[00-FF]: #444488 */
 }
 /* Contenido Principal */
-
+.example{
+    max-width: 720px;
+    margin: 1rem auto;
+    border-left: .25rem solid #448;
+    padding: 1rem;
+    background-color: #ccc;
+    line-height: 1.5;
+}
+.container{
+    display: flex;
+    gap: .5rem;
+    overflow: auto;
+}
+/* Contenido Multimedia */
+.example figure{
+    min-width: min(90%, 720px);
+}
+.example iframe{
+    width: 100%;
+    min-height: 360px;
+    /*  Relacion de Aspecto
+        aspect-ratio    width        height
+        4:3             1.33(h)      75%(w)
+        16:9            1.78(h)   56.25%(w)
+        16:10            1.6(h)    62.5%(w)
+    */
+}
 /* Pie de Pagina */
 
 /* Formulario de Contacto */
