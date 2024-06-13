@@ -9,7 +9,8 @@ h2,
 h3,
 header p,
 .example figure,
-.menu{
+.menu,
+#header{
     margin: 0;
 }
 iframe{
@@ -51,6 +52,7 @@ footer a{
 }
 /* Etiquetas con class="header" */
 .header{
+    margin: -1rem -1rem 1rem;
     padding: 1rem;
     color: #eee; /* RGB(238,238,238) */
     background-color: #448; /* RGB(68,68,136) */
@@ -61,6 +63,18 @@ header{
     color: #448; /*DEC[0-255]: RGB(68,68,136) | HEX[00-FF]: #444488 */
 }
 /* Contenido Principal */
+main{
+    max-width: 960px;
+    margin: .5rem auto;
+    padding: .5rem;
+}
+article{
+    margin: 1.5rem 0;
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 0 0 .5rem #ccc;
+    overflow: hidden;
+}
 .example{
     max-width: 720px;
     margin: 1rem auto;
