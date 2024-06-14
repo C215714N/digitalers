@@ -102,6 +102,46 @@ article{
         16:10            1.6(h)    62.5%(w)
     */
 }
+/* Tablas */
+th,
+td{
+    width: 100px;
+}
+caption,
+th,
+td{
+    padding: .5rem;
+}
+table caption{
+    border-radius: .5rem .5rem 0 0;
+}
+.classic{
+    border-collapse: collapse;
+}
+.classic caption,
+.classic th,
+.classic td{
+    border: 1px solid #448;
+}
+.classic caption{
+    border-bottom: none;
+}
+.modern,
+.modern caption,
+.modern tr,
+.modern td{
+    color: #eee;
+    background-color: rgba(68,68,136,.5);
+}
+.semantic thead{
+    background-color: #c33;
+}
+.semantic tbody{
+    background-color: #3c6;
+}
+.semantic tfoot{
+    background-color: #248;
+}
 /* Pie de Pagina */
 #footer iframe{
     width: 100%;
