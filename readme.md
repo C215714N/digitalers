@@ -17,6 +17,10 @@ Aqui dejo una lista de algunos editores que pueden utilizar para trabajar y algu
 | [Brackets](https://brackets.io) | Desarrollado con Javascript y pensado para ser utilizado por diseñadores web. |
 | [VIM](https://www.vim.org/) | Para desarrolladores hardcore capaces de abandonar la GUI y concentrarse en el codigo. |
 
+## Recursos
+* [Flex Froggy](https://flexboxfroggy.com)
+* [Grid Garden](https://cssgridgarden.com)
+
 ## Desarrollo frontend
 
 En el mundo del __desarrollo web__ existen varias entidades que funcionan como reguladores del lenguaje, asi como referentes a la hora de escribir codigo, estableciendo lo que se conoce como __buenas practicas__.
@@ -77,6 +81,17 @@ En un formulario encontraremos campos que indican que valores podemos ingresar. 
 |checkbox|[X] Español [X] Ingles [ ] Portugües |
 |textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
 |select| seleccione un lenguaje <br> html <br> css <br> js |
+
+## Acceso FTP
+
+Se conoce con este nombre al __protocolo de transferencia de archivos__ que se utiliza para intercambiar datos entre cliente y servidor. Es necesario contar con un __Dominio (Nombre de sitio)__ y un servicio de __Hosting (espacio web)__ Para poder utilizarlo, ya que este ultimo nos brindara la informacion para establecer dicha comunicacion.
+
+| Parametro  | Descripcion |
+|--|--|
+| __host__ | direccion o nombre del servidor donde se subiran los archivos
+| __username__ | nombre que identifica al usuario que realizara el intercambio de datos
+| __password__ | valor que acredita la identidad del usuario que accede al recurso
+| __port__ | canal de comunicaciones utilizado por el dispositivo para contectarse al servidor
 
 ___
 
