@@ -1,0 +1,19 @@
+* {
+    font-family: 'Ubuntu','Raleway','consolas', sans-serif;
+}
+/* Reinicios */
+body,
+h1,
+h2,
+h3,
+.menu{
+    margin: 0;
+}
+.menu,
+.list-unstyled{
+    list-style: none;
+}
+:is(nav, .social) a,
+.link{
+    text-decoration: none;
+}
