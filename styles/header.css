@@ -1,0 +1,26 @@
+#header{
+    min-height: min(100vh, 640px);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: min(calc(.8rem + 2vw), 3rem);
+    text-shadow: 0 0 .5rem #333;
+    /* Background Properties */
+    color: #eee;
+    background-color: #448;
+    background-image:   
+        linear-gradient(
+            hsla(200, 50%, 50%, .8),
+            hsla(270, 50%, 50%, .8)
+        ),
+        url("../assets/bg/code.png"),
+        url("../assets/bg/neural_network.avif");
+    background-position: center;
+    background-size: 
+        cover, /* cover | contain | width height */
+        clamp(120px, 100%, 20rem); /* (min, val, max) */
+    background-repeat: no-repeat;
+    background-attachment: 
+        fixed, /* se ubica con respecto a la ventana */
+        scroll; /* se ubica con respecto a la etiqueta*/
+}
