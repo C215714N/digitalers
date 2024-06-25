@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #36c;
+    background-image: linear-gradient(
+        to top right, /* direccion o inclinacion */
+        #36c, #448 /*color-n porcentaje,  */
+    );
+}
+nav a{
+    color: #ccc;
+}
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+}
+.menu.active{
+    max-height: 100vh;
+}
+/* Medium Devices - Tablets */
+@media screen and (width >= 768px){
+    #menu-button{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: auto;
+        max-height: 100vh;
+        gap: .5rem;
+    }
+}
+/* Medios de Impresion */
+@media print{
+    nav{
+        display: none;
+    }
+}
