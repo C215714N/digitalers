@@ -9,6 +9,9 @@ h3,
 .menu{
     margin: 0;
 }
+.menu{
+    padding: 0;
+}
 .menu,
 .list-unstyled{
     list-style: none;

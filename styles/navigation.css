@@ -3,6 +3,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: .5rem max(calc(50vw - 660px),.5rem);
     background-color: #36c;
     background-image: linear-gradient(
         to top right, /* direccion o inclinacion */
@@ -11,6 +12,10 @@ nav{
 }
 nav a{
     color: #ccc;
+}
+nav a:hover{
+    color: #eee;
+    text-shadow: 0 0 .25rem;
 }
 .menu{
     width: 100%;
