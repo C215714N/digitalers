@@ -1,5 +1,15 @@
 * {
+    box-sizing: border-box;
+    /* EXPLICACION:
+        CONTENT-BOX:
+            content-width: width;
+            final-width: width + padding + border;
+        BORDER-BOX:
+            final-with: width;
+            content-width: width - padding - border
+    */
     font-family: 'Ubuntu','Raleway','consolas', sans-serif;
+    scroll-behavior: smooth;
 }
 /* Reinicios */
 body,

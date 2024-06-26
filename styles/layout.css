@@ -1,0 +1,36 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        "nav"
+    ;
+    overflow-x: hidden;
+}
+nav{ grid-area: nav; }
+#header{ grid-area: header; }
+main{ grid-area: main; }
+#footer{ grid-area: footer; }
+/* Medium Devices */
+@media screen and (width >= 768px){
+    body{
+        grid-template-areas: 
+            "nav"
+            "header"
+            "main"
+            "footer"
+        ;
+    }
+}
+/* Large Devices */
+@media screen and (width >= 992px){
+    body{
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer"
+        ;
+    }
+}

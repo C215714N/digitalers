@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&family=Open+Sans");
 /* Reglas Generales */
 @import url("general.css");
-
+@import url("layout.css");
 /* Navegacion Principal */
 @import url("navigation.css");
 /* Cabecera de Pagina */
