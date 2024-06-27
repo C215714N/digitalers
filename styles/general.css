@@ -8,7 +8,7 @@
             final-with: width;
             content-width: width - padding - border
     */
-    font-family: 'Ubuntu','Raleway','consolas', sans-serif;
+    font-family: var(--font);
     scroll-behavior: smooth;
 }
 /* Reinicios */

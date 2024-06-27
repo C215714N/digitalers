@@ -1,0 +1,14 @@
+.card{
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 0 .25rem #666;
+}
+.card-header{
+    margin: -1rem -1rem 1.5rem;
+    padding: 1rem;
+    color: var(--text);
+    background-color: var(--bg);
+}
+.card-footer{
+
+}
