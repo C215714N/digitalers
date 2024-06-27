@@ -4,17 +4,17 @@ nav{
     align-items: center;
     flex-wrap: wrap-reverse;
     padding: .5rem max(calc(50vw - 660px),.5rem);
-    background-color: #36c;
+    background-color: var(--info);
     background-image: linear-gradient(
         to top right, /* direccion o inclinacion */
-        #36c, #448 /*color-n porcentaje,  */
+        var(--info), var(--first) /*color-n porcentaje,  */
     );
 }
 nav a{
-    color: #ccc;
+    color: var(--grey);
 }
 nav a:hover{
-    color: #eee;
+    color: var(--light);
     text-shadow: 0 0 .25rem;
 }
 .menu{

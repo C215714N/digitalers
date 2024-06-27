@@ -6,8 +6,8 @@
     font-size: min(calc(.8rem + 2vw), 3rem);
     text-shadow: 0 0 .5rem #333;
     /* Background Properties */
-    color: #eee;
-    background-color: #448;
+    color: var(--light);
+    background-color: var(--first);
     background-image:   
         linear-gradient(
             hsla(200, 50%, 50%, .8),
@@ -18,7 +18,7 @@
     background-position: center;
     background-size: 
         cover, /* cover | contain | width height */
-        clamp(120px, 100%, 20rem); /* (min, val, max) */
+        clamp(var(--xs), 100%, var(--md)); /* (min, val, max) */
     background-repeat: no-repeat;
     background-attachment: 
         fixed, /* se ubica con respecto a la ventana */
