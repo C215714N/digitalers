@@ -7,8 +7,8 @@ nav{
     background-color: var(--info);
     background-image: linear-gradient(
         to top right, /* direccion o inclinacion */
-        var(--info), var(--first) /*color-n porcentaje,  */
-    );
+        var(--gradient) /*color porcentaje */
+);
 }
 nav a{
     color: var(--grey);

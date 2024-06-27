@@ -1,3 +1,4 @@
+/* Variables Globales */
 :root{
     /* Colores */
     --first: #448;
@@ -19,4 +20,39 @@
     /* Tipografias */
     --main: 'dev','code', sans-serif;
     --font: 'Ubuntu','Raleway','consolas', sans-serif;
+}
+/* Variables Locales */
+/* Colores */
+.bg-first{
+    --bg: var(--first);
+}
+.bg-second{
+    --bg: var(--second);
+}
+.bg-third{
+    --bg: var(--third);
+}
+.bg-light{
+    --text: var(--first);
+    --bg: var(--light);
+}
+.bg-dark{
+    --bg: var(--dark);
+}
+.bg-success{
+    --bg: var(--success);
+}
+.bg-warning{
+    --text: var(--dark);
+    --bg: var(--warning);
+}
+.bg-danger{
+    --bg: var(--danger);
+}
+.bg-info{
+    --bg: var(--info);
+}
+/* Gradient */
+.bg-gradient{
+    --gradient: hsla(0,0%,100%,.5), hsla(0,0%,0%,.5);
 }
