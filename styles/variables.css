@@ -1,0 +1,21 @@
+:root{
+    /* Colores */
+    --first: #448;
+    --second: #c36;
+    --third: #248;
+    --light: #eee;
+    --dark: #333;
+    --danger: #c33;
+    --warning: #da3;
+    --success: #3c6;
+    --info: #36c;
+    /* Tamaños */
+    --xs: 120px;
+    --sm: 240px;
+    --md: 360px;
+    --lg: 480px;
+    --xl: 600px;
+    /* Tipografias */
+    --main: 'dev','code', sans-serif;
+    --font: 'Ubuntu','Raleway','consolas', sans-serif;
+}

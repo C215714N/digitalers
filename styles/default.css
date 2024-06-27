@@ -1,6 +1,7 @@
 /* Elementos externos */
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&family=Open+Sans");
 /* Reglas Generales */
+@import url("variables.css");
 @import url("general.css");
 @import url("layout.css");
 /* Navegacion Principal */
