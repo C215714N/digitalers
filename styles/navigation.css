@@ -2,7 +2,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: .5rem max(calc(50vw - 660px),.5rem);
     background-color: #36c;
     background-image: linear-gradient(

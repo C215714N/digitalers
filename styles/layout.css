@@ -19,11 +19,6 @@ main{
     padding: .5rem;
     gap: 1rem;
 }
-section,
-aside{
-    padding: 1rem;
-    box-shadow: 0 0 .25rem #666;
-}
 /* Medium Devices */
 @media screen and (width >= 768px){
     body{
@@ -53,6 +48,7 @@ aside{
     }
     aside {
         grid-column: 2;
-        grid-row: 1 / 5;
+        grid-row: 1;
+        height: calc(100vh - 3rem);
     }
 }
