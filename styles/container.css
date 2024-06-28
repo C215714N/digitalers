@@ -1,0 +1,49 @@
+/* Selectores de Atributos 
+    ^ empieza con
+    $ termina con
+    * contiene
+*/
+[class*="display-"]{
+    display: var(--d);
+}
+[class*="block"]{
+    --d: block;
+}
+[class*="flex"]{
+    --d: flex;
+}
+[class*="grid"]{
+    --d: grid;
+}
+/* Disposicion de elementos */
+.auto > *{
+    flex: 1 1 min(100%, var(--size));
+    /* EXPLICACION
+        flex-grow: determina si el elemento debe agrandarse;
+        flex-shrink: determina si el elemento debe achicarse;
+        flex-basis: establece el tamaño base para el elemento;
+    */ 
+}
+.auto{
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(min(100%,var(--size)), 1fr)
+    );
+    /* EXPLICACION
+        repeat(N,valor) repite el mismo valor N cantidad de veces
+        - auto-fill: rellena el espacio con las celdas que entren
+        - auto-fit: estira las celdas para rellenar el espacio
+        minmax(min,max) establece los valores minimo y maximo de las celdas
+    */
+}
+/* Flexbox */
+.wrap{
+    flex-wrap: wrap;
+}
+.nowrap{
+    flex-wrap: nowrap;
+}
+.wrap-reverse{
+    flex-wrap: nowrap;
+}
+/* CSS Grid */
