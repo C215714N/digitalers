@@ -56,3 +56,19 @@
 .bg-gradient{
     --gradient: hsla(0,0%,100%,.5), hsla(0,0%,0%,.5);
 }
+/* Tamaños */
+.xs{
+    --size: var(--xs);
+}
+.sm{
+    --size: var(--sm);
+}
+.md{
+    --size: var(--md);
+}
+.lg{
+    --size: var(--lg);
+}
+.xl{
+    --size: var(--xl);
+}
