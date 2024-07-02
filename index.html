@@ -58,7 +58,7 @@
             Hace varios años me encuentro aprendiendo diferentes lenguajes y herramientas en el mundo desarrollo web. Entre ellos se encuentran los siguientes.
         </p>
         <h3>Lenguajes</h3>
-        <ul class="display-flex wrap auto xs | list-unstyled">
+        <ul class="display-flex wrap auto sm | list-unstyled">
             <li>
                 <strong>HTML</strong>
             
@@ -162,10 +162,56 @@
     <!-- Pie de Pagina -->
     <footer id="footer" class="footer">
         <!-- Mapa de Contacto -->
-
+        <iframe class="map cover"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111975206!2d-58.378511025212944!3d-34.60238855742641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1719962450358!5m2!1ses-419!2sar"
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <button class="map icon-max" title="abrir/cerrar mapa"></button>
         <!-- Formulario de Contacto -->
         <form action="" id="contact">
             <h2>Contacto</h2>
+            <label for="contact_name">Ingrese su Nombre (*)</label>
+            <input 
+                id="contact_name" 
+                name="name"
+                type="text" 
+                placeholder="Cristian Racedo"
+                maxlength="50"
+                required>
+            <p class="validation">
+                Escriba solamente letras y espacios hasta un maximo de 50 caracteres, sin signos o simbolos.
+            </p>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email" 
+                placeholder="cristiandracedo@hotmail.com"
+                minlength="8"
+                required>
+            <p class="validation">
+                Escriba una direccion de correo valida como "usuario@servidor" utilizando al menos 8 caracteres
+            </p>
+            <label for="contact_phone">Ingrese su</label>
+            <input 
+                id="contact_phone" 
+                name="phone" 
+                type="tel" 
+                placeholder="(5411)0303-4567"
+                required>
+            <p class="validation">
+                Coloque la caracteristica entre parentesis y utilice un guion cada 4 digitos
+            </p>
+            <label for="contact_consult">Escriba su consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                placeholder="Buenas, necesito hacer una consulta sobre..."
+                minlength="30" 
+                maxlength="3000" 
+                required></textarea>
+            <button class="btn">enviar</button>
         </form>
         <!-- Redes Sociales -->
         <div class="display-flex social">
