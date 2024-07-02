@@ -19,7 +19,8 @@ h3,
 .menu{
     margin: 0;
 }
-.menu{
+.menu,
+.list-unstyled{
     padding: 0;
 }
 .menu,
