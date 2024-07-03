@@ -1,0 +1,42 @@
+// Variables: Espacio reservado cuyo valor puede cambiar
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+
+/* Pie de pagina */
+// Nesting: Anidacion de selectores para mayor especificidad
+#footer{
+    padding: 1rem;
+    // Mapa de Contacto
+    .map{
+        --color: var(--first);
+        --bg: var(--light);
+        border: none;
+        &.cover{
+            width: 100%;
+            height: 100%;
+        }
+        &.btn{
+            color: var(--color);
+            background-color: var(--bg);
+            padding: .5rem 1rem;
+            &:hover{
+                --color: var(--light);
+                --bg: var(--first);
+                box-shadow: 0 .25rem .5rem var(--dark);
+            }
+            &:active{
+                border: 1px solid var(--second);
+            }
+        }
+    }
+    // Formulario
+    #contact{
+        border-radius: .25rem;
+    }
+    // Copyright
+    p:last-child{
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
