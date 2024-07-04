@@ -1,4 +1,9 @@
 nav{
+    position: sticky;
+    /* STICKY: El elemento ocupa su posicion original hasta que cumple la condicion definida por los atributos de posicion */
+    top: 0;
+    bottom: 0;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,12 +23,25 @@ nav a:hover{
     text-shadow: 0 0 .25rem;
 }
 .menu{
+    position: fixed;
+    top: 100%;
+    left: 0;
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
+    height: 100%;
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    background: linear-gradient(#36ce,#448e);
+    transition: all .25s linear;
+    /* SHORTHAND
+        property: atributo que sera animado
+        duration: tiempo que durara la ejecucion
+        timing:   modo en el que se realizara la transicion
+        delay:    tiempo que demora para ejecutarse
+    */
 }
 .menu.active{
-    max-height: 100vh;
+    top: 0;
 }
 /* Medium Devices - Tablets */
 @media screen and (width >= 768px){
@@ -31,10 +49,13 @@ nav a:hover{
         display: none;
     }
     .menu{
+        position: static;
+        /* STATIC: El elemento forma parte del flujo natural del documento y no puede cambiar su posicion, es el valor predeterminado */
         display: flex;
         width: auto;
         max-height: 100vh;
         gap: .5rem;
+        background-image: none;
     }
 }
 /* Medios de Impresion */
