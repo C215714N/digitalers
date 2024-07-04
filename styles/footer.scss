@@ -22,6 +22,7 @@ $position: static, relative, absolute, fixed, sticky;
 %activeMap{
     @extend .p-fixed;
     z-index: 2;
+    opacity: .95;
 }
 // Loops: Estilos que se repiten en base a una condicion
 /* Atributos de Posicionamiento */
