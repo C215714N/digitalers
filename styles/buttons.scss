@@ -1,0 +1,48 @@
+// Iconos
+@mixin pseudo($text: 🏠){
+    &::before{ content: "#{$text}"; }
+}
+// ::PseudoElemento Parte o elemento dentro de otro elemento
+[class*="icon-"]{
+    &::before{
+        font-size: 1.5rem;
+        line-height: 1rem;
+        filter: grayscale(100%);
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        filter: grayscale(70%);
+    }
+}
+.icon-{
+    &home{ @include pseudo(); }
+    &about{ @include pseudo(📰); }
+    &training{ @include pseudo(📚); }
+    &services{ @include pseudo(💻); }
+    &experience{ @include pseudo(🏛️); }
+    &contact{ @include pseudo(📱); }
+    &menu{ @include pseudo(≡) }
+    &close{ @include pseudo(\00D7)}
+    &max{@include pseudo(✖️)}
+    &min{@include pseudo(➖)}
+}
+
+// Botones
+.btn{
+    --color: var(--light);
+    --bg: var(--first);
+    position: relative;
+    color: var(--color);
+    min-width: 2rem;
+    border-radius: .25rem;
+    border: 1px solid;
+    padding: .5rem;
+    background-color: transparent;
+    z-index: 1;
+    font-size: .8rem;
+    // :PseudoClase Instancia o caracteristica de un elemento
+    &:hover{
+        color: var(--bg);
+        background-color: var(--color);
+    }
+}
