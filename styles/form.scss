@@ -57,7 +57,7 @@ form{
     input,
     textarea,
     select{
-        @include props(.5rem, .25rem, 1px, border-width, $ma:border-radius);
+        @include props(.5rem, .25rem, 1px solid, $ma:border-radius);
         &:focus{
             @extend %outline-dark;
             &+.validation{
