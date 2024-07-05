@@ -37,12 +37,14 @@
     border-radius: .25rem;
     border: 1px solid;
     padding: .5rem;
-    background-color: transparent;
+    background-color: var(--bg);
     z-index: 1;
     font-size: .8rem;
+    opacity: .5;
     // :PseudoClase Instancia o caracteristica de un elemento
     &:hover{
         color: var(--bg);
         background-color: var(--color);
+        opacity: 1;
     }
 }

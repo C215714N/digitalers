@@ -11,13 +11,13 @@
     <!-- Navegacion Principal -->
     <nav class="bg-gradient">
         <a href="#">CR</a>
-        <button id="menu-button" class="btn" title="abrir menu">&equiv;</button>
+        <button id="menu-button" class="btn icon-menu" title="abrir menu"></button>
         <ul id="menu-list" class="menu">
-            <li><a href="#about">Acerca</a></li>
-            <li><a href="#training">Formación</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a class="icon-about" href="#about">Acerca</a></li>
+            <li><a class="icon-training" href="#training">Formación</a></li>
+            <li><a class="icon-services" href="#services">Servicios</a></li>
+            <li><a class="icon-experience" href="#experience">Experiencia</a></li>
+            <li><a class="icon-contact" href="#contact">Contacto</a></li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
@@ -169,7 +169,7 @@
         </iframe>
         <button class="map btn icon-max" title="abrir/cerrar mapa"></button>
         <!-- Formulario de Contacto -->
-        <form action="" id="contact">
+        <form class="flex flex-column flex-gap" action="" id="contact">
             <h2>Contacto</h2>
             <label for="contact_name">Ingrese su Nombre (*)</label>
             <input 
@@ -191,7 +191,7 @@
                 minlength="8"
                 required>
             <p class="validation">
-                Escriba una direccion de correo valida como "usuario@servidor" utilizando al menos 8 caracteres
+                Escriba una direccion valida como "usuario@servidor" utilizando al menos 8 caracteres
             </p>
             <label for="contact_phone">Ingrese su</label>
             <input 
@@ -242,7 +242,7 @@
         </div>
         <!-- Derechos de Autor -->
         <p>
-            &copy;2024 Todos los derechos reservados | para mas informacion enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+            &copy;2024 Todos los derechos reservados | para mas informacion enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristian<wbr>dracedo<wbr>@hotmail.com</a>
         </p>
     </footer>
     <!-- Scripts JS -->

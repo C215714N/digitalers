@@ -2,7 +2,8 @@
     --color: var(--grey);
     --position: center;
     --size: 2.5rem;
-    justify-content: center;   
+    justify-content: center;
+    flex-wrap: wrap;
     gap: .5rem;
 }
 .social a{
