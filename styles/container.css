@@ -47,3 +47,9 @@
     flex-wrap: nowrap;
 }
 /* CSS Grid */
+.g-1{
+    gap: .25rem;
+}
+.g-2{
+    gap: .5rem;
+}
