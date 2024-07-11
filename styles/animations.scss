@@ -1,0 +1,24 @@
+@keyframes intro {
+    from{
+        transform: // Efectos que se aplican sobre la etiqueta
+        translateZ(10vw) // desplazamiento sobre eje Z
+        translateY(100vh); // desplazamiento sobre eje Y
+    }
+}
+@keyframes enter{
+    to{
+        transform: 
+        translateX(0) // desplazamiento sobre eje X
+        skewX(0); // sesgado sobre eje X
+    }
+}
+@keyframes glow{
+    from{
+        box-shadow: 0 0 0 var(--dark);
+    }
+    to{
+        box-shadow: 
+            0 0 .25rem var(--grey),
+            0 0 .5rem var(--light);
+    }
+}
