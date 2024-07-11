@@ -23,4 +23,30 @@
     background-attachment: 
         fixed, /* se ubica con respecto a la ventana */
         scroll; /* se ubica con respecto a la etiqueta*/
+    /* Perspectiva */
+    perspective: 3rem;
+    perspective-origin: top center;
+    text-align: center;
+}
+#header h1{
+    transform: 
+        rotateX(5deg);
+    animation: intro 4s ease-out 1s backwards;
+}
+#header p{
+    transform: 
+        skewX(45deg)
+        translateX(-100vw);
+    animation: enter 5s ease-out forwards;
+    /* EXPLICACION
+        name:       identifica la animacion que debe ser ejecutada
+        duration:   tiempo que tardara la animacion en finalizar
+        timing:     como se ejecutara la animacion
+        delay:      tiempo de espera para iniciar la animacion
+        iteration:  cantidad de veces que se repetira la animacion
+        fill-mode:  indica que estilos debe aplicar al antes o despues de la animacion 
+            - BACKWARDS: el elemento empieza en su estado inicial (FROM)
+            - NORMAL: el elemento vuelve a su estado sin animacion
+            - FORWARDS: el elemento mantiene su estado final (TO)
+    */
 }

@@ -1,8 +1,8 @@
 @keyframes intro {
     from{
         transform: // Efectos que se aplican sobre la etiqueta
-        translateZ(10vw) // desplazamiento sobre eje Z
-        translateY(100vh); // desplazamiento sobre eje Y
+        translateZ(50vh) // desplazamiento sobre eje Z
+        rotateX(15deg); // desplazamiento sobre eje Y
     }
 }
 @keyframes enter{
