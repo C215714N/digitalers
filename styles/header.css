@@ -27,6 +27,7 @@
     perspective: 3rem;
     perspective-origin: top center;
     text-align: center;
+    overflow: hidden;
 }
 #header h1{
     transform: 
@@ -44,7 +45,13 @@
         timing:     como se ejecutara la animacion
         delay:      tiempo de espera para iniciar la animacion
         iteration:  cantidad de veces que se repetira la animacion
-        fill-mode:  indica que estilos debe aplicar al antes o despues de la animacion 
+        direction:  indica en que sentido debe ejecutarse la animacion
+            - NORMAL: se ejecuta de inicio a fin
+            - REVERSE: se ejecuta de fin a inicio
+            - ALTERNATE: se ejecuta de inicio a fin y luego de fin a inicio
+            - ALTERNATE-REVERSE: se ejecuta de fin a inicio y luego de inicio a fin
+        fill-mode:  indica que estilos debe aplicar al antes o despues de la 
+        animacion 
             - BACKWARDS: el elemento empieza en su estado inicial (FROM)
             - NORMAL: el elemento vuelve a su estado sin animacion
             - FORWARDS: el elemento mantiene su estado final (TO)

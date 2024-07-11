@@ -19,8 +19,11 @@ nav a{
     color: var(--grey);
 }
 nav a:hover{
-    color: var(--light);
-    text-shadow: 0 0 .25rem;
+    animation: glow .5s ease-in-out infinite alternate;
+}
+nav a:hover::before{
+    display: inline-block;
+    animation: jump 1s linear infinite alternate;
 }
 .menu{
     position: fixed;
