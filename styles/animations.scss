@@ -24,6 +24,11 @@
             0 0 .5rem var(--light);
     }
 }
+@keyframes loading {
+    to{
+        transform: rotate(360deg);
+    }
+}
 @keyframes jump{
     0%{
         transform: rotate(0) translate(0,0);

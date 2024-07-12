@@ -1,0 +1,21 @@
+$timing: ease, ease-in, ease-out, ease-in-out, linear;
+$animations: (
+    a animation-timing-function ($timing),
+    t transition-timing-function ($timing),
+    dir animation-direction (normal, reverse, alternate, alternate-reverse)
+);
+@each $key, $attr, $values in $animations {
+@each $v in $values{
+    .#{$key}-#{$v} { #{$attr}: $v; }
+} }
+.loading{
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    border-radius: 50%;
+    border: .5rem solid;
+    border-color: transparent #cde #36c #248;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

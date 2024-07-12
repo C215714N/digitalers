@@ -10,11 +10,13 @@
     border-radius: .25rem;
     padding: 2rem;
     background: var(--color) var(--bg) var(--position)/var(--size) no-repeat;
+    transition: all .5s ease;
 }
 .social a:hover{
     --color: var(--light);
     --size: 3.25rem;
     box-shadow: 0 .25rem .5rem var(--dark);
+    transform: translateY(-.25rem) rotate(360deg);
 }
 /* Iconos redes sociales */
 [href*="facebook"]{
@@ -40,4 +42,15 @@
 }
 [href*="github"]{
     --bg: url("../assets/icon/github.svg");
+}
+@media screen and (width >= 768px){
+    .social a:last-child{
+        position: fixed;
+        bottom: 3rem;
+        right: 1rem;
+        opacity: .5;
+    }
+    .social a:last-child:hover{
+        opacity: 1;
+    }
 }
