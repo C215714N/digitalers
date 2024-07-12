@@ -1,52 +1,56 @@
 @use "sass:math";
 $functions: lineal, cuadratica, trigonometrica, exponencial, limite, vectorial;
 .sea{
+    position: relative;
     animation: sailing 3s alternate infinite;
     min-height: 100vh;
     padding: .5rem;
     gap: .5rem;
-    .bubble{
-        width: 3rem;
-        height: 3rem;
-        margin: .25rem;
-        border-radius: 50%;
-        box-shadow: 
-            -.25rem .25rem .5rem var(--dark),
-            -.25rem .25rem .5rem #eee8 inset;
-        @for $i from 1 through 6 {
-            $fn: nth($functions, $i);
-            &:nth-child(#{$i}n){
-                animation: $fn $i * 5s linear alternate infinite;
-                background: radial-gradient(
-                    circle at top right,
-                    hsl($i * 30, 50%, 50%, .5),
-                    hsl($i * 60, 50%, 30%, .5)
-                );
+    overflow: hidden;
+    .container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: loading 360s linear infinite;
+        .bubble{
+            width: 3rem;
+            height: 3rem;
+            margin: .25rem;
+            border-radius: 50%;
+            box-shadow: 
+                -.25rem .25rem .5rem var(--dark),
+                -.25rem .25rem .5rem #eee8 inset;
+            @for $i from 1 through 6 {
+                $fn: nth($functions, $i);
+                &:nth-child(#{$i}n){
+                    animation: $fn 10s linear $i*.25s alternate infinite;
+                    background: radial-gradient(
+                        circle at top right,
+                        hsl($i * 30, 50%, 50%, .5),
+                        hsl($i * 60, 50%, 30%, .5)
+                    );
+                }
             }
         }
     }
 }
-
 /* Animaciones */
 @each $f in $functions {
 @keyframes #{$f} {
     @for $i from 0 through 100 {
         $x: $i;
         $y: $i;
-        #{$i}%{
-            transform: translate($i * 1vw, $i * 1vh);
+        #{$i}%{ 
+            transform: translate($i * 1vw, $i * 1vh); 
         }
-    }
-}}
+} } }
 @keyframes sailing{
-    @for $i from 0 through 100 {
-        #{$i}%{
-            background-image: linear-gradient(
-                ($i - 50) * .25deg,
-                #248,
-                #36c,
-                #248
-            );
-        }
+@for $i from 0 through 100 {
+    #{$i}%{
+        background-image: linear-gradient(
+            ($i - 50)*.25deg, #248, #36c, #248
+        );
     }
-}
+} }
