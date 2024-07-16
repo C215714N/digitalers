@@ -1,5 +1,5 @@
 @use "sass:math";
-$functions: lineal, cuadratica, trigonometrica, exponencial, limite, vectorial;
+$functions: lineal, cuadratica, trigonometrica, exponencial, limite;
 .sea{
     position: relative;
     animation: sailing 3s alternate infinite;
@@ -36,6 +36,28 @@ $functions: lineal, cuadratica, trigonometrica, exponencial, limite, vectorial;
         }
     }
 }
+@function getCoord($n, $fn){
+    $x: $n;
+    $y: 0;
+    @if $fn == lineal{
+        $y: $n / 2;
+    }
+    @if $fn == cuadratica{
+        $x: $n - 50;
+        $y: math.pow($x,2) / 250;
+    }
+    @if $fn == trigonometrica{
+        $y: math.sin($x) * 20;
+    }
+    @if $fn == exponencial{
+        $x: $n - 50;
+        $y: math.pow(1.5, $x);
+    }
+    @if $fn == limite{
+        
+    }
+    @return translate($x * 1vw, $y * 1vh);
+}
 /* Animaciones */
 @each $f in $functions {
 @keyframes #{$f} {
@@ -43,7 +65,7 @@ $functions: lineal, cuadratica, trigonometrica, exponencial, limite, vectorial;
         $x: $i;
         $y: $i;
         #{$i}%{ 
-            transform: translate($i * 1vw, $i * 1vh); 
+            transform: getCoord($i, $f); 
         }
 } } }
 @keyframes sailing{
