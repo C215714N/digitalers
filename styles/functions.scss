@@ -1,5 +1,5 @@
 @use "sass:math";
-$functions: lineal, cuadratica, trigonometrica, exponencial, limite;
+$functions: lineal, cuadratica, trigonometrica, exponencial, limite, vectorial;
 .sea{
     position: relative;
     animation: sailing 3s alternate infinite;
@@ -25,7 +25,7 @@ $functions: lineal, cuadratica, trigonometrica, exponencial, limite;
             @for $i from 1 through 6 {
                 $fn: nth($functions, $i);
                 &:nth-child(#{$i}n){
-                    animation: $fn 10s linear $i*.25s alternate infinite;
+                    animation: $fn 2s linear $i*.2s alternate infinite;
                     background: radial-gradient(
                         circle at top right,
                         hsl($i * 30, 50%, 50%, .5),
@@ -36,43 +36,32 @@ $functions: lineal, cuadratica, trigonometrica, exponencial, limite;
         }
     }
 }
-@function getCoord($n, $fn){
-    $x: $n;
-    $y: 0;
-    @if $fn == lineal{
-        $y: $n / 2;
+@function getCoord($n,$f){
+    $x:$n;
+    $y:0;
+    @if $f == lineal{ $y: $x / 2; }
+    @if $f == cuadratica{ $y: math.pow($x - 50,2) / 25; }
+    @if $f == trigonometrica{
+        $x: ($n * 5);
+        $y: math.sin($x) * 5
     }
-    @if $fn == cuadratica{
-        $x: $n - 50;
-        $y: math.pow($x,2) / 250;
+    @if $f == exponencial{ $y: math.pow(1.05, $x); }
+    @if $f == limite{
+        @if $x != 50 { $y: (100 / ($x - 50)) / 2; }
     }
-    @if $fn == trigonometrica{
-        $y: math.sin($x) * 20;
-    }
-    @if $fn == exponencial{
-        $x: $n - 50;
-        $y: math.pow(1.5, $x);
-    }
-    @if $fn == limite{
-        
-    }
-    @return translate($x * 1vw, $y * 1vh);
+    @if $f == vectorial{ $y: math.pow($x - 50,3) / 1250; }
+    @return translate($x * .5vw, $y * 1vh);
 }
 /* Animaciones */
 @each $f in $functions {
 @keyframes #{$f} {
     @for $i from 0 through 100 {
-        $x: $i;
-        $y: $i;
-        #{$i}%{ 
-            transform: getCoord($i, $f); 
-        }
+    #{$i}%{ transform: getCoord($i,$f); }
 } } }
 @keyframes sailing{
 @for $i from 0 through 100 {
     #{$i}%{
         background-image: linear-gradient(
             ($i - 50)*.25deg, #248, #36c, #248
-        );
-    }
+    ) }
 } }
