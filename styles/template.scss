@@ -1,0 +1,132 @@
+$cols: 24;
+$limit: 10;
+$align: left, right, center, justify, justify-all;
+$content: 
+    start, 
+    end, 
+    center, 
+    space-around, 
+    space-between, 
+    space-evenly, 
+    stretch, 
+    baseline,
+;
+$timing:
+    ease,
+    ease-in,
+    ease-out,
+    ease-in-out,
+    linear,
+;
+$colors: 
+    primary     #448,
+    secondary   #c36,
+    tertiary    #248,
+    fourth      #284,
+    danger      #c33,
+    warning     #ea3,
+    success     #3c6,
+    info        #48f,
+    light       #eee,
+    dark        #333,
+    none        transparent,
+;
+$attributes:
+    text        color,
+    bg          background-color,
+    border      border-color,
+    outline     outline-color,
+;
+$queries:
+    sm  576px   540px,
+    md  768px   720px,
+    lg  992px   960px,
+    xl  1200px  1140px,
+    xxl 1400px  1320px,
+;
+$sizes: 
+    m       margin              .25rem,
+    mn      margin              -.25rem,
+    p       padding             .25rem,
+    b       border              1px,
+    br      border-radius       .1rem,
+    o       outline             1px,
+    g       gap                 .1rem,
+    fs      font-size           .5rem,
+    rfs     font-size           2vw,
+    lh      line-height         .25,
+    fw      font-weight         100,
+    bg-s    background-size     10%,
+    bg-p    background-position 10%,
+;
+$properties:
+    d display (none, block, inline, inline-block, flex, inline-flex, grid, inline-grid, table, inline-table),
+    jc justify-content $content,
+    ji justify-items $content,
+    ac align-content $content,
+    ai align-items $content,
+
+    list list-style (none, circle, square, dot, decimal-leading-zero, decimal, upper-roman, lower-roman, lower-greek, hiragana, katakana, gujarati, arabic-indic),
+    b border-style (none, solid, double, groove, dotted, dashed),
+    p position (static, relative, absolute, fixed, sticky),
+    over overflow (visible, hidden, auto, scroll),
+    ani-timing animation-timing-function $timing,
+    tran-timing transition-timing-function $timing,
+    ani-dir animation-direction (normal, reverse, alternate, alternate-reverse)
+    text text-align $align,
+    text text-decoration (none, line-through, underline),
+    text text-transform  (uppercase, lowercase, capitalize),
+;
+// Sistema de grillas responsive
+@mixin gridSystem($size:""){
+@for $i from 1 through $cols{
+    .col#{$size}-#{$i}{
+        width: percentage( $i / $cols);
+}}}
+// Atributos de Color
+@mixin colorProps($size:""){
+@each $prop, $attr in $attributes{
+@each $cn, $cv in $colors{
+    .#{$prop}#{$size}-#{$cn}{
+        #{$attr}: $cv;
+    }
+    .#{$prop}#{$size}-#{$cn}-subtle{
+        #{$attr}: lighten($cv, 15%);
+    }
+    .#{$prop}#{$size}-#{$cn}-emphasis{
+        #{$attr}: darken($cv, 20%);
+    }
+}}}
+// Atributos de Tamaños
+@mixin sizeProps($size:""){
+@each $prop, $attr, $unit in $sizes{
+@for $i from 0 through $limit{
+    .#{$prop}#{$size}-#{$i}{
+        #{$attr}: $i * $unit;
+    }
+}}}
+// Atributos con valores predefinidos
+@mixin setProps($size:""){
+@each $prop, $attr, $values in $properties{
+@each $v in $values{
+    .#{$prop}#{$size}-#{$v}{
+        #{$attr}: $v;
+    }
+}}}
+@each $vname, $vwidth, $vmax in $queries{
+    @if $vwidth == nth(nth($queries, 1), 2){
+        @include gridSystem();
+        @include colorProps();
+        @include sizeProps();
+        @include setProps();
+    }
+    /*Sistema de Grillas Responsive */
+    @media screen and (width >= $vwidth){
+        $sz: "-"+$vname;
+        .container, .container-#{$vname}{ max-width: $vmax; }
+        @include gridSystem($sz);
+        @include colorProps($sz);
+        @include sizeProps($sz);
+        @include setProps($sz);
+    }
+}
