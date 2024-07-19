@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Declaraciones</title>
     <script>
+    {
         /* VARIABLES: espacio reservado en memoria con el fin de almacenar datos y cuyo valor puede cambiar.
 
         REGLAS DE NOMENCLATURA
@@ -27,7 +28,6 @@
         edad = 33; // reasignacion
 
         const esInstructor = true // declaracion y asignacion
-
         /* Tipos de Datos
 
             PRIMITIVOS (INMUTABLES)
@@ -43,9 +43,19 @@
             - object {}        elemento con propiedades clave-valor
             - function(){}     bloque de codigo reutilizable
         */
+    }
+    {
+        confirm("Bienvenido al Curso de JavaScript\n¿Te puedo hacer algunas Preguntas?");
+        alert("Respeto tu decision como usuario, pero reafirmo mi autoridad como desarrollador y voy a preguntar de todas maneras");
+        // ENTRADA
+        const nombre = prompt("¿Cual es tu Nombre?");
+        // PROCESO
+        const mensaje = "Bienvenido " + nombre + ". Espero que te vaya muy bien en este curso." 
+        // SALIDA
+        alert(mensaje)
+    }
     </script>
 </head>
 <body>
-    
 </body>
 </html>
