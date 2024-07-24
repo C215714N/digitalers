@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    {
+        let n = 1;
+        const tabla = prompt("¿ingrese un numero para crear la tabla de potencias?")
+        let acumulador = "la tabla del "+ tabla +" es la siguiente:\n"
+        // Mientras n sea menor o igual a 10
+        while(n <= 10){
+            acumulador += tabla+"^"+n+"="+(tabla ** n)+"\n"
+            n++
+        }
+        alert(acumulador)
+    }
+    {
+        let mensaje="", n = 1;
+        const simpsonsRef = prompt("escribe el mensaje de castigo");
+        const repeticiones = parseInt(prompt("¿escribe un numero del 1 al 100?"));
+        do{
+            mensaje+= simpsonsRef + " ";
+            n++
+        }
+        while(n <= repeticiones)
+        alert(mensaje);
+    }
+    </script>
+</body>
+</html>
