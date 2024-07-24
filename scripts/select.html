@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora </title>
+</head>
+<body>
+    <script>
+        let resultado;
+        const operacion = (prompt("Elija una operacion:\n1)SUMA\n2)RESTA\n3)PRODUCTO\n4)DIVISION\n5)POTENCIA")).toUpperCase();
+        const n1 = prompt("ingrese un numero");
+        const n2 = prompt("ingrese otro numero");
+
+        switch(operacion){
+            case "1": 
+            case "SUMA":
+                resultado = "la suma da : " + (parseInt(n1)+parseInt(n2));
+            break;
+            case "2":
+            case "RESTA":
+                resultado = "la resta da:" + (n1 - n2);
+            break;
+            case "3":
+            case "PRODUCTO":
+                resultado = "la multiplicacion da: " + (n1 * n2);
+            break;
+            case "4":
+            case "DIVISION":
+                if (n2 != 0) resultado = "la division da: " + (n1 / n2);
+                else resultado = "no se puede dividir entre 0";
+            case "5":
+            case "POTENCIA":
+                resultado= "la potenciacion da: " + (n1 ** 2);
+            break;
+            default:
+                resultado = "la opcion elegida no es valida";
+        }
+        alert(resultado);
+    </script>
+</body>
+</html>
