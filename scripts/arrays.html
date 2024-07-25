@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vectores</title>
+</head>
+<body>
+    <ul id="lenguajes"></ul>
+    <script>
+    {
+        const lenguajes = [];
+        const cantidad = parseInt(prompt("entre 1 y 20 ¿cuantos lenguajes deseas cargar?"))
+        // Cargar elementos a un array
+        for(let i = 0; i < cantidad; i++){
+            lenguajes[i] = prompt("Ingrese el lenguaje que desea cargar")
+        } 
+        let verificar;
+        do{
+            verificar = confirm("¿Desea consultar alguno de los lenguajes cargados?")
+            if (verificar){
+                const indice = parseInt(prompt("ingrese el numero de elemento a consultar")) - 1;
+                // Consultar elementos de un array
+                if (indice >= 0 && indice < lenguajes.length){
+                    alert(lenguajes[indice]);
+                }
+                else alert("no se encontro el elemento indicado")
+            }
+        } while (verificar)
+        // renderizar elementos de un array
+        // Capturamos al elemento padre
+        const listaLenguajes = document.getElementById("lenguajes");
+        // Recorremos el arreglo de lenguajes
+        for(let i = 0; i < lenguajes.length; i++){
+            // Creamos un Nodo en el DOM
+            const li = document.createElement("li");
+            // Asignamos el contenido (textual)
+            li.innerText = lenguajes[i];
+            // Anidamos a la estructura de la pagina
+            listaLenguajes.appendChild(li);
+        }
+    }
+    </script>
+</body>
+</html>
