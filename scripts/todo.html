@@ -5,16 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tareas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <article>
         <h2 class="text-center">Lista de Tareas</h2>
-        <div class="row col-lg-8 mx-auto px-4">
+        <div class="row col-lg-8 mx-auto pb-3 px-4">
             <input id="textoTareas" class="col form-control">
             <button id="botonTareas" class="col-3 btn btn-success">Aceptar</button>
         </div>
         <ul id="listaTareas" class="list-group"></ul>
+        <div id="modalTareas" class="modal">
+            <div class="modal-dialog">    
+                <div class="modal-content">
+                    <h2 class="modal-header h5">
+                        ¿Desea eliminar la siguiente tarea?
+                        <button data-bs-dismiss="modal" class="btn-close"></button>
+                    </h2>
+                    <p class="modal-body">
+                    </p>
+                    <div class="modal-footer">
+                        <button data-bs-dismiss="modal" class="btn btn-secondary">cancelar</button>
+                        <button data-bs-dismiss="modal" class="btn btn-danger" onclick="eliminarTarea(selected)">eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
     <script src="todo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
