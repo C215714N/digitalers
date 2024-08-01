@@ -1,0 +1,14 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css");
+#canvas {
+    display: none;
+}
+#drop-area {
+    border: 2px dashed #ccc;
+    width: 320px;
+    height: 240px;
+    padding: min(120px, calc(50% - 1rem)) 0;
+    margin: 10px 0;
+}
+.d-flex > * {
+    flex: 1 0 min(320px, 100%);
+}
