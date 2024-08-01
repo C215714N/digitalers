@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photomath Clone</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body class="d-flex flex-wrap p-3 gap-2">
+    <section class="d-flex flex-wrap gap-2">
+        <!-- Botón para capturar con la cámara -->
+        <video class="w-100 border border-dark bg-dark rounded" id="video" autoplay></video>
+        <div class="d-grid gap-2">
+            <button id="capture" class="form-control">Realizar Captura</button>
+            <!-- Boton para cargar imágenes -->
+            <input type="file" id="file-input" class="form-control">
+        </div>
+    </section>
+    <section class="d-flex flex-wrap">
+        <div id="drop-area" class="w-100 h-100 m-0 rounded | text-secondary text-center fs-3">Arrastre la imágen Aquí</div>
+        <canvas id="canvas" width="320" height="240"></canvas>
+    </section>
+    <section class="d-grid">
+        <img class="w-100" id="photo" alt="The screen capture will appear in this box.">
+        <p id="recognized-text"></p>
+        <p id="result"></p>
+    </section>
+    <!-- Tesseract.js -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
