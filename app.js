@@ -1,4 +1,5 @@
 // declaraciones
+let calculo
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
@@ -66,6 +67,7 @@ function recognizeText(dataURL) {
 // Evaluar expresión matemática usando math.js
 function evaluateMath(expression) {
     try {
+        calculo = expression;
         const result = math.evaluate(expression);
         resultElement.textContent = `Resultado: ${result}`;
     } catch (err) {
