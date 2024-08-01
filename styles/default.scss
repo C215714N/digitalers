@@ -1,15 +1,20 @@
 $limit: 12;
+@mixin transition($timing: linear, $prop: all, $time: .5s){
+    transition: $prop $time $timing;
+}
 .gallery{
     list-style: none;
     min-height: min(320px, 100vh);
     padding: 0;
-    li{
+    &-item{
+        @include transition(ease-out);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
+        opacity: .5;
         @for $i from 1 through $limit {
             &:nth-child(#{$i}n){
                 background-image: radial-gradient(
@@ -19,7 +24,7 @@ $limit: 12;
                 );
         }}
         &.active{
-            z-index: 0;
+            opacity: 1;
         }
     }
 }
@@ -32,6 +37,7 @@ $limit: 12;
     display: flex;
     justify-content: center;
     button{
+        @include transition;
         margin: .2rem;
         border: none;
         border-radius: .5rem;
