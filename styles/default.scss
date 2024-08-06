@@ -2,6 +2,12 @@ $limit: 12;
 @mixin transition($timing: linear, $prop: all, $time: .5s){
     transition: $prop $time $timing;
 }
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .5s linear;
+    font-family: 'Ubuntu', 'calibri', sans-serif;
+}
 .gallery{
     list-style: none;
     min-height: min(320px, 100vh);
@@ -93,6 +99,13 @@ $areas: input, actions, numbers, symbols;
         flex-wrap: wrap;
         grid-area: $area;
     }
+}
+#input{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    border: .1rem solid #999;
 }
 #actions > *{
     flex: 1 0 min(320px, 33%);
