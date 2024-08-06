@@ -45,6 +45,7 @@ $limit: 12;
         background-color: #ccc;
         &.active{
             padding: .25rem 1.5rem;
+            box-shadow: 0 0 .25rem #eee;
         }
     }
 }
@@ -73,5 +74,49 @@ $limit: 12;
         &:hover{
             opacity: 1;
         }
+    }
+}
+
+$areas: input, actions, numbers, symbols;
+#root {
+    max-width: 480px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "input input input"
+    "actions actions actions"
+    "numbers numbers symbols";
+}
+@each $area in $areas{
+    ##{$area}{
+        display: flex;
+        flex-wrap: wrap;
+        grid-area: $area;
+    }
+}
+#actions > *{
+    flex: 1 0 min(320px, 33%);
+}
+#numbers{
+    flex-wrap: wrap-reverse;
+}
+#numbers > * {
+    flex: 1 0 33.3%;
+}
+#numbers :first-child{
+    flex-basis: 100%;
+}
+#symbols{
+    flex-direction: column-reverse;
+}
+button{
+    padding: .5rem;
+    border: 2px solid #fff;
+    background-color: #ccc;
+    &:hover{
+        background: radial-gradient(circle at top left, #eee, #ccc)
+    }
+    &:focus{
+        background: linear-gradient(#ccc, #999);
     }
 }
