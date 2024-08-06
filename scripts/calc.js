@@ -22,14 +22,49 @@ const render = (arr, className) => {
     root.appendChild(container);
 }
 // Funciones de la Calculadora
-const clear = () => Object.assign(calc, { n1: "", op: "", n2: "" })
-const clearElement = () => calc.op ? calc.n2 = "" : calc.n1 = ""
+const clear = () => {
+    Object.assign(calc, { n1: "", op: "", n2: "" })
+    return 0;
+}
+const clearElement = () => {
+    calc.op ? calc.n2 = "" : calc.n1 = ""
+    return 0;
+}
 const setOperation = (symbol) => calc.op = symbol
 const calcResult = () => {
-    if(calc.op && calc.n2) calc.n1 = eval(calc.n1+calc.op+calc.n2)
+    if(calc.op && calc.n2) 
+    return calc.n1 = eval(calc.n1+calc.op+calc.n2)
 }
-const addDigit = (n) => calc.op ? calc.n2+=n : calc.n1+=n
+const addDigit = (n) => calc.op ? calc.n2+= n : calc.n1+= n
 const setDigit = (n) => calc.op ? calc.n2 = n : calc.n1 = n
+
+const setValue = (value) => {
+    switch(value){
+        // Actiones
+        case "C": return clear()
+        case "CE": return clearElement()
+        case "=": return calcResult()
+        // Operaciones
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+            return setOperation(value)
+        // Numeros
+        default: return addDigit(value);
+    }
+}
+// Asignacion de Acciones
+const setActions = () => {
+    const buttons = document.querySelectorAll("button");
+    const input = document.querySelector("input");
+
+    input.addEventListener("input", (ev) => setDigit(ev.target.value))
+    buttons.forEach(btn => btn.addEventListener("click", (ev) => {
+        const value = ev.target.innerText;
+        input.value = setValue(value);
+    }))
+}
 
 // Vistas de Calculadora
 renderElement({
@@ -40,3 +75,5 @@ renderElement({
 render(actions,"actions");
 render(numbers(), "numbers");
 render(symbols, "symbols");
+clear();
+setActions();
