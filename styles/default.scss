@@ -84,6 +84,11 @@ $limit: 12;
 }
 
 $areas: input, actions, numbers, symbols;
+.container-3d{
+    padding-top: 10vh;
+    perspective: 10rem;
+    perspective-origin: top center;
+}
 #root {
     max-width: 480px;
     margin: auto;
@@ -92,6 +97,7 @@ $areas: input, actions, numbers, symbols;
     "input input input"
     "actions actions actions"
     "numbers numbers symbols";
+    transform: rotateX(5deg); 
 }
 @each $area in $areas{
     ##{$area}{
