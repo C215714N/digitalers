@@ -1,19 +1,18 @@
 const root = document.getElementById("root");
-const symbols = ["+","-","*","/"];
-const actions = ["CE", "C", "="];
-const calc = {}
-
+const calc = {};
+const obj = {
+    symbols: ["+","-","*","/"],
+    actions: ["CE", "C", "="],
+    fn: ["clearElement","clear","calcResult"],
+    numbers: numbers()
+}
 // Generador de Arrays
-const numbers = (ini=0, fin=9, step=1, arr=[]) => {
+function numbers (ini=0, fin=9, step=1, arr=[]) {
     for(let i=ini; i<=fin; i+=step) arr.push(i);
     return arr;
 }
 // Renderizado de ELementos
-const renderElement = ({element, props, parent}) => {
-    const tag = document.createElement(element);
-    Object.assign(tag, props)
-    parent.appendChild(tag);
-}
+const renderElement = ({element, props, parent}) => parent.appendChild(Object.assign(document.createElement(element), props))
 // Renderizado de botones
 const render = (arr, className) => {
     const container = document.createElement("div");
@@ -22,58 +21,29 @@ const render = (arr, className) => {
     root.appendChild(container);
 }
 // Funciones de la Calculadora
-const clear = () => {
-    Object.assign(calc, { n1: "", op: "", n2: "" })
-    return 0;
-}
-const clearElement = () => {
-    calc.op ? calc.n2 = "" : calc.n1 = ""
-    return 0;
-}
-const setOperation = (symbol) => calc.op = symbol
-const calcResult = () => {
-    if(calc.op && calc.n2) 
-    return calc.n1 = eval(calc.n1+calc.op+calc.n2)
-}
+const clear = () => (Object.assign(calc, { n1: "", op: "", n2: "" })) && 0
+const clearElement = () => (calc.op ? calc.n2 = "" : calc.n1 = "") && 0
+const setOperation = (symbol) => (calc.op = symbol) && calc.n1
+const calcResult = () => calc.n1 = (calc.op && calc.n2) && eval(calc.n1+calc.op+calc.n2)
 const addDigit = (n) => calc.op ? calc.n2+= n : calc.n1+= n
 const setDigit = (n) => calc.op ? calc.n2 = n : calc.n1 = n
-
+// Asignacion de Funciones
 const setValue = (value) => {
-    switch(value){
-        // Actiones
-        case "C": return clear()
-        case "CE": return clearElement()
-        case "=": return calcResult()
-        // Operaciones
-        case "+":
-        case "-":
-        case "*":
-        case "/":
-            return setOperation(value)
-        // Numeros
-        default: return addDigit(value);
-    }
+    for (let i=0; i < obj.actions.length; i++) if (obj.actions[i] == value ) return eval(obj.fn[i]+"()")
+    for (let s of obj.symbols) if (s==value) return setOperation(value)
+    return addDigit(value)
 }
 // Asignacion de Acciones
 const setActions = () => {
     const buttons = document.querySelectorAll("button");
     const input = document.querySelector("input");
-
-    input.addEventListener("input", (ev) => setDigit(ev.target.value))
-    buttons.forEach(btn => btn.addEventListener("click", (ev) => {
-        const value = ev.target.innerText;
-        input.value = setValue(value);
+    input.addEventListener("input", ({target:{value}}) => setDigit(value));
+    buttons.forEach(btn => btn.addEventListener("click", ({target:{innerText}}) => {
+        input.value = setValue(innerText); input.focus();
     }))
-}
-
+};
 // Vistas de Calculadora
-renderElement({
-    element: "input", 
-    props: { id: "input", type: "number" }, 
-    parent: root,
-})
-render(actions,"actions");
-render(numbers(), "numbers");
-render(symbols, "symbols");
 clear();
+renderElement({ element:"input", props:{id:"input", type:"number"}, parent:root})
+Object.keys(obj).forEach(k=> k!='fn' && render(obj[k],k))
 setActions();
