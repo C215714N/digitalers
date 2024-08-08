@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form style="display: grid;" action="">
+        <h2>Registrate</h2>
+        <label for="username">Escriba un nombre de usuario</label>
+        <input id="username" 
+            name="username" 
+            type="text"
+            minlength="4"
+            maxlength="20"
+            required>
+        <label for="pass1">Ingrese la contraseña</label>
+        <input id="pass1" 
+            name="password" 
+            type="password"
+            minlength="8"
+            autocomplete="true"
+            required>
+        <label for="pass2">Repita la contraseña</label>
+        <input id="pass2" 
+            name="password" 
+            type="password" 
+            minlength="8"
+            autocomplete="true"
+            required>
+        <button>aceptar</button>
+    </form>
+    <form id="contact" style="display: grid;" action="">
+        <h2>Dejanos tu consulta</h2>
+        <label for="name">Ingrese su Nombre</label>
+        <input id="name"
+            name="name"
+            type="text" 
+            minlength="2" 
+            maxlength="50" 
+            required>
+        <label for="email">Ingrese su Correo</label>
+        <input 
+            id="email"
+            name="email" 
+            type="email" 
+            minlength="8" 
+            required>
+        <label for="phone">Ingrese su telefono</label>
+        <input 
+            id="phone"
+            name="phone" 
+            type="tel" 
+            minlength="6" 
+            required>
+        <label for="consult">Ingrese su Consulta</label>
+        <textarea id="consult"
+            name="consult"
+            minlength="30"
+            maxlength="1500"
+            required></textarea>
+        <button>enviar</button>
+    </form>
+    <!-- Script -->
+    <script src="scripts/validation.js"></script>
+</body>
+</html>
