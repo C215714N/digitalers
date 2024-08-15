@@ -24,21 +24,31 @@ const setActiveItem = (array, type, className="active") => {
 }
 // Iteracion del Array de galerias
 galleries.forEach(gallery => {
+    let timeWait = addInterval();
     // Identificar elementos de Cada galeria
     const images = gallery.querySelectorAll(".gallery-item");
     const controls = gallery.querySelectorAll(".controls button");
     const buttons = ["prev", "next"]
+    // Intervalo de Tiempo
+    function addInterval () {
+        return setInterval(() => {
+            setActiveItem(images, "next"),
+            setActiveItem(controls, "next")
+        }, 2000)
+    }
     // Avanzar y Retroceder
     buttons.forEach(btn => {
         const button = gallery.querySelector(`.${btn}`);
         button.addEventListener("click", () => {
             setActiveItem(images, btn);
             setActiveItem(controls, btn);
+            timeWait = addInterval()
         })
     })
     // Boton de Seleccion
     controls.forEach((ctrl,index) => ctrl.addEventListener("click", () => {
         setActiveItem(images,index)
         setActiveItem(controls,index)
+        clearInterval(timeWait);
     }))
 })
