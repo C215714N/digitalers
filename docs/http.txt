@@ -1,0 +1,12 @@
+<h2>Solicitudes HTTP</h2>
+<p>
+    Peticion realizada por el cliente (navegador) donde se indica al servidor que se estan solicitando recursos. En base a los permisos que este tenga con respecto a los mismos y la disponibilidad en servidor, se enviara una respuesta con informacion adicional relacionada con el resultado de dicha solicitud
+</p>
+<h3>Codigos de Respuesta</h3>
+<ul>
+    <li><strong>100-199</strong>: Procesamiento</li>
+    <li><strong>200-299</strong>: Respuesta Exitosa</li>
+    <li><strong>300-399</strong>: Redireccionamientos</li>
+    <li><strong>400-499</strong>: Errores de Clientes</li>
+    <li><strong>500-599</strong>: Errores de Servidor</li>
+</ul>

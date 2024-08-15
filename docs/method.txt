@@ -1,0 +1,11 @@
+<h2>Metodos de Navegador</h2>
+<p>
+    Cuando se realizan solicitudes, entre cliente y servidor, el navegador nos ofrece diferentes formas de realizar dichas acciones. Estas formas reciben el nombre de metodos y por defecto siempre utiliza GET, aunque con HTML podemos implementar el metodo POST. Pero en caso de requerir utilizar alguno de los siguientes, podemos hacerlo mediante algun lenguaje de programacion como JS.
+</p>
+<ul>
+    <li><strong>GET</strong>: metodo utilizado principalmente para solicitas datos al servidor, debido a que no cifra los mismos.</li>
+    <li><strong>POST</strong>: metodo utilizado para enviar datos al servidor, implementado en la mayoria de formularios/aplicaciones</li>
+    <li><strong>PUT</strong>: enviar un objeto de actualizacion para modificar los valores almacenados en un servidor</li>
+    <li><strong>DELETE</strong>: enviar una peticion de eliminacion de datos al servidor, utilizando un dato de referencia</li>
+    <li><strong>HEADERS</strong>: envia informacion adicional para las cabeceras de comunicacion</li>
+</ul>

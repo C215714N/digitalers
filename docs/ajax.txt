@@ -1,0 +1,28 @@
+<h2>AJAX</h2>
+
+<p>
+    Corresponde al acronimo de Asynchronous Javascript And XML y hace referencia a la forma en que intercambian datos, entre clientes y servidores, donde se utilizan funciones para enviar datos, pero los mismos se codifican el formato de etiquetas.
+</p>
+
+<ul>
+    <li>
+        <p>
+            <strong>XML</strong>(eXtended Markup Language) Lenguaje de marcado, similar a HTML, que posee varias caracteristicas adicionales y que tambien se utiliza para la creacion de graficos vectoriales, como por ejemplo SVG.
+        </p>
+        <pre>
+            <usuario>
+                <nombre>cristian</nombre>
+                <apellido>racedo</apellido>
+            </usuario>
+        </pre>
+    </li>
+    <li>
+        <strong>Javascript y JSON</strong> corresponden al lenguaje de programacion interpretado y la <em>notacion de objetos</em> del mismo, que se ha vuelto muy popular en los ultimos y tiene soporte en los diferentes lenguajes de programacion.
+        <pre>
+            "usuario": {
+                "nombre":"cristian",
+                "apellido":"racedo"
+            }
+        </pre>
+    </li>
+</ul>

@@ -1,0 +1,9 @@
+<h2>Single Page Application</h2>
+<p>
+    Las aplicaciones web de una sola pagina destacan por mostrar los diferentes contenidos  del sitio en un solo archivo, renderizando y eliminando elementos de la vista. Suelen implementar algun metodo de enrutamiento, es decir, mostrar una url que cambia, pero sin cambiar de archivo. Existen multiples herramientas (frameworks) que facilitan el desarrollo de este tipo de aplicaciones, pero tambien se pueden trabajar directamente con JS.
+</p>
+<ul>
+    <li>Angular</li>
+    <li>ReactJS</li>
+    <li>VueJS</li>
+</ul>
