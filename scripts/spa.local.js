@@ -9,24 +9,32 @@ localLinks.forEach(link => {
         // Modificacion del Historial
         history.pushState({},'',"/"+path)
         // Ejecucion de Solicitud HTTP
-        getData(`/docs/${file}.txt`, render)
+        getData({
+            type: "text",
+            url: `docs/${file}.txt`, 
+            callback: render
+        })
     })
 })
 // Peticiones al Servidor
-function getData(url, callback){
+function getData({url, type, callback}){
     const xhr = new XMLHttpRequest();
     xhr.open("GET", url);
+    xhr.responseType = type ?? "text";
     xhr.addEventListener("readystatechange", () => {
     if (xhr.readyState == 4){
         if (xhr.status == 200) callback(xhr.responseText)
         if (xhr.status == 404) callback(notFound())
     }})
+    xhr.addEventListener("progress", (e) => {
+        console.log(e.total, e.loaded)
+    })
     xhr.send()
 }
 // Carga de Contenido en Pagina
 function render(data){
     const main = document.querySelector("main");
-    main.innerHTML=`<section>${data}</section>`;
+    main.innerHTML=`<section class="card m-4 p-3">${data}</section>`;
 }
 // Estructura para Elemento no Encontrado
 const notFound = () => `
@@ -37,3 +45,8 @@ const notFound = () => `
 <p>
     No hemos podido encontrar la pagina solicitada, si el error persiste, comunicate con el administrador del sitio. Para que continues navegando te invitamos a visitar la siguiente <a href="/">direccion</a>
 </p>`
+const copyRight = () => {
+    const copy = document.getElementById("copy")
+    copy.innerHTML = "&copy;Todos los derechos reservados | " + new Date().toLocaleDateString()
+}
+copyRight()
