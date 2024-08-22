@@ -1,8 +1,15 @@
-import { getData } from "./async.js"
+import { getData } from "./async.js";
+import { root, links, brand } from "./variables.js";
+import Nav from "./components/navigation.js";
 
-const showResults = async() => {
-    const results = await getData("https://jsonplaceholder.typicode.com/users")
-    console.log(results)
-}
+root.innerHTML+= Nav(links, brand);
 
-console.log(showResults())
+document.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    console.log("hiciste click")
+    const tag = ev.target.tagName;
+
+    if(tag === "A"){
+        
+    }
+})

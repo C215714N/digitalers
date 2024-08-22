@@ -171,3 +171,109 @@ Establecen los límites que indican el comienzo y el final de líneas y palabras
 | __$__     | final de una linea
 | __\b__    | perimetro de una cadena
 | __\B__    | no esta en el perimetro
+
+
+## Programacion Asincrona
+
+El término asíncrono se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado
+
+### callback
+
+Es una función que se pasa a otra función como un argumento y que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción. Los callbacks aseguran que una función se ejecute despues de que se resuelva una tarea, para ello es necesario pasarla como parámetro y luego llamarla de vuelta después de que haya ocurrido algo o se haya completado alguna tarea. 
+
+* __cbFn:__ funcion invocada (callBack)
+* __args:__ argumentos de la funcion (callback)
+* __el:__   elemento del array (iteracion)
+* __i:__    indice del array (iteracion)
+* __Arr:__  array de referencia (iteracion)
+* __acc:__  variable acumuladora (iteracion)
+* __dy:__   retraso en milisegundos (tiempo)
+
+| funcion | parametros | descripcion
+|-|-|-|
+| __forEach__(`cbFn`)     | `el`, `i`, `Arr`  | ejecuta una funcion callback por cada elemento dentro de un array
+| __filter__(`cbFn`)      | `el`, `i`, `Arr`  | ejecuta una funcion que devuelve cada elemento que coincida
+| __find__(`cbFn`)        | `el`, `i`, `Arr`  | encuentra el primer elemento que devuelva la funcion callback
+| __map__(`cbFn`)         | `el`, `i`, `Arr`  | genera un array nuevo a partir del resultado de la funcion
+| __findIndex__(`cbFn`)   | `el`, `i`, `Arr`  | devuelve el indice del primer elemento que corresponda
+| __reduce__(`cbFn`)      | `acc`, `el`       | sumariza todos los valores de un array en una valor acumulado
+| __setInterval__(`cbFn`, `dy`) | `args` | ejecuta una funcion callback cada cierto periodo de tiempo
+| __setTimeout__(`cbFn`, `dy`)  | `args` | ejecuta una funcion despues de transcurrido cierto lapso de tiempo
+
+#### XMLHttpRequest
+```js
+function getData(url, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener('readystatechange', () =>
+        xhr.status === 200 ? 
+        callback(null, JSON.parse(xhr.responseText)) : 
+        callback("se produjo un error", null)
+    )
+    xhr.open('GET',url);
+    xhr.send();
+}
+```
+
+A pesar de ser una forma flexible y potente de controlar la asincronía, que permite realizar múltiples posibilidades, las funciones callbacks tienen ciertas desventajas evidentes. En primer lugar, el código creado con las funciones es algo caótico y tener que pasar un __NULL__ como parámetro en algunas funciones es poco elegante.
+
+### promise
+
+Es un proxy de un valor que no se conoce necesariamente y le permite asociar controladores con el valor eventual de éxito o el motivo de falla de una acción asíncrona. Esto permite a los métodos asíncronos que en lugar de devolver inmediatamente el valor final, devuelvan la promesa que proporciona el valor, en algún momento futuro.
+
+|estado|descripcion|
+|-|-|
+| __pending__ | la operacion esta pendiente, estado inicial|
+| __fulfilled__ | la operación se completó con éxito|
+| __rejected__ | la operación falló por algun motivo|
+
+Una _promesa pendiente puede cumplirse_ con un valor o _rechazarse con un motivo (error)_. Cuando ocurre cualquiera de estas opciones, se llama a los controladores asociados en cola por el _método then_. Si la promesa ya se ha cumplido o rechazado cuando se adjunta un manejador correspondiente, se llamará al manejador, por lo que no existe una condición de carrera entre la finalización de una operación asíncrona y la conexión de sus manejadores.
+
+|metodo|descripcion|
+|-|-|
+|__then__(`resolve`,`reject`)| Permite adjuntar funciones para manejar el éxito o el rechazo de la promesa |
+|__catch__(`reject`)| Permite manejar explicitamente los errores de rechazo de la promesa |
+|__finally__(`callback`) | Permite ejecutar una función independientemente del resultado, útil para limpiar recursos |
+
+#### API fetch
+```js
+function getData(url) {
+    return new Promise((resolve, reject) => {
+    fetch(url)
+    .then((res) => { 
+        if(!res.ok) throw new Error("error: "+res.status);
+        return res.json();
+    })
+    .then((data) => resolve(data))
+    .catch((error) => reject(error))
+})}
+```
+
+Las promesas son una mejora significativa sobre los callbacks para manejar la asincronía en JavaScript, ofreciendo un _código más legible y mantenible_, además de _facilitar la gestión de errores_ y el _flujo de control_ en operaciones asíncronas.
+
+### async/await
+
+Característica que proporciona una forma más concisa y fácil de trabajar con funciones asíncronas y promesas. async se utiliza para declarar que una función devuelve una promesa y permite usar await dentro de esa función para esperar a que una promesa se resuelva o se rechace antes de continuar con la ejecución del código. 
+
+| concepto | descripción |
+|-|-|
+| __async function__ |	Declaración de una función como asíncrona, que _retorna Promise_ |
+| __await__ |	Utilizado para esperar de manera síncrona la _resolución de la promesa_ |
+| __try/catch__ | _Manejo de errores_ que capturan excepciones de operaciones asincrónicas |
+| __Paralelismo__ |	Se puede lograr esperando múltiples promesas con _Promise.all() y await_ |
+| __Compatibilidad__ |	Se puede utilizar en _navegadores modernos y entornos Node.js_ |
+
+#### Try... Catch
+```js
+async function getData({url, ...req}) {
+    try {
+        const res = await fetch(url,req);
+        if (!res.ok) throw new Error("error: "+ res.status)
+        const data = await res.json()
+        return data
+    } catch (error) {
+        throw error
+    }
+}
+```
+
+__async/await__ es una herramienta poderosa que simplifica la escritura y el manejo de código asíncrono en JavaScript, mejorando la legibilidad y mantenibilidad del código en comparación con el uso tradicional de callbacks y encadenamiento de promesas.
