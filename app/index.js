@@ -6,10 +6,11 @@ root.innerHTML+= Nav(links, brand);
 
 document.addEventListener('click', (ev) => {
     ev.preventDefault();
-    console.log("hiciste click")
     const tag = ev.target.tagName;
-
     if(tag === "A"){
-        
+
+    }
+    if(tag === "BUTTON"){
+
     }
 })
