@@ -10,7 +10,7 @@ const Nav = (array, brand) => `
     </ul>
 </nav>`
 function menuList(array, links=""){
-    for (let item of array) links +=`<li><button class="nav-link" data-target="${item.link}">${item.text}</button></li>`
+    for (let item of array) links +=`<li><button class="nav-link" data-url="${item.link}" data-link="remote">${item.text}</button></li>`
     return links;
 }
 export default Nav;
