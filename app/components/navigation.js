@@ -1,5 +1,5 @@
 const Nav = (array, brand) => `
-<nav class="navbar navbar-dark bg-dark bg-gradient sticky-top py-2 px-3">
+<nav class="navbar navbar-dark navbar-expand-md bg-dark bg-gradient sticky-top py-2 px-3">
     <a class="navbar-brand" href="#">${brand}</a>
     <button class="navbar-toggler navbar-toggler-icon" 
         data-bs-target=".navbar-nav" 
