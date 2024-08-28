@@ -6,7 +6,7 @@ export const Post = async (post) => {
 const userData = await getData(jph+"/users/"+post.userId);
 const comments = await Comments(post.id);
 return `
-    <article class="card | col-md-10 col-xl-8 | mx-auto | shadow-lg">
+    <article class="card | col-md-10 col-xl-8 | mx-auto p-0 | shadow-lg">
         <header class="card-header">
             <h2 class="h3">${post.title}</h2>
             <p>Posted By ${userData.name}</p>

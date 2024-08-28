@@ -5,7 +5,12 @@ export const User = (user) =>`
         <p>${user.username} <a href="mailto:${user.email}">${user.email}</a></p>
     </header>
     <footer class="btn-group col-12 col-sm-4">
-        <button class="btn btn-primary">Ver perfil</button>
+        <button class="btn btn-primary" 
+            data-url="/users/${user.id}"
+            data-link="remote"
+            data-component="Profile">
+            Ver perfil
+        </button>
         <button class="btn btn-danger">Quitar</button>
     </footer>
 </article>`
