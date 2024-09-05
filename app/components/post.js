@@ -13,7 +13,7 @@ return `
         </header>
         <p class="card-body">${post.body}</p>
         <section class="card-footer">
-            <h3 class="h5">Comentarios</h3>
+            <h3 class="h5 |  col-md-8 col-lg-6 mx-auto">Comentarios</h3>
             ${/* CommentsForm()*/ "" }
             <div class="list-group list-group-flush | col-md-8 col-lg-6 | mx-auto">
             ${comments}

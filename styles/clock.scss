@@ -1,0 +1,77 @@
+
+$areas: title,time,H,m,s,type,start,pause,stop;
+@font-face {
+    font-family: "digital";
+    src: url("../assets/font/digital.ttf");
+}
+@mixin areas($array){
+@each $item in $array{
+    ##{$item}{ grid-area: $item};
+}}
+#root{
+    perspective: 10rem;
+    perspective-origin: top center;
+}
+#clock{
+    @include areas($areas);
+    position: relative;
+    max-width: min(80vw, 480px);
+    transform: rotateX(-5deg);
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+        "title title title"
+        "time time time"
+        "H m s"
+        "type type type"
+        "start pause stop";
+    gap: .25rem;
+    border: .5rem solid #333;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: #afa;
+    text-shadow: 0 0 .25rem #020;
+    background: #284 linear-gradient(#333a, #222a);
+    font-family: "digital";
+    box-shadow: 
+        -.5rem .5rem .5rem #3338,
+        0 -.5rem #3338 inset,
+        .75rem 0 #3338 inset,
+        -.75rem 0 #3338 inset
+    ;
+    perspective: 5rem;
+    perspective-origin: top center;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: calc(100% + .25rem);
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background-color: #333;
+        transform: rotateX(25deg) scale(.97)
+    }
+    h2,
+    p{
+        margin: 0;
+        text-align: center;
+        font: normal normal min(calc(10vw + .8rem), 3.5rem) digital;
+    }
+    input,
+    select{
+        border-radius: .25rem;
+        border: 1px solid;
+        color: #3c6;
+        background: #333;
+        font: digital;
+        text-align: right;
+    }
+    button{
+        border-radius: .25rem;
+        border: none;
+        padding: .25rem;
+        color: #3c6;
+        background: 
+            linear-gradient(#222,#333);
+    }
+}
