@@ -28,16 +28,16 @@ $areas: title,time,H,m,s,type,start,pause,stop;
     gap: .25rem;
     border: .5rem solid #333;
     border-radius: .5rem;
-    padding: 1rem;
+    padding: .5rem 1.5rem 1.5rem;
     color: #afa;
     text-shadow: 0 0 .25rem #020;
     background: #284 linear-gradient(#333a, #222a);
     font-family: "digital";
     box-shadow: 
         -.5rem .5rem .5rem #3338,
-        0 -.5rem #3338 inset,
-        .75rem 0 #3338 inset,
-        -.75rem 0 #3338 inset
+        0 -.75rem #333a inset,
+        .75rem 0 #333a inset,
+        -.75rem 0 #333a inset
     ;
     perspective: 5rem;
     perspective-origin: top center;
@@ -73,5 +73,13 @@ $areas: title,time,H,m,s,type,start,pause,stop;
         color: #3c6;
         background: 
             linear-gradient(#222,#333);
+        &:hover{
+            transform: translateZ(.1rem);
+            box-shadow: 0 -.25rem #333;
+            background: linear-gradient(#666,#444);
+        }
+        &:active{
+            transform: translate(0);
+        }
     }
 }
