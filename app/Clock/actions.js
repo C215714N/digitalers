@@ -14,14 +14,15 @@ export const ClickController = (e) => {
     clock = type.value == 1 ? new Timer(H,m,s) : new Cron(H,m,s)
     switch(id){
     case "start":
+        clearInterval(time);
         time = setInterval(()=> {
             p.innerHTML = clock.showTime();
             type.value == 1 ? clock.susTime() : clock.addTime()
         },1000)
     break;
     case "pause":
-        units.forEach(u => document.getElementById(u).value = parseInt(clock.get(u)))
         clearInterval(time)
+        units.forEach(u => document.getElementById(u).value = parseInt(clock.get(u)))
     break;
     case "stop":
         clearInterval(time)
