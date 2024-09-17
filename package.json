@@ -1,0 +1,28 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "ejercicios nodejs con modulos integrados y dependencias",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch .",
+    "test": "",
+    "deploy": "git push IT --all && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c2151714n/digitalers.git"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "javascript",
+    "environment"
+  ],
+  "author": "Cristian Racedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c2151714n/digitalers/issues"
+  },
+  "homepage": "https://github.com/c2151714n/digitalers#readme"
+}
