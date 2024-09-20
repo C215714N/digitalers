@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Raleway, calibri, sans-serif;    
+}
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.m-0 {
+    margin: 0;
+}
