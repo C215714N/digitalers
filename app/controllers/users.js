@@ -2,7 +2,7 @@ import User from "../models/users.js"
 import { users } from "../models/userModel.js"
 
 export const createUser = (req, res) => {
-    const newUser = new User({id: users.length,...req.body})
+    const newUser = new User({id: users.length + 1,...req.body})
     users.push(newUser)
     res.json({
         message: "usuario agregado exitosamente",
@@ -23,7 +23,7 @@ export const updateUser = (req, res) => {
     })
 }
 export const deleteUser = (req,res) => {
-    let deleted = idx = null;
+    let deleted, idx = null;
     users.forEach((usr,i) => usr.id == req.params.id && (
         deleted = usr, idx = i
     ))
