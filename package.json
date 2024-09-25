@@ -30,6 +30,7 @@
     "express": "^4.21.0"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "morgan": "^1.10.0"
   }
 }
