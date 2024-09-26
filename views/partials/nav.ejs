@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark navbar-expand-md p-2 bg-secondary sticky-top">
+    <a href="#" class="navbar-brand"><%=APP%></a>
+    <button class="navbar-toggler navbar-toggler-icon"  
+        data-bs-target="ul.navbar-nav" 
+        data-bs-toggle="collapse">
+    </button>
+    <ul class="navbar-nav navbar-collapse collapse">
+    <% navLinks.forEach( function (item) { %>
+        <li>
+            <a class="nav-link"
+                href="<%=item.link%>">
+                <%= item.text%>
+            </a>
+        </li>
+    <% }) %>
+    </ul>
+</nav>

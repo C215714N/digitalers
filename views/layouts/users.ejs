@@ -1,0 +1,16 @@
+<section class="container">
+    <h2>Lista de Usuarios</h2>
+    <ul class="list-group my-3 shadow">
+        <% users.forEach( function(usr) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <strong>Nombre: </strong>
+                <%= usr.user%> <br>
+                <strong>Correo: </strong>
+                <%=usr.email%>
+            </div>
+            <a href="/users/<%=usr.id%>" class="btn btn-primary float-end">Ver</a>
+        </li>
+        <% }) %>
+    </ul>
+</section>

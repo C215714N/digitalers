@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= APP %></title>
-</head>
+<!-- Cabecera de Documento -->
+<%- include ('partials/dochead') %>
 <body>
-    <header id="header">
-        <h1><%= APP %></h1>
-        <p>Bienvenido al sitio</p>
-    </header>
+    <!-- Cabecera de Pagina -->
+    <%- include('partials/header') %>
+    <!-- Navegacion -->
+    <%- include('partials/nav') %>
+    <!-- Contenido Principal -->
+    <main class="container py-4">
+    <% if (users) { %>
+        <%- include('layouts/users') %>
+    <% } %>
+    </main>
+    <!-- Pie de Pagina -->
+    <%- include('partials/footer') %>
 </body>
 </html>
