@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/c2151714n/digitalers#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.0"
   },
   "devDependencies": {
