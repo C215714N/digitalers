@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{APP}}</title>
-</head>
+<html lang="es">
+{{> dochead}}
 <body>
-    <header id="header">
-        <h1>{{APP}}</h1>
-        <p>Bienvenido al Sitio</p>
-    </header>
+    {{> nav}}
+    {{> header}}
+    <main class="container">
+    {{{body}}}
+    </main>
+    {{> footer}}
 </body>
 </html>

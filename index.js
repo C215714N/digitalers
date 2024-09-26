@@ -23,6 +23,6 @@ app.engine('hbs', engine({
 app.set("view engine", "hbs")
 // Rutas
 app.use('/users', usersRouter)
-app.use("/", (_,res) => res.render('index',{ APP, navLinks, users }))
+app.use("/", (_,res) => res.render('layouts/users',{ APP, navLinks, users }))
 // Ejecucion
 app.listen(PORT ?? 3000, () => console.log("service running on port "+PORT))

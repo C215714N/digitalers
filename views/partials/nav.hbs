@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark navbar-expand-md p-2 bg-dark sticky-top opacity-75">
+    <a href="#" class="navbar-brand">{{APP}}</a>
+    <button class="navbar-toggler navbar-toggler-icon"  
+        data-bs-target="ul.navbar-nav" 
+        data-bs-toggle="collapse">
+    </button>
+    <ul class="navbar-nav navbar-collapse collapse">
+    {{#each navLinks}}
+    <li> 
+        {{#with this}}
+        <a class="nav-link" href="{{link}}">{{text}}</a>
+        {{/with}}
+    </li> 
+    {{/each}}
+    </ul>
+</nav>
