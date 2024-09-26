@@ -1,0 +1,10 @@
+nav.navbar.navbar-dark.navbar-expand-md.p-2.bg-dark.sticky-top
+    a.navbar-brand(href="#")=APP
+    button.navbar-toggler.navbar-toggler-icon(
+        data-bs-target="ul.navbar-nav"
+        data-bs-toggle="collapse"
+    )
+    ul.navbar-nav.navbar-collapse.collapse
+        each item in navLinks
+            li
+                a.nav-link(href=item.link)=item.text

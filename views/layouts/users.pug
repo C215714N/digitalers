@@ -1,0 +1,12 @@
+section.container
+    h2 Lista de Usuarios
+    ul.list-group.my-3.shadow
+        each usr in users 
+            li.list-group-item.d-flex.justify-content-between.align-items-center
+                div
+                    strong Nombre: 
+                    =usr.user
+                    br
+                    strong Correo: 
+                    =usr.email
+                a(href="/users/"+usr.id).btn.btn-primary.float-end Ver
