@@ -30,3 +30,6 @@ Esto es una guia para los alumnos de digitalers que realizan la capacitacion Nod
     * [DTO](./docs/dto.md)
     * [MVC](./docs/mvc.md)
     * [MRC](./docs/mrc.md)
+* Pruebas de Desarrollo
+    * [TDD](./docs/tdd.md)
+    * [BDD](./docs/bdd.md)
