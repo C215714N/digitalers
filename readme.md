@@ -21,3 +21,12 @@ Esto es una guia para los alumnos de digitalers que realizan la capacitacion Nod
     * [url](./docs/core.md#url)
     * [path](./docs/core.md#path)
     * [file system](./docs/core.md#fs)
+* Motores de Plantillas
+    * [Pug](./docs/pug.md)
+    * [EJS](./docs/ejs.md)
+    * [Handlebars](./docs/hbs.md)
+* Patrones de Diseño
+    * [DAO](./docs/dao.md)
+    * [DTO](./docs/dto.md)
+    * [MVC](./docs/mvc.md)
+    * [MRC](./docs/mrc.md)
