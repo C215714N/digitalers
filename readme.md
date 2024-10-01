@@ -9,3 +9,15 @@ Esto es una guia para los alumnos de digitalers que realizan la capacitacion Nod
 * [VS Code: Editor de Codigo](https://code.visualstudio.com)
 * [Postman: Herramienta para pruebas HTTP](https://postman.com)
 
+## Tabla de Contenidos
+
+* [REPL](./docs/repl.md)
+* [Objetos Globales](./docs/global.md)
+    * [console](./docs/global.md#console)
+    * [process](./docs/global.md#process)
+    * [timers](./docs/global.md#timers)
+* [Modulos Integrados](./docs/core.md)
+    * [Operating System](./docs/core.md#os)
+    * [url](./docs/core.md#url)
+    * [path](./docs/core.md#path)
+    * [file system](./docs/core.md#fs)
