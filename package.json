@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/c2151714n/digitalers#readme",
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "mongoose": "^8.6.4"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
