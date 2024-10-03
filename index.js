@@ -13,5 +13,6 @@ app.use(morgan('tiny'))
 app.use(express.urlencoded({extended: false}))
 // Rutas
 app.use('/users', usersRouter)
+app.use(express.static('public'))
 // Ejecucion
 app.listen(PORT ?? 3000, () => console.log("service running on port "+PORT))
