@@ -1,40 +1,25 @@
-import User from "../models/users.js"
-import { users } from "../models/userModel.js"
-
-export const createUser = (req, res) => {
-    const newUser = new User({id: users.length + 1,...req.body})
-    users.push(newUser)
-    res.json({
-        message: "usuario agregado exitosamente",
-        data: newUser
-    })
+import UserDao from "../DAO/user.js"
+import { User } from "../models/user.js"
+export const createUser = ({body}, res) => {
+    const userData = new UserDao(body);
+    const newUser = new User(userData);
+    newUser.save()
+    .then(result => res.json({ ...result, data: newUser }))
+    .catch(err => res.json(err))
 }
 export const getUsers = (req,res) => {
-    res.json(req.params.id ? users.filter(usr => usr.id == req.params.id) : users)
+    User.find()
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
 }
 export const updateUser = (req, res) => {
-    users.forEach((usr,i) => {
-        usr.id == req.params.id && (
-        users[i] = {...usr, ...req.body}
-    )})
-    res.json({
-        message: "usuario actualizado con exito",
-        data: req.body
-    })
+    const userData = new UserDao(req.body)
+    User.updateOne({_id},{ $set: userData })
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
 }
-export const deleteUser = (req,res) => {
-    let deleted, idx = null;
-    users.forEach((usr,i) => usr.id == req.params.id && (
-        deleted = usr, idx = i
-    ))
-    if (idx){
-    users.splice(idx, 1)
-        res.json({
-            message: "usuario eliminado",
-            data: deleted
-    })}
-    else res.status(404).json({
-        code: 404,
-        message: "no se encontro al usuario "+ req.params.id,
-    })
+export const deleteUser = ({params:id}, res) => {
+    User.deleteOne({_id: ObjectId(id)})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
 }
