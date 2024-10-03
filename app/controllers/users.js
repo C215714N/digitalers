@@ -11,8 +11,9 @@ export const createUser = ({body}, res) => {
     }))
     .catch(err => res.json(err))
 }
-export const getUsers = (req,res) => {
-    User.find().sort({_id: -1})
+export const getUsers = ({params:{id:_id}},res) => {
+    const query = _id ? {_id} : {}
+    User.find(query).sort({_id: -1})
     .then(result => res.json(result))
     .catch(err => res.json(err))
 }
