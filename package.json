@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --watch .",
-    "test": "",
+    "test": "mocha index.test.js",
     "deploy": "git push IT --all && git push --tags"
   },
   "repository": {
@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/c2151714n/digitalers/issues"
   },
-  "homepage": "https://github.com/c2151714n/digitalers#readme"
+  "homepage": "https://github.com/c2151714n/digitalers#readme",
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "chai-http": "^5.0.0",
+    "mocha": "^10.7.3"
+  }
 }
