@@ -1,0 +1,16 @@
+<nav>
+    <a href="#">{{appName}}</a>
+    <button class="navbar-toggler navbar-toggler-icon"
+        data-bs-target="#menu"
+        data-bs-toggle="collapse">
+    </button>
+    <ul id="menu">
+    {{#each links}}
+        {{#with this}}
+        <li>
+            <a class="nav-link {{icon}}" href="{{url}}">{{text}}</a>
+        </li>
+        {{/with}}
+    {{/each}}
+    </ul>
+</nav>
