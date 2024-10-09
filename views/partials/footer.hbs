@@ -1,6 +1,10 @@
-<footer id="footer">
-    <p>&copy;{{year}} Todos los derechos reservados | {{author}}</p>
+<footer id="footer" class="sticky-bottom | pt-5 px-3 pb-2 | opacity-50">
+    <p class="m-0">&copy;{{year}} Todos los derechos reservados | {{author}}</p>
 </footer>
 {{#each scripts}}
-    <script src="{{this}}" type="module"></script>
+    {{#with this}}
+    <script src="{{url}}"
+    {{#if type}} type="{{type}}" {{/if}}>
+    </script>
+    {{/with}}
 {{/each}}
