@@ -1,3 +1,4 @@
+{{>msg}}
 <form action="/signin" method="post" class="container | col-md-8 col-lg-6 col-xxl-4 | m-3 mx-auto p-3 rounded shadow">
     <h2>Crear Cuenta</h2>
     <label for="user">Ingrese su Usuario</label>
@@ -23,5 +24,6 @@
         type="password" 
         id="pass2" 
         required>
-    <button class="d-block my-2 ms-auto | btn btn-success">Registrarse</button>
+    <p class="m-0">Ya tengo cuenta <a href="/login">Iniciar sesion</a></p>
+    <button class="d-block ms-auto | btn btn-success">Registrarse</button>
 </form>

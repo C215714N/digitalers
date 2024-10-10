@@ -1,0 +1,11 @@
+{{#if message}}
+<div class="alert alert-{{#if err}}danger{{else}}success{{/if}} | m-3 mx-md-auto | col-md-8 col-lg-6">
+    <button class="btn-close float-end" data-bs-dismiss="alert"></button>
+    <h2>{{title}}</h2>
+    <p>{{message}}</p>
+    {{#with err.errResponse}}
+        <strong>Codigo: </strong> {{code}}
+        <strong>Detalle: </strong> {{errmsg}}
+    {{/with}}
+</div>
+{{/if}}
