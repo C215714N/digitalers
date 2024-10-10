@@ -7,7 +7,7 @@ export const hashPassword = (req, res, next) => {
         req.body.password = pass
         next()
     })
-    .catch(err => res.render('./layouts/error', appConfig))
+    .catch(err => res.render('./layouts/error', {...appConfig, err}))
 }
 export const hp = async (req, res, next) => {
     try{

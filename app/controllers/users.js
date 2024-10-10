@@ -1,15 +1,19 @@
 import UserDao from "../DAO/user.js"
 import { User } from "../models/user.js"
+import { appConfig } from "../config/application.js";
+
 export const createUser = ({body}, res) => {
     const userData = new UserDao(body);
     const newUser = new User(userData);
     newUser.save()
-    .then(result => res.render('signin', {
-        status: res.status,
-        message: "usuario creado exitosamente",
-        data: newUser 
+    .then(() => res.render('./layouts/signin',{
+        ...appConfig, title: "Registro Exitoso",
+        message: "su cuenta ha sido creada"
     }))
-    .catch(err => res.render('signin', err))
+    .catch(err => res.render('./layouts/signin',{
+        ...appConfig, err, title: "Registro Fallido",
+        message: "Hubo un inconveniente con los datos ingresados"
+    }))
 }
 export const getUsers = ({params:{id:_id}},res) => {
     const query = _id ? {_id} : {}
