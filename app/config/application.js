@@ -9,6 +9,8 @@ export const appConfig = {
         {icon: "user", url: "/users", text: "usuarios"},
         {icon: "box-open", url: "/products", text: "productos"},
         {icon: "newspaper", url: "/posts", text: "muro"},
+        {icon: "user", url: "/login", text: "Iniciar Sesion"},
+        {icon: "user", url: "/signin", text: "Registrarse"},
     ],
     styles: [
         'styles/default.css',

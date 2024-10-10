@@ -4,12 +4,12 @@ export const createUser = ({body}, res) => {
     const userData = new UserDao(body);
     const newUser = new User(userData);
     newUser.save()
-    .then(result => res.json({
+    .then(result => res.render('signin', {
         status: res.status,
         message: "usuario creado exitosamente",
         data: newUser 
     }))
-    .catch(err => res.json(err))
+    .catch(err => res.render('signin', err))
 }
 export const getUsers = ({params:{id:_id}},res) => {
     const query = _id ? {_id} : {}
