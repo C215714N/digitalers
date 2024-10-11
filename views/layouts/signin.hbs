@@ -3,26 +3,31 @@
     <h2>Crear Cuenta</h2>
     <label for="user">Ingrese su Usuario</label>
     <input class="form-control" 
-        type="text" 
         id="user" 
         name="name" 
+        type="text" 
+        minlength="6"
         required>
     <label for="email">Ingrese su Correo</label>
     <input class="form-control" 
-        type="email" 
         id="email" 
         name="email" 
+        type="email" 
+        minlength="8"
         required>
     <label for="pass1">Ingrese su Contraseña</label>
     <input class="form-control" 
-        type="password" 
         id="pass1" 
         name="password" 
+        type="password"
+        minlength="6"   
         required>
     <label for="pass2">Repita su Contraseña</label>
     <input class="form-control" 
-        type="password" 
         id="pass2" 
+        name="pass2"
+        type="password"
+        minlength="6" 
         required>
     <p class="m-0">Ya tengo cuenta <a href="/login">Iniciar sesion</a></p>
     <button class="d-block ms-auto | btn btn-success">Registrarse</button>

@@ -1,14 +1,14 @@
 import * as auth from '../controllers/users.js';
+import * as get from '../controllers/auth.js'
 import { Router } from "express";
-import { appConfig } from '../config/application.js'
-import { hashPassword } from '../middleware/auth.js';
+import { createToken, hashPassword, verifyUser } from '../middleware/auth.js';
 
 const authRouter = Router();
-authRouter.get("/", (req, res) => res.render('./layouts/home', appConfig))
-authRouter.get("/signin", (req, res) => res.render('./layouts/signin', appConfig))
-authRouter.get("/login", (req, res) => res.render('./layouts/login', appConfig))
+authRouter.get("/", get.home)
+authRouter.get("/signin", get.signIn)
+authRouter.get("/login", get.logIn)
 
-authRouter.post('/login', auth.getUsers)
+authRouter.post('/login', verifyUser, createToken)
 authRouter.post('/signin', hashPassword, auth.createUser)
 
 export default authRouter;
