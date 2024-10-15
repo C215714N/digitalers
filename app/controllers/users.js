@@ -21,7 +21,7 @@ export const getUsers = ({params:{id:_id}},res) => {
     .then(result => res.json(result))
     .catch(err => res.json(err))
 }
-export const updateUser = ({params:{id:_id}, body}, res) => {
+export const updateUser = ({body:{id:_id}}, res) => {
     const userData = new UserDao(body)
     User.updateOne({_id},{ $set: userData})
     .then(({modifiedCount}) => res.json({
@@ -33,8 +33,7 @@ export const updateUser = ({params:{id:_id}, body}, res) => {
     }))
     .catch(err => res.json(err))
 }
-export const deleteUser = (req, res) => {
-    const {id:_id} = req.params;
+export const deleteUser = ({body:{id:_id}}, res) => {
     User.deleteOne({_id})
     .then(({deletedCount}) => res.json({
         status: deletedCount ? 200 : 404,

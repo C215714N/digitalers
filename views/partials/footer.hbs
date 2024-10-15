@@ -3,8 +3,9 @@
 </footer>
 {{#each scripts}}
     {{#with this}}
-    <script src="{{url}}"
-    {{#if type}} type="{{type}}" {{/if}}>
-    </script>
+    <script src="{{url}}"{{#if type}} type="{{type}}"{{/if}}></script>
     {{/with}}
 {{/each}}
+<script>
+    const token ={{#if token}}'{{token}}'{{else}}null{{/if}} ;
+</script>

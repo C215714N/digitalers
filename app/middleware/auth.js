@@ -1,7 +1,6 @@
 import bcrypt from "bcrypt"
 import { User } from "../models/user.js"
 import { appConfig } from "../config/application.js"
-import jwt from "jsonwebtoken"
 
 export const hashPassword = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)
@@ -19,16 +18,4 @@ export const verifyUser = (req, res, next) => {
         title:"No se han podido validar las credenciales", 
         message:"Revise que todos los datos sean correctos"
     }))
-}
-
-export const createToken = (req, res, next) => {
-    const { id } = req.body
-    const { SECRET } = process.env
-    const token = jwt.sign({id}, SECRET, { expiresIn: "1h" })
-    res.json({ token })
-}
-
-export const checkToken = (req, res, next) => {
-    
-    jwt.verify(token, SECRET)
 }
