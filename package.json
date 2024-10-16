@@ -2,13 +2,13 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "ejercicios nodejs con modulos integrados y dependencias",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "start": "node --watch .",
-    "test": "",
+    "test": "tsc --build && node --watch dist/index.js",
     "deploy": "git push IT --all && git push --tags",
-    "build": "tsc index.ts"
+    "build": "tsc --build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/c2151714n/digitalers#readme",
   "devDependencies": {
+    "@types/node": "^22.7.5",
     "typescript": "^5.6.3"
   }
 }
