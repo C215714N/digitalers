@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node --watch .",
     "test": "",
-    "deploy": "git push IT --all && git push --tags"
+    "deploy": "git push IT --all && git push --tags",
+    "build": "tsc index.ts"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/c2151714n/digitalers/issues"
   },
-  "homepage": "https://github.com/c2151714n/digitalers#readme"
+  "homepage": "https://github.com/c2151714n/digitalers#readme",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
 }
