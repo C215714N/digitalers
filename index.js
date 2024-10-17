@@ -14,7 +14,9 @@ app.use(express.static('public'));
 ws.on("connection", socket => {
     console.log("Se ha conectado el cliente " + socket.id)
     // Transmision de datos
-    socket.on("message", (data) => ws.emit("message", data))
+    socket.on("message", (data) => {
+        ws.emit("message", data)
+    })
     // Desconexion de Usuario
     socket.on("disconnect", () => console.log("Se ha desconectado el cliente " + socket.id))
 })
