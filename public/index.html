@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <h1>Digichatters</h1>
+    <section id="chat-box">
+        <article class="other-users">
+            <h2>Administrador</h2>
+            <p>
+                Bienvenido al DigiChat, aqui es donde la aventura continua...
+            </p>
+        </article>
+        <article class="current-user">
+            <h2>Administrador</h2>
+            <p>
+                Bienvenido al DigiChat, aqui es donde la aventura continua...
+            </p>
+        </article>
+    </section>
+    <form id="message-box">
+        <label for="usr">Escribe tu nombre</label>
+        <input 
+            id="usr" 
+            name="usr" 
+            type="text"
+            minlength="4"
+            placeholder="Escribe tu nombre"
+            required>
+        <label for="msg">Escribe un mensaje</label>
+        <textarea 
+            id="msg" 
+            name="msg"
+            minlength="2"
+            maxlength="2000"
+            placeholder="Escribe tu mensaje"
+            required></textarea>
+        <button>Enviar</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app/index.js"></script>
+</body>
+</html>
