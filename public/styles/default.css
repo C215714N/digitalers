@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open sans', 'Raleway', 'calibri', sans-serif;
+    scroll-behavior: smooth;
+    transition: all .25s linear;
+}
+/* Margin */
+body,
+h1,
+h2,
+header p{
+    margin: 0;
+}
+/* Estilos Generales */
+body{
+    background-color: #666;
+}
+h1{
+    background-color: #eee;
+    font-size: 1rem;
+    padding: .25rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+h2{
+    font-size: 1rem;
+}
+p{
+    margin: .2rem 0;
+}
+/* Seccion de Mensajes */
+#chat-box{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 3rem);
+    padding: .5rem;
+    gap: 1rem;
+}
+#chat-box article{
+    position: relative;
+    max-width: min(80vw, 540px);
+    border-radius: .5rem;
+    padding: .5rem;
+    background: var(--color) linear-gradient(#fff8, #fff4);
+}
+#chat-box article::before{
+    content: '';
+    position: absolute;
+    top: calc(100% - .25rem);
+    width: 1rem;
+    height: 1rem;
+    background: var(--color) linear-gradient(#fff4, #fff2);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0);
+}
+/* Mensajes */
+[class*="other"]{
+    --color: #aaa;
+}
+[class*="current"]{
+    --color: #3c6;
+    margin-left: auto;
+}
+/* Punta cuadro de dialogo */
+[class*="other"]::before{
+    left: .5rem;
+}
+[class*="current"]::before{
+    right: .5rem;
+    transform: rotateY(180deg);
+}
+/* Formulario */
+#message-box{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin: 1rem auto 0;
+    border-radius: .25rem;
+    padding: .5rem;
+    gap: .25rem;
+}
+#message-box * {
+    font-size: 1rem;
+    outline: none;
+    border-radius: .25rem;
+    border: 1px solid;
+    padding: .25rem .5rem;
+}
+label{
+    position: fixed;
+    opacity: 0;
+}
+textarea{
+    min-height: 5rem;
+    resize: vertical;
+}
+button{
+    color: #284;
+}
+button:hover{
+    color: #eee;
+    background-color: #284;
+}
