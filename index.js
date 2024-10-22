@@ -15,7 +15,12 @@ ws.on("connection", socket => {
     console.log("Se ha conectado el cliente " + socket.id)
     // Transmision de datos
     socket.on("message", (data) => {
-        ws.emit("message", data)
+        ws.emit("message", { id: socket.id, ...data} )
+    })
+    // Carga de Mensajes Anteriores
+    socket.on('load', async () => {
+        const data = []
+        data.length && socket.emit('chat', data)
     })
     // Desconexion de Usuario
     socket.on("disconnect", () => console.log("Se ha desconectado el cliente " + socket.id))

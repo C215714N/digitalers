@@ -8,17 +8,20 @@ const resetForm = () => {
     msg.value = "";
     msg.focus()
 }
-// Recepcion de datos
-socket.on("message", ({user, message:msg}) => {
+const addMessage = ({id, user, message:msg}) => {
     const isMine = () => user == messageBox.usr.value ? 'current-user' : 'other-users' // Verificacion de Nombre de Usuario
     const message = Object.assign( document.createElement('article'), {
+        id,
         className: isMine(),
         innerHTML: `
             <h2>${user}</h2>
             <p>${msg}</p>`
     }); // Creacion de Objeto Mensaje con sus atributos
     chatBox.appendChild(message) // Anidacion de Mensaje
-})
+} 
+// Recepcion de datos
+socket.on("message", addMessage)
+socket.on("chat", (arr) => arr.forEach(item => addMessage(item)))
 // Envio de Datos
 messageBox.addEventListener('submit', (e) => {
     e.preventDefault() // Evitamos la recarga de la pagina
@@ -33,4 +36,7 @@ messageBox.addEventListener('submit', (e) => {
 messageBox.msg.addEventListener('keyup', (e) => {
     const button = messageBox.querySelector('button');  
     if (e.ctrlKey && e.key == "Enter") button.click()
+})
+document.addEventListener('DOMContentLoaded', () => {
+    socket.emit('load')
 })
