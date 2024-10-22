@@ -2,12 +2,20 @@
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import express from "express";
+import * as u from "./src/users.controller.js";
+import { dbConn } from "./src/db.config.js";
+import { configDotenv } from "dotenv";
 /** DECLARACIONES */
-const { PORT = 3000 } = process.env;
+configDotenv()
+const { 
+    PORT = 3000, 
+    URI = "mongodb://localhost:27017/digichat" 
+} = process.env;
 const app = express();
 const server = createServer(app);
 const ws = new Server(server);
 /* CONFIGURACION */
+dbConn(URI)
 app.use(express.static('public'));
 /* WEBSOCKET */
 // Conexion de usuarios
@@ -22,6 +30,11 @@ ws.on("connection", socket => {
         const data = []
         data.length && socket.emit('chat', data)
     })
+    // Acciones de Usuario
+    socket.on("create", (data) => u.createUser(data, socket))
+    socket.on("find", (filter) => u.findUser(filter, socket))
+    socket.on("update", (obj) => u.updateUser(obj, socket))
+    socket.on("delete", (filter) => u.deleteUser(filter, socket))
     // Desconexion de Usuario
     socket.on("disconnect", () => console.log("Se ha desconectado el cliente " + socket.id))
 })
