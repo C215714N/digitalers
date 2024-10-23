@@ -8,26 +8,51 @@
 body,
 h1,
 h2,
-header p{
+header p,
+.menu{
     margin: 0;
+}
+.menu{
+    padding: 0;
+}
+.menu{
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
 }
 /* Estilos Generales */
 body{
     background-color: #666;
 }
 h1{
-    background-color: #eee;
     font-size: 1rem;
-    padding: .25rem;
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 h2{
     font-size: 1rem;
 }
 p{
     margin: .2rem 0;
+}
+/* Barra de Navegacion */
+nav{
+    display: flex;
+    gap: .5rem;
+    background-color: #eee;
+    padding: .25rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.menu{
+    display: flex;
+    gap: .5rem; 
+}
+form{
+    display: none;
+}
+form:target{
+    display: flex;
 }
 /* Seccion de Mensajes */
 #chat-box{
@@ -70,10 +95,9 @@ p{
     transform: rotateY(180deg);
 }
 /* Formulario */
-#message-box{
+form{
     position: sticky;
     bottom: 0;
-    display: flex;
     flex-direction: column;
     max-width: 420px;
     margin: 1rem auto 0;
@@ -81,7 +105,7 @@ p{
     padding: .5rem;
     gap: .25rem;
 }
-#message-box * {
+form * {
     font-size: 1rem;
     outline: none;
     border-radius: .25rem;
