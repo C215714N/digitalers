@@ -27,7 +27,16 @@ ws.on("connection", socket => {
     })
     // Carga de Mensajes Anteriores
     socket.on('load', async () => {
-        const data = []
+        const data = [
+            {
+                user: "admin",
+                message: "Bienvenido a Digichatters"
+            },
+            {
+                user: "c215714n",
+                message: "Ahora es cuando la aventura digievoluciona"
+            }
+        ]
         data.length && socket.emit('chat', data)
     })
     // Acciones de Usuario
