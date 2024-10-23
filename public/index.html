@@ -7,16 +7,25 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <h1>Digichatters</h1>
+    <nav>
+        <h1>Digichatters</h1>
+        <ul class="menu">
+            <li><a href="#message-box">Chat</a></li>
+            <li><a href="#login">Iniciar Sesion</a></li>
+            <li><a href="#signin">Registrarse</a></li>
+        </ul>
+    </nav>
     <section id="chat-box"></section>
+    <!-- Formulario de Mensaje -->
     <form id="message-box">
-        <label for="usr">Escribe tu nombre</label>
+        <label for="usr">Usuario</label>
         <input 
             id="usr" 
             name="usr" 
             type="text"
             minlength="4"
-            placeholder="Escribe tu nombre"
+            placeholder="Usuario"
+            disabled
             required>
         <label for="msg">Escribe un mensaje</label>
         <textarea 
@@ -27,6 +36,42 @@
             placeholder="Escribe tu mensaje"
             required></textarea>
         <button>Enviar</button>
+    </form>
+    <!-- Formulario de Inicio de Sesion -->
+    <form id="login">
+        <label for="user">Ingrese su Nombre, correo o telefono</label>
+        <input 
+            id="user" 
+            name="user" 
+            type="text"
+            placeholder="Ingrese su Nombre, Correo o Numero telefonico"
+            required>
+        <button>Aceptar</button>
+    </form>
+    <!-- Formulario de Registro -->
+    <form id="signin">
+        <label for="username">Ingrese un Nombre de Usuario</label>
+        <input 
+            id="username" 
+            name="username" 
+            type="text" 
+            placeholder="Ingrese un Nombre de Usuario"
+            required>
+        <label for="email">Ingrese su Correo</label>
+        <input 
+            id="email" 
+            name="email" 
+            type="email" 
+            placeholder="Ingrese su Correo"
+            required>
+        <label for="phone">Escriba su numero de Telefono</label>
+        <input 
+            id="phone" 
+            name="phone" 
+            type="tel" 
+            placeholder="Escriba su numero de Telefono"
+            required>
+        <button>Registrarse</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app/serviceWorker.js"></script>
