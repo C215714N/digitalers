@@ -66,19 +66,54 @@
                         <strong>value</strong> corresponde al dato enviado, normalmente es implicito, pero podemos establecer un valor predeterminado en caso de ser necesario.
                     </li>
                 </ul>
+                <p>
+                    Pueden obtener mas informacion sobre formularios en <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools</a> 
+                </p>
             </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-
+        <form id="contact" action="scripts/contact.php" method="post">
+            <h2>Hacenos tu consulta</h2>
+            <label for="contactName">Ingrese su Nombre</label>
+            <input 
+                id="contactName" 
+                name="name" 
+                type="text"
+                required>
+            <label for="contactEmail">Ingrese su Correo</label>
+            <input
+                id="contactEmail"
+                name="email" 
+                type="email"
+                minlength="8"
+                required>
+            <label for="contactSubject">Seleccione el Asunto</label>
+            <select id="contactSubject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Estilos con CSS</option>
+                <option value="js">Logica con JS</option>
+            </select>
+            <label for="contactConsult">Realice su Consulta</label>
+            <textarea 
+                id="contactConsult" 
+                name="consult"
+                minlength="30"
+                maxlength="1500"
+                required></textarea>
+                <input class="button" type="submit" value="ENVIAR">
+        </form>
         <!-- Redes Sociales -->
 
         <!-- Mapa de Contacto -->
 
         <!-- Derechos de Autor -->
-        <p>&copy;2025 Todos los derechos reservados</p>
+        <p>
+            &copy;2025 Todos los derechos reservados | 
+            para mas informacion enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">CristianDRacedo@hotmail.com</a>
+        </p>
     </footer>
 </body>
 </html>
