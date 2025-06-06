@@ -21,7 +21,20 @@ header p,
 /* Cabecera de Pagina */
 
 /* Navegacion Principal */
-
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #448;
+}
+.menu a{
+    color: #ccc;
+}
+.menu :is(.active, a:hover) {
+    color: #eee;
+    text-shadow: 0 0 8px #eee ; /* -x+ -y+ blur color*/
+}
 /* Contenido Principal */
 
 /* Pie de Pagina */
