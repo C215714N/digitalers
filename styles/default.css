@@ -19,7 +19,25 @@ header p,
     list-style: none;
 }
 /* Cabecera de Pagina */
-
+#header {
+    padding: min(20%,240px) 16px;
+    text-align: center;
+    text-shadow: 
+        0 0 4px #333,
+        -4px 4px 4px #448;
+    background-image: url("../assets/bg/osx-leopard.jpg");
+    background-size: cover; /* width height | cover | contain*/
+    background-position: center; /* x y | top bottom center left right*/
+}
+.header {
+    padding: 8px;
+    background-color: #448;
+    color: #eee;
+}
+header {
+    border-bottom: 2px solid;
+    color: #448;
+}
 /* Navegacion Principal */
 .menu {
     display: flex;
