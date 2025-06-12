@@ -7,8 +7,12 @@ h1,
 h2,
 h3,
 header p,
+.container figure,
 .menu {
     margin: 0;
+}
+iframe{
+    border: none;
 }
 :is(nav,footer) a {
     text-decoration: none;
@@ -54,7 +58,45 @@ header {
     text-shadow: 0 0 8px #eee ; /* -x+ -y+ blur color*/
 }
 /* Contenido Principal */
-
+main {
+    max-width: 960px;
+    margin: 16px auto;
+}
+article {
+    margin: 16px 0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 0 16px #ccc;
+    overflow: hidden;
+}
+    /* Secciones de Ejemplo */
+    .example {
+        max-width: 720px;
+        margin: 8px auto 16px;
+        border-left: 4px solid #448;
+        padding: 16px 24px;
+        line-height: 1.5;
+        background-color: #eee;
+        box-shadow: -8px 8px 8px #ccc;
+    }
+    .container {
+        display: flex;
+        gap: 8px;
+        overflow: auto;
+    }
+    /* Contenido Multimedia */
+    iframe,
+    video {
+        width: 100%;
+        height: calc(100% - 24px);
+    }
+    figure {
+        min-width: min(640px, 90%);
+        min-height: 360px;
+    }
+    video {
+        object-fit: cover;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
