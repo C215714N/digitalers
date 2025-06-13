@@ -144,6 +144,7 @@ article {
     .social {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap-reverse;
         gap: 8px;
         padding: 16px;
     }
@@ -156,6 +157,11 @@ article {
         background-position: center;
         background-repeat: no-repeat;
     }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 4px 8px #333;
+    }
     /* Iconos Redes sociales */
     .facebook {
         background-image: url("../assets/icon/facebook.svg");
@@ -163,8 +169,17 @@ article {
     .instagram {
         background-image: url("../assets/icon/instagram.svg");
     }
+    .linkedin {
+        background-image: url("../assets/icon/linkedin.svg");
+    }
     .twitter {
         background-image: url("../assets/icon/twitter.svg");
+    }
+    .youtube {
+        background-image: url("../assets/icon/youtube.svg");
+    }
+    .whatsapp {
+        background-image: url("../assets/icon/whatsapp.svg");
     }
     .github {
         background-image: url("../assets/icon/github.svg");
