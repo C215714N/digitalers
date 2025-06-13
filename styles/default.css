@@ -100,6 +100,48 @@ article {
     video {
         object-fit: cover;
     }
+    /* Tablas */
+    table caption {
+        border-radius: 8px 8px 0 0; /* TL TR BR BL -> sentido horario*/
+    }
+    table caption,
+    th,
+    td {
+        min-width: 50px;
+        padding: 4px 8px;
+    }
+    .classic {
+        border-collapse: collapse;
+    }
+    .classic :is(
+        caption,
+        th, 
+        td
+    ){
+        border: 2px solid #448;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern :is(
+        caption,
+        tr,
+        td
+    ){
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5); /*Alpha(transparencia) 0-1*/
+        text-shadow: -1px 1px 2px #333;
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #3c6;
+    }
+    .semantic tfoot{
+        background-color: #36c;
+    }
 /* Pie de Pagina */
     #footer iframe{
         min-height: 320px;
