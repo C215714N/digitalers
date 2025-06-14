@@ -269,6 +269,84 @@
                     </table>
                 </div>
             </section>
+            <section>
+                <header>
+                    <h3>¿Celdas combinadas?</h3>
+                </header>
+                <p>
+                    En caso de ser necesario, podemos expandir el tamaño de una celda, ya sea, <em>de manera horizontal o vertical</em> con los atributos <strong>colspan="..."</strong> y <strong>rowspan="..."</strong> respectivamente. Debemos tener en cuenta que el contenido posterior sera desplazado a la derecha de las celdas ocupadas.
+                </p>
+                <div class="example container">
+                    <table class="modern semantic">
+                        <caption>Venta de Insumos</caption>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Teclado</td>
+                                <td>27000</td>
+                                <td>1</td>
+                                <td>27000</td>
+                            </tr>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>340000</td>
+                                <td>3</td>
+                                <td>1020000</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>48000</td>
+                                <td>2</td>
+                                <td>96000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">Total</th>
+                                <td>1143000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="classic modern semantic">
+                        <caption>Desarrollo</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">FrontEnd</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">BackEnd</td>
+                                <td>SQL</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                            </tr>
+                            <tr>
+                                <td>JAVA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
