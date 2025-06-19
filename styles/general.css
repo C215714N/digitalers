@@ -1,5 +1,12 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'digitales', 'Ubuntu', 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', 'Open Sans', sans-serif;
+}
+/* Tipografia */
+.techno {
+    font-family: 'techno';
+}
+.digitales {
+    font-family: 'digitales';
 }

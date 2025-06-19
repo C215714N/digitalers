@@ -1,0 +1,15 @@
+@font-face {
+    src: url("../assets/fonts/technova.ttf");
+    font-family: "digitales";
+}
+@font-face {
+    src: url("/assets/fonts/optimus.otf");
+    font-family: "techno";
+}
+/* FORMATOS
+    eot (Ethernet Open Type)
+    otf (Open Type Font)
+    svg (scalable vector graphics)
+    ttf (True Type Font)
+    woff (Web Open Font File)
+*/
