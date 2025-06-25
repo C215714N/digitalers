@@ -64,6 +64,17 @@ En un formulario encontraremos campos que indican que valores podemos ingresar. 
 |textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
 |select| seleccione un lenguaje <br> html <br> css <br> js |
 
+## Acceso FTP
+
+Se conoce con este nombre al __protocolo de transferencia de archivos__ que se utiliza para intercambiar datos entre cliente y servidor. Es necesario contar con un __Dominio (Nombre de sitio)__ y un servicio de __Hosting (espacio web)__ Para poder utilizarlo, ya que este ultimo nos brindara la informacion para establecer dicha comunicacion.
+
+| Parametro  | Descripcion |
+|--|--|
+| __host__ | direccion o nombre del servidor donde se subiran los archivos
+| __username__ | nombre que identifica al usuario que realizara el intercambio de datos
+| __password__ | valor que acredita la identidad del usuario que accede al recurso
+| __port__ | canal de comunicaciones utilizado por el dispositivo para contectarse al servidor
+
 ___
 
 ## Actividades
