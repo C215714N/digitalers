@@ -10,3 +10,21 @@
 .digitales {
     font-family: 'digitales';
 }
+/* Tamaños */
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.marginless{
+    margin: 0;
+}
+iframe,
+.borderless {
+    border: 0;
+}
+.menu,
+.paddingless{
+    padding: 0;
+}

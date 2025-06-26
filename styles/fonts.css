@@ -1,9 +1,9 @@
 @font-face {
-    src: url("../assets/fonts/technova.ttf");
+    src: url("../assets/fonts/technova.ttf"); /* Ruta relativa */
     font-family: "digitales";
 }
 @font-face {
-    src: url("/assets/fonts/optimus.otf");
+    src: url("/assets/fonts/optimus.otf"); /* Ruta Raiz */
     font-family: "techno";
 }
 /* FORMATOS
