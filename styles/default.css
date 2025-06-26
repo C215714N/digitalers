@@ -3,11 +3,11 @@
 @import url("fonts.css");
 /* Reglas Generales */
 @import url("general.css");
-
+@import url("layout.css");
 /* Navegacion */
 @import url("nav.css");
 /* Cabecera */
-
+@import url("header.css");
 /* Contenido */
 
 /* Pie */
