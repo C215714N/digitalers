@@ -18,7 +18,7 @@ nav {
         - dimesion: vmin (minimo), vmax (maximo)
         - disposicion: vw (width), vh (height)
     */
-    background: /*SHORTHAND: color img pos/size repeat*/ 
+    background: /*SHORTHAND: color image position/size repeat*/ 
         #326 /*background-color*/
         linear-gradient( /*background-image*/
             to right,              /*angulo (opcional)*/
@@ -63,7 +63,7 @@ nav > a{
         font-size: 1rem;
     }
 }
-/* Pantallas Grandes */
+/* Pantallas Grandes (Desktop) */
 @media screen and (width >= 1140px){
     nav {
         display: flex;
