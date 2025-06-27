@@ -28,3 +28,10 @@ iframe,
 .paddingless{
     padding: 0;
 }
+/* Estilos */
+.not-listed{
+    list-style: none;
+}
+.not-decorated{
+    text-decoration: none;
+}
