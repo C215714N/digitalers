@@ -1,0 +1,31 @@
+
+.gallery :is(
+    figure,
+    img
+){
+    width: 100%;
+}
+/* Flexbox */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex > * {
+    flex: 1 0 min(100%, 320px);
+    /* ATRIBUTOS flex-:
+        grow:    define si un elemento debe crecer para ocupar espacio
+        shrink:  establece si un elemento debe reducir su tamaño
+        basis:   tamaño base del elemento hijo (inicial)
+    */
+}
+/* CSS-Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr)); 
+    /* EXPLICACION: 
+        repeat(N,S): indica N cantidad de columnas de S tamaño
+        * auto-fill:    rellena el espacio con x columnas
+        * auto-fit:     estira las columnas para ocupar el espacio
+        minmax(a,b): establece el tamaño minimo y maximo de las columnas 
+    */
+}
