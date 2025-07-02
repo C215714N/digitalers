@@ -14,6 +14,25 @@
     width: 100%;
     background-color: #ccc;
 }
+/* Fondos de Pelicula */
+.bg.gallery > *{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    color: #eee;
+    text-shadow: 0 0 .15rem #000;
+    background:
+        radial-gradient(
+            circle at top right,
+            hsla(250, 50%,80%, 50%),
+            hsla(250, 50%,30%, 50%)
+        ),
+        url("../assets/bg/red_cinema.jpg") top right/cover no-repeat;
+}
+.bg.gallery a{
+    color: #eee;
+    font-size: 1.5rem;
+}
 /* Flexbox */
 .flex{
     display: flex;

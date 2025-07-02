@@ -32,6 +32,10 @@ iframe,
 .not-listed{
     list-style: none;
 }
+.bg.gallery a,
 .not-decorated{
     text-decoration: none;
+}
+#footer {
+    color: red;
 }
