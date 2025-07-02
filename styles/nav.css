@@ -64,7 +64,7 @@ nav > a{
     }
 }
 /* Pantallas Grandes (Desktop) */
-@media screen and (width >= 1140px){
+@media screen and (width >= 1200px){
     nav {
         display: flex;
         min-height: auto;

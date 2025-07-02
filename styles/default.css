@@ -9,6 +9,7 @@
 /* Cabecera */
 @import url("header.css");
 /* Contenido */
+@import url("main.css");
 @import url("gallery.css");
 
 /* Pie */

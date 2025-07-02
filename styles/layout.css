@@ -31,7 +31,7 @@ main{
     }
 }
 /* Pantallas Grandes (Desktop) */
-@media screen and (width >= 1140px){
+@media screen and (width >= 1200px){
     body{
         grid-template-areas: 
             "nav"
