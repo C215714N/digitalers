@@ -1,14 +1,22 @@
-
+.gallery {
+    padding: 1rem;
+    gap: 1rem;
+}
+.gallery > * {
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: #ccc;
+}
 .gallery :is(
     figure,
     img
 ){
     width: 100%;
+    background-color: #ccc;
 }
 /* Flexbox */
 .flex{
     display: flex;
-    flex-wrap: wrap;
 }
 .flex > * {
     flex: 1 0 min(100%, 320px);
@@ -18,10 +26,29 @@
         basis:   tamaño base del elemento hijo (inicial)
     */
 }
+/* Propiedades Flexbox */
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.row-reverse{
+    flex-direction: row-reverse;
+}
+.column-reverse{
+    flex-direction: column-reverse;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
 /* CSS-Grid */
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,320px), 1fr)); 
     /* EXPLICACION: 
         repeat(N,S): indica N cantidad de columnas de S tamaño
         * auto-fill:    rellena el espacio con x columnas
