@@ -1,0 +1,19 @@
+main {
+    max-width: 1520px;
+    margin: auto;
+    padding: 1rem;
+}
+@media screen and (width >= 1400px){
+    main{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    section{
+        grid-column: 1;
+    }
+    aside {
+        background-color: #ccc;
+        grid-column: 2;
+        grid-row: 1/5;
+    }
+}
