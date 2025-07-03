@@ -1,0 +1,33 @@
+.static{
+/* - STATIC: el elemento ocupa un lugar en el espacio y no puede cambiar su posicion sin afectar a los demas, es el valor predeterminado de cada elemento. */
+    position: static;
+}
+.relative{
+/* - RELATIVE: el elemento se deplaza con respecto a si mismo y sigue ocupando lugar en el espacio, pero en caso de moverse, no afecta a los demas.
+ */
+    position: relative;
+}
+.absolute{
+/* - ABSOLUTE: el elemento se ubica con respecto a su ancestro mas proximo que NO sea STATIC. Ya no ocupa lugar en el espacio, pero por defecto respeta su posicion.
+ */
+    position: absolute;
+}
+.fixed{
+/* - FIXED: el elemento se ubica con respecto a la ventana, deja de ocupar lugar en el espacio, y es necesario indicar su posicion para visualizarlo en la ventana.
+ */
+    position: fixed;
+}
+.sticky{
+/* - STICKY: el elemento ocupa su lugar predeterminado hasta cumplir determinada condicion, a partir de esto se mantiene fijo a la ventana mientras permanezca dentro de su contenedor.
+ */
+    position: sticky;
+}
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}

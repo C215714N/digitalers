@@ -4,6 +4,7 @@
 /* Reglas Generales */
 @import url("general.css");
 @import url("layout.css");
+@import url("position.css");
 /* Navegacion */
 @import url("nav.css");
 /* Cabecera */
