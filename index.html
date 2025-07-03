@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <nav>
+    <nav class="sticky">
         <a href="#">Digitalers</a>
         <ul class="menu">
             <li><a class="icon-genre" href="#genre">Generos</a></li>
@@ -21,7 +21,7 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header id="header">
+    <header id="header" class="relative">
         <h1 class="techno">DigiTALES</h1>
         <p>
             Una nueva forma de <strong>ver cine</strong> <br>
@@ -36,6 +36,15 @@
                 placeholder="...Buscar">
             <button type="button">Buscar</button>
         </form>
+        <!-- Video de Fondo -->
+        <video class="background-video absolute" autoplay muted loop>
+            <source src="assets/bg/cinema_moments.mp4">
+            <source src="assets/bg/cinema_moments.mp4">
+            <source src="assets/bg/cinema_moments.mp4">
+            <p>
+                Lo sentimos, pero tu navegador NO ES COMPATIBLE con este elemento. No te preocupes, podes descargar el contenido desde el siguiente <a href="assets/bg/cinema_moments.mp4" download>link</a>
+            </p>
+        </video>
     </header>
     <!-- Contenido -->
     <main>
@@ -198,7 +207,7 @@
                 title="seguinos en instagram" 
                 target="_blank">
             </a>
-            <a class="icon" 
+            <a class="icon fixed" 
                 href="https://api.whatsapp.com/send?phone=1103034567&text=quisiera+solicitar+una+pelicula:" 
                 title="mensajeanos por whatsapp" 
                 target="_blank">
