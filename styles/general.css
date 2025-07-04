@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Ubuntu', 'Open Sans', sans-serif;
+    font-family: var(--font);
 }
 /* Tipografia */
 .techno {

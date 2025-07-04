@@ -5,14 +5,14 @@
 .gallery > * {
     border-radius: .5rem;
     padding: .5rem;
-    background-color: #ccc;
+    background-color: var(--grey);
 }
 .gallery :is(
     figure,
     img
 ){
     width: 100%;
-    background-color: #ccc;
+    background-color: var(--grey);
 }
 /* Fondos de Pelicula */
 .bg.gallery > *{
@@ -30,7 +30,7 @@
         url("../assets/bg/red_cinema.jpg") top right/cover no-repeat;
 }
 .bg.gallery a{
-    color: #eee;
+    color: var(--light);
     font-size: 1.5rem;
 }
 /* Flexbox */

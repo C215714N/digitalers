@@ -2,12 +2,12 @@
     min-height: min(100vh, 640px); /* rango: 0px <= height <= 640px */
     padding: 1rem;
     background:
-        #2248
+        hsl(var(--second), 30%, .5)
         radial-gradient(
             circle at top left, /* figura y ubicacion*/
-            hsla(255,30%,60%,.5), /* color n */
-            hsla(255,30%,20%,.5) /* tono saturacion brillo transparencia */
+            hsla(var(--first),60%,.5), /* color n */
+            hsla(var(--first),20%,.5) /* tono saturacion brillo transparencia */
         );
-    font-size: min(calc(2vw + .8rem), 5rem); /* rango: .8rem <= Tipografia <= 5rem */
+    font-size: min(var(--responsive), 5rem); /* rango: .8rem <= Tipografia <= 5rem */
     text-shadow: 0 0 .25rem #eee;
 }

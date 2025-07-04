@@ -13,7 +13,7 @@ main {
         grid-column: 1;
     }
     aside {
-        background-color: #ccc;
+        background-color: var(--grey);
         grid-column: 2;
         grid-row: 1/5;
     }

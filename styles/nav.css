@@ -19,18 +19,18 @@ nav {
     - disposicion: vw (width), vh (height)
     */
     background: /*SHORTHAND: color image position/size repeat*/ 
-    #326 /*background-color*/
+    hsl(var(--first),50%) /*background-color*/
     linear-gradient( /*background-image*/
     to right,              /*angulo (opcional)*/
-    hsl(255, 50%, 60%), /*color n*/
-    hsl(255, 50%, 30%)  /* tono saturacion brillo*/
+    hsl(var(--first),60%), /*color n*/
+    hsl(var(--first),30%)  /* tono saturacion brillo*/
     );
     bottom: 0;
     z-index: 2;
 }
 nav a {
     text-decoration: none;
-    color: #aac;
+    color: hsl(var(--first), 80%);
 }
 nav > a{
     display: none;
@@ -47,7 +47,7 @@ nav > a{
 }
 .menu a:hover{
     color: #eee;
-    text-shadow: 0 0 .25rem #eee;
+    text-shadow: 0 0 .25rem var(--light);
 }
 /* Pantallas Medianas (Tablets) */
 @media screen and (width >= 576px){
