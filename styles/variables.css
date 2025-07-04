@@ -1,14 +1,21 @@
 :root {
     /* Fuentes */
-    --font: 'Ubuntu', 'Open Sans', sans-serif;
+    --font: 'Ubuntu', 'Open Sans', sans-serif; 
     /* Colores */
     --first: 260, 50%; /* color, saturacion */
     --second: 245, 30%;
     --light: #eee;
     --grey: #ccc;
     --dark: #333;
+    --success: #3c6;
+    --warning: #ea3;
+    --danger: #c33;
     /* Tamaños */
     --responsive: calc(2vw + .8rem);
+    --icon-sm: 2rem;
+    --icon-md: 3rem;
+    --icon-lg: 4rem;
+    --icon-xl: 5rem;
     --sm: 120px;
     --md: 240px;
     --lg: 320px;
