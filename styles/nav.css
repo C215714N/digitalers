@@ -1,30 +1,32 @@
 nav {
-    padding: .5rem max(.5rem, calc(50vw - 660px));
+    padding: .5rem max(1rem, calc(50vw - 660px));
     /* UNIDADES 
-        ABSOLUTAS: Son aquellas que siempre valen lo mismo independientemente del medio en el que se reproduzcan.
-        Se utilizan principalmente para establecer maximos o minimos.
-        - distancia: mm, cm, in (2.54cm).
-        - tipografia: pt(1/72"), pc(1/6").
-        - hibrida: px(1/96") - depende de la resolucion.
-
-        RELATIVAS: Son aquellas que varian su tamaño, dependiendo de otro elemento (contenedor). 
-        Se utilizan principalmente para definir tamaños de caja y tipografia.
-        - tamaño: porcentaje% (ancho del contenedor)
-        - tipografia: % (letra), em (ancho "M"), ex (alto "x"), ch (tamaño "0")
-        - hibrida: rem (root EM) - no varia entre contenedores
-
-        FLEXIBLES: Son aquellas que cambian su tamaño dependiendo unicamente del VIEWPORT (ventana).
-        Se utilizan para definir alturas y tipografia flexible
-        - dimesion: vmin (minimo), vmax (maximo)
-        - disposicion: vw (width), vh (height)
+    ABSOLUTAS: Son aquellas que siempre valen lo mismo independientemente del medio en el que se reproduzcan.
+    Se utilizan principalmente para establecer maximos o minimos.
+    - distancia: mm, cm, in (2.54cm).
+    - tipografia: pt(1/72"), pc(1/6").
+    - hibrida: px(1/96") - depende de la resolucion.
+    
+    RELATIVAS: Son aquellas que varian su tamaño, dependiendo de otro elemento (contenedor). 
+    Se utilizan principalmente para definir tamaños de caja y tipografia.
+    - tamaño: porcentaje% (ancho del contenedor)
+    - tipografia: % (letra), em (ancho "M"), ex (alto "x"), ch (tamaño "0")
+    - hibrida: rem (root EM) - no varia entre contenedores
+    
+    FLEXIBLES: Son aquellas que cambian su tamaño dependiendo unicamente del VIEWPORT (ventana).
+    Se utilizan para definir alturas y tipografia flexible
+    - dimesion: vmin (minimo), vmax (maximo)
+    - disposicion: vw (width), vh (height)
     */
     background: /*SHORTHAND: color image position/size repeat*/ 
-        #326 /*background-color*/
-        linear-gradient( /*background-image*/
-            to right,              /*angulo (opcional)*/
-            hsl(255, 50%, 60%), /*color n*/
-            hsl(255, 50%, 30%)  /* tono saturacion brillo*/
-        );
+    #326 /*background-color*/
+    linear-gradient( /*background-image*/
+    to right,              /*angulo (opcional)*/
+    hsl(255, 50%, 60%), /*color n*/
+    hsl(255, 50%, 30%)  /* tono saturacion brillo*/
+    );
+    bottom: 0;
+    z-index: 2;
 }
 nav a {
     text-decoration: none;
@@ -50,7 +52,8 @@ nav > a{
 /* Pantallas Medianas (Tablets) */
 @media screen and (width >= 576px){
     nav {
-        min-height: 100vh;
+        height: 100vh;
+        top: 0;
     }
     nav > a{
         display: block;
@@ -67,7 +70,7 @@ nav > a{
 @media screen and (width >= 1200px){
     nav {
         display: flex;
-        min-height: auto;
+        height: auto;
         justify-content: space-between;
     }
     .menu {
