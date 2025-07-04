@@ -1,0 +1,50 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.social .icon.fixed{
+    bottom: 1rem;
+    right: 1rem;
+    opacity: .5;
+}
+.social .icon.fixed:hover{
+    opacity: .7;
+}
+/* Iconos */
+.icon{
+    --color: var(--grey);
+    --img: linear-gradient(var(--light), var(--grey));
+    --position: center;
+    --size: var(--icon-md);
+    --repeat: no-repeat;
+    --blur: 0;
+}
+.icon{
+    width: var(--icon-xl);
+    height: var(--icon-xl);
+    border-radius: .5rem;
+    background: var(--color) var(--img) var(--position)/var(--size) var(--repeat);
+    box-shadow: 0 0 var(--blur) var(--dark);
+}
+.icon:hover{
+    --color: var(--light);
+    --blur: .5rem;
+}
+.icon:focus{
+    --blur: 1rem;
+}
+/* Selectores de Atributo */
+[href*="facebook"]{
+    --img: url("../assets/icon/facebook.svg");
+}
+[href*="instagram"]{
+    --img: url("../assets/icon/instagram.svg");
+}
+[href*="twitter"]{
+    --img: url("../assets/icon/twitter.svg");
+}
+[href*="whatsapp"]{
+    --img: url("../assets/icon/whatsapp.svg");
+}
