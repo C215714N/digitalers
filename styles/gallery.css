@@ -38,7 +38,7 @@
     display: flex;
 }
 .flex > * {
-    flex: 1 0 min(100%, 320px);
+    flex: 1 0 min(100%, var(--size));
     /* ATRIBUTOS flex-:
         grow:    define si un elemento debe crecer para ocupar espacio
         shrink:  establece si un elemento debe reducir su tamaño
@@ -67,7 +67,7 @@
 /* CSS-Grid */
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%,320px), 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,var(--size)), 1fr)); 
     /* EXPLICACION: 
         repeat(N,S): indica N cantidad de columnas de S tamaño
         * auto-fill:    rellena el espacio con x columnas
