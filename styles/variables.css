@@ -1,0 +1,33 @@
+:root {
+    /* Fuentes */
+    --font: 'Ubuntu', 'Open Sans', sans-serif;
+    /* Colores */
+    --first: 260, 50%; /* color, saturacion */
+    --second: 245, 30%;
+    --light: #eee;
+    --grey: #ccc;
+    --dark: #333;
+    /* Tamaños */
+    --responsive: calc(2vw + .8rem);
+    --sm: 120px;
+    --md: 240px;
+    --lg: 320px;
+    --xl: 360px;
+    --xxl: 480px;
+}
+/* Tamaños */
+.sm {
+    --size: var(--sm);
+}
+.md{    
+    --size: var(--md);
+}
+.lg{    
+    --size: var(--lg);
+}
+.xl{    
+    --size: var(--xl);
+}
+.xxl{    
+    --size: var(--xxl);
+}
