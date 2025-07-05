@@ -1,4 +1,5 @@
 nav {
+    min-width: 12rem;
     padding: .5rem max(1rem, calc(50vw - 660px));
     /* UNIDADES 
     ABSOLUTAS: Son aquellas que siempre valen lo mismo independientemente del medio en el que se reproduzcan.
@@ -29,6 +30,8 @@ nav {
     z-index: 2;
 }
 nav a {
+    --dir: column;
+    --align: center;
     text-decoration: none;
     color: hsl(var(--first), 80%);
 }
@@ -49,6 +52,9 @@ nav > a{
     color: #eee;
     text-shadow: 0 0 .25rem var(--light);
 }
+.menu li:last-child{
+    display: none;
+}
 /* Pantallas Medianas (Tablets) */
 @media screen and (width >= 576px){
     nav {
@@ -58,12 +64,19 @@ nav > a{
     nav > a{
         display: block;
     }
+    nav a {
+        --dir: row;
+        --align: center;
+    }
     .menu {
         margin-top: 1rem;
         flex-direction: column;
     }
     .menu a{
         font-size: 1rem;
+    }
+    .menu li:last-child{
+        display: block;
     }
 }
 /* Pantallas Grandes (Desktop) */

@@ -1,0 +1,39 @@
+[class*="icon-"]{
+    display: flex;
+    flex-direction: var(--dir);
+    justify-content: var(--justify);
+    align-items: var(--align);
+    gap: .5rem;
+    filter: grayscale(100%);
+    transition: all 1s .1s ease;
+    /* EXPLICACION
+        property: propiedad que debe tener estados intermedios,
+        duration: tiempo de la transicion en segundos,
+        delay: tiempo de espera en segundos,
+        timing: modo en el sucede la transicion
+    */
+}
+[class*="icon-"]:hover{
+    filter: grayscale(60%);
+}
+[class*="icon-"]::before{
+    font-size: 2rem;
+}
+.icon-genre::before{
+    content: "🎬"
+}
+.icon-age::before{
+    content: "🔞"
+}
+.icon-premiere::before{
+    content: "🎫"
+}
+.icon-format::before{
+    content: "🎞️"
+}
+.icon-promo::before{
+    content: "🍿"
+}
+.icon-suggestion::before{
+    content: "📋"
+}
