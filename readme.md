@@ -64,3 +64,11 @@ Esto es una guia para los alumnos de la capacitacion __Digitalers NodeJS__ que c
 2. Crear una galeria de elementos que se adapte segun el tamaño de la ventana y colocarla dentro de la seccion principal.
 3. Fijar la barra de navegacion a la parte superior o inferior de su contenedor, segun corresponda.
 4. Crear un botton flotante de contacto (whatsapp, correo, telegram) y colocarlo a un costado de la pagina.
+
+### Efectos Visuales
+
+1. Aplica un estilo visual diferente para los hipervinculos dependiendo de lo siguiente:
+    * Enlaces externos, aquellos cuyo valor para el _atributo href_ empiecen con __http__.
+    * Enlace internos, aquellos cuyo _atributo href_ terminen con el __valor .html__.
+2. Agrega una animacion a las opciones del menu y a las redes sociales cuando se haga _:hover_ sobre los mismos
+3. Utiliza transiciones para los controles de los formularios que aplique a las pseudoclases _:focus, :valid, :invalid_.
