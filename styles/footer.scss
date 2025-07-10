@@ -1,0 +1,25 @@
+// Variables: Espacio reservado en memoria cuyo valor puede cambiar
+$color: #eee;
+$bgColor: #2248;
+// Mixin: Selectores que reciben parametros y se utilizan como atributos;
+@mixin flex($g:.25rem, $dir:column){
+    display: flex;
+    flex-direction: $dir;
+    gap: $g;
+}
+// Nesting: anidacion de estilos para crear selectores especificos
+footer{
+    @include flex(1rem);
+    padding: var(--icon-sm);
+    color: $color;
+    background-color: $bgColor;
+    form{
+        @include flex;
+        padding: 1rem;
+        input, textarea, button {
+            border-radius: .25rem;
+            border: 1px solid $bgColor;
+            padding: .5rem;
+        }
+    }
+}
