@@ -3,7 +3,7 @@
     flex-direction: var(--dir);
     justify-content: var(--justify);
     align-items: var(--align);
-    gap: .5rem;
+    gap: 0 .5rem;
     filter: grayscale(100%);
     transition: all 1s .1s ease;
     /* EXPLICACION
