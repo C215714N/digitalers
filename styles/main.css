@@ -13,8 +13,14 @@ main {
         grid-column: 1;
     }
     aside {
+        min-height: calc(100vh - 3.5rem);
         background-color: var(--grey);
         grid-column: 2;
-        grid-row: 1/5;
+        grid-row: 1;
+    }
+    section h2,
+    aside {
+        position: sticky;
+        top: 3.5rem;
     }
 }
