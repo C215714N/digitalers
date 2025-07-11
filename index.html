@@ -195,11 +195,42 @@
         <form action="" id="suggestions">
             <h2>Deja tu sugerencia</h2>
             <label for="name">Nombre</label>
-            <input id="name" type="text">
+            <input 
+                id="name"
+                name="name"
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z ñÑ]{2,50}"
+                placeholder="Nombre: Cristian Racedo"
+                required>
+            <p class="validate">
+                Escribe un nombre entre 2 y 50 caracteres. <br>
+                Utilizando solamente letras.
+            </p>
             <label for="email">Correo</label>
-            <input id="email" type="email">
+            <input 
+                id="email"
+                name="email" 
+                type="email"
+                minlength="8"
+                placeholder="Correo: cristiandracedo@hotmail.com"
+                required>
+            <p class="validate">
+                Escribe un correo valido de al menos 8 caracteres. <br>
+                Respetando el siguiente ejemplo "cristiandracedo@gmail.com"
+            </p>
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea 
+                id="message" 
+                name="message"
+                minlength="30"
+                maxlength="1500"
+                placeholder="Sugerencia: Buenas, quisiera solicitar una pelicula..."
+                required></textarea>
+            <p class="validate">
+                Escribe un mensaje que posea entre 30 y 1500 caracteres. <br>
+                Contestaremos tu consulta lo antes posible
+            </p>
             <button>enviar</button>
         </form>
         <!-- Newsletter -->

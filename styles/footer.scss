@@ -2,24 +2,69 @@
 $color: #eee;
 $bgColor: #2248;
 // Mixin: Selectores que reciben parametros y se utilizan como atributos;
-@mixin flex($g:.25rem, $dir:column){
+@mixin normalize($p:0, $m:0, $b:none){
+    margin: $m;
+    border: $b;
+    padding: $p;
+}
+@mixin flex($g:.2rem, $dir:column){
     display: flex;
     flex-direction: $dir;
     gap: $g;
 }
+// Extend: Estilos cuyos selectores permiten ser anidados (% Estilo oculto)
+%column{ @include flex; }
+%show{
+    @include normalize(.5rem, -.1rem 0 .5rem);
+    max-height: 100vh;
+}
+%hide{
+    @include normalize;
+    max-height: 0;
+    overflow: hidden;
+}
+%btn{
+    color: var(--light);
+    background-color: transparent;
+    &:hover{
+        color: $bgColor;
+        background-color: var(--light);
+    }
+}
 // Nesting: anidacion de estilos para crear selectores especificos
 footer{
-    @include flex(1rem);
+    @extend %column;
     padding: var(--icon-sm);
     color: $color;
     background-color: $bgColor;
-    form{
-        @include flex;
-        padding: 1rem;
-        input, textarea, button {
+    #suggestions{
+        @include normalize(1rem .5rem, auto);
+        @extend %column;
+        max-width: 540px;
+        :is(input, textarea, button) {
+            @include normalize(.5rem, 0, .1rem solid $bgColor);
+            outline: none;
             border-radius: .25rem;
-            border: 1px solid $bgColor;
-            padding: .5rem;
+            &:focus{ border-color: var(--dark);
+                box-shadow: 0 0 .5rem var(--light);
+                & + .validate { @extend %show; 
+            }   }
+            &:not(button, :placeholder-shown){
+                &:valid{ border-color: var(--success);
+                & + .validate { color: var(--success); 
+                }   }
+                &:invalid{ border-color: var(--danger);
+                & + .validate { color: var(--danger); 
+                    background-color: var(--grey);
+                }   }
+        }   }
+        button{ @extend %btn; }
+        .validate{
+            @extend %hide;
+            border-radius: .5rem;
+            border-top-left-radius: 0;
+            background-color: var(--dark);
+            opacity: .7;
         }
     }
 }
