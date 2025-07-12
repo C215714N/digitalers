@@ -1,0 +1,23 @@
+$cols: 24;
+$media:
+    sm   576px   540px,
+    md   768px   720px,
+    lg   992px   960px,
+    xl   1200px  1140px,
+    xxl  1400px  1320px,
+;
+// Bucles: Clases o Estilos que se repiten dada una condicion
+@for $i from 1 through $cols {
+    .col-#{$i}{
+        width: percentage($i / $cols);
+}   }
+@each $name, $width, $max in $media{
+@media screen and (min-width: $width){
+    .container, .container-#{$name}{
+        max-width: $max;
+    }
+    @for $i from 1 through $cols {
+    .col-#{$name}-#{$i}{ 
+        width: percentage($i / $cols); 
+    }   }
+}   }
