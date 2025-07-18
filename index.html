@@ -9,10 +9,35 @@
     /* Declaracion de Variables */
         var name = "Cristian"; // String
         var age = 34; // Number
-        var message = "Buenas, mi nombre es " + name + " y tengo " + age + " años de edad."; // String utilizando variables
+        var message = "Buenas, mi nombre es " + name + " y tengo " + age + " años de edad."; // String Concatenacion utilizando variables
 
     /* Mensaje por consola*/
         console.log(message);
+    /* Operadores */
+        var a = 10, b = 5, c = 0;
+        console.log("a = " + a, "b = " + b)
+        // Aritmeticos
+        console.log("suma:", a + b);
+        console.log("resta:", a - b);
+        console.log("producto: ", a * b);
+        console.log("division:", a / b);
+        console.log("resto:", a % b);
+        console.log("potencia:", a ** b);
+        // Logicos (Booleanos)
+        console.log("menor:", a < b);
+        console.log("mayor:", a > b);
+        console.log("igual:", a == b);
+        console.log("distinto:", a != b);
+        console.log("and: ", a && b);
+        console.log("or: ", a || b);
+        // Unarios
+        c+= a; console.log("suma:", c);
+        c-=b; console.log("resta:", c);
+        c*= b; console.log("producto: ", c);
+        c/= a; console.log("division: ", c);
+        c%= b; console.log("resto: ", c);
+        c**=a; console.log("potencia: ", c);
+
     </script>
 </head>
 <body>
@@ -28,5 +53,10 @@
     <p>
         Presiona F12 y luego ve a la solapa <strong>console</strong> para ver el mensaje de bienvenida
     </p>
+    <script>
+        var date = new Date().getFullYear(); // Object (date) 
+        var copyright = "&copy;" + date + " Todos los derechos Reservados.";
+        document.write("<footer>"+ copyright + "</footer>");
+    </script>
 </body>
 </html>
