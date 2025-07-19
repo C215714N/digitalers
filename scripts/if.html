@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <a href="../">Página Principal</a>
+    <script>
+        var mensaje;
+    /* Mensaje del Jefe Gorgori | Wiggum */
+        // CONFIRM: Metodo del objeto window que devuelve un dato de tipo boolean
+        var pregunta = confirm("¿Ha cometido un crimen y desea confesarlo?");
+        // CONDICIONAL: Se ejecuta si el resultado es verdadero
+        if(!pregunta){
+            // ALERT: Metodo del objeto window de correponde a una SALIDA DE DATOS (String)
+            mensaje = "Ha cometido un crimen y no desea confesarlo\naguarde tranquilamente en su domicilio que iremos por usted"
+        } else {
+            mensaje = "Queda detenido por haber cometido un crimen\nespere hasta que llegemos para arrestarlo."
+        }
+        alert(mensaje);
+    /* Promedio de Calificaciones */
+        var nota1, nota2, nota3, resultado;
+        // PROMPT: Metodo del Objeto window que corresponde a una ENTRADA DE DATOS (String)
+        alert("Bienvenido a CalcuPrompt\nrecuerde ingresar solamente digitos\ncuyos valores se encuentren entre 1 y 10");
+        nota1 = parseInt(prompt("Ingrese el primer numero"));
+        nota2 = parseInt(prompt("Ingrese el segundo numero"));
+        nota3 = parseInt(prompt("Ingrese el tercer y ultimo numero"));
+        revision = "nota1: " + nota1 + "\nnota2: " + nota2 + "\nnota3: " + nota3;
+        // if (){...} else if () {...} else {...}
+        if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3)){
+            // CONDICION: Ninguno de los valores debe ser de tipo NaN
+            if (nota1 < 1 || nota2 < 1 || nota3 < 1) {
+                // CONDICION: Se ejecuta el codigo en caso de complirse
+                mensaje = "No se permiten numeros negativos\nrevise los valores ingresados y vuelva a intentar\n"+revision;
+            } 
+            else if(nota1 > 10 || nota2 > 10 || nota3 > 10) {
+                // ALTERNATIVA: Se ejecuta en caso de cumplirse, siempre y cuando no se haya cumplido la condicion anterior.
+                mensaje = "El valor maximo permitido es 10\ncorrobore que los numeros ingresados cumplan dicha condicion." + revision;
+            } 
+            else {
+                // SINO: codigo que se ejecuta cuando no se cumple ninguna de las condiciones anteriores
+                resultado = (nota1 + nota2 + nota3) / 3;
+                mensaje = revision + "\nLa Nota promedio es: " + resultado;
+            }
+        } else {
+            // SINO: Muestra mensaje de entrada invalida
+            mensaje = "No se pudo realizar la operacion debido a que alguno de los datos ingresados NO ES VALIDO.\n" + revision + "\nrecargue la pagina y vuelva a intentar.";
+        };
+        alert(mensaje);
+    </script>
+</body>
+</html>
