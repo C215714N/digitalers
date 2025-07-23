@@ -6,3 +6,5 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
 
 * [Lenguajes de Programacion](./docs/programming.md)
 * [Declaracion de Variables](./docs/datatypes.md)
+* [Tipos de Operadores](./docs/operators.md)
+* [Estructuras Condicionales](./docs/conditionals.md)
