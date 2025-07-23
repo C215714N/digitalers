@@ -4,4 +4,5 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
 
 ## Tabla de Contenidos
 
-* [Variables](./docs/datatypes.md)
+* [Lenguajes de Programacion](./docs/programming.md)
+* [Declaracion de Variables](./docs/datatypes.md)
