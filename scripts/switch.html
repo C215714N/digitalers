@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <a href="../">Página Principal</a>
+    <script>
+        var mensaje = "Ha ingresado un vehiculo ";
+        var vehiculo = prompt("Bienvenido al catalogo automotor\nIngrese el vehiculo que desea clasificar");
+        // CONDICIONAL MULTIPLE: ejecuta codigo dadas las condiciones cumplidas
+        switch(vehiculo.toUpperCase()){
+            case "AVION":
+            case "AVIONETA":
+            case "AEROPLANO":
+            case "CAZA":
+            case "HELICOPTERO":
+            case "PARAPENTE":
+                mensaje+="aereo";
+            break;
+            case "AUTO":
+            case "CAMIONETA":
+            case "CAMION":
+            case "MOTO":
+            case "BICI":
+            case "TANQUE":
+                mensaje+="terrestre";
+            break;
+            case "BARCO":
+            case "LANCHA":
+            case "YATE":
+            case "CRUCERO":
+            case "CANOA":
+                mensaje+="aquatico";
+            break;
+            default: 
+                mensaje+="que no se encuentra en la base de datos"
+        }
+        alert(mensaje);
+    </script>
+</body>
+</html>
