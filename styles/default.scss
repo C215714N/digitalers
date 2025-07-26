@@ -49,7 +49,7 @@ $colorProps:
 $units: 
     m   margin          .5rem,
     o   outline         1px,
-    b   border          .1rem,
+    b   border-width    .1rem,
     r   border-radius   .25rem,
     p   padding         .5rem,
     g   gap             .2rem,
@@ -70,6 +70,9 @@ $media:
 $properties: (
     d:     (
         display: ($b, $i, #{$i}-#{$b}, $f, $g, #{$i}-#{$f}, #{$i}-#{$g}, table, #{$i}-#{table}),
+    ),
+    b:  (
+        border-style: (none, solid, dotted, dashed, double, groove),
     ),
     bg:     (
         #{$bg}-size: (cover, contain),
