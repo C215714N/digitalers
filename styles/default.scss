@@ -1,0 +1,146 @@
+// Variables
+$a: align;
+$b: block;
+$c: content;
+$d: direction;
+$f: flex;
+$g: grid;
+$h: height;
+$i: inline;
+$j: justify;
+$p: position;
+$s: size;
+$t: template;
+$w: width;
+$x: row;
+$y: column;
+$z: z-index;
+
+$an: animation;
+$ts: transition;
+$tf: timing-function;
+$sp:space;
+$bg: background;
+$xdir: left, right;
+$ydir: top, bottom;
+$lists: none, square, circle, disc, hiragana, katakana, arabic-indic, lower-alpha, upper-alpha, lower-roman, upper-roman, decimal-leading-zero, decimal, lower-greek, upper-greek;
+$directions: baseline, start, end, center, #{$sp}-between, #{$sp}-around, #{$sp}-evenly;
+$timing: ease, ease-in, ease-out, ease-in-out, linear;
+$colorValues: 
+    primary     #448,
+    secondary   #c36,
+    success     #484,
+    warning     #ea4,
+    danger      #c33,
+    light       #eee,
+    dark        #333,
+    info        #36c,
+    none        transparent,
+;
+$colorProps: 
+    text        color,
+    bg          background-color,
+    b           border-color,
+    o           outline-color,
+    caret       caret-color,
+    underline   text-decoration-color,
+;
+
+$units: 
+    m   margin          .5rem,
+    o   outline         1px,
+    b   border          .1rem,
+    r   border-radius   .25rem,
+    p   padding         .5rem,
+    g   gap             .2rem,
+    w   width           10%,
+    h   height          10vh,
+    fs  font-size       .25rem,
+    d   font-size       1vw,
+
+;
+$media: 
+    -sm  576px 540px,
+    -md  768px  720px,
+    -lg  992px  960px,
+    -xl  1200px 1140px,
+    -xxl 1400px  1320px,
+;
+
+$properties: (
+    d:     (
+        display: ($b, $i, #{$i}-#{$b}, $f, $g, #{$i}-#{$f}, #{$i}-#{$g}, table, #{$i}-#{table}),
+    ),
+    bg:     (
+        #{$bg}-size: (cover, contain),
+        #{$bg}-position: top right bottom left center,
+    ),
+    $f:     (
+        #{$a}-items: $directions,
+        #{$j}-#{$c}: $directions,
+    ),
+    $g:     (
+        #{$a}-items: $directions,
+        #{$a}-#{$c}: $directions,
+        #{$j}-items: $directions,
+        #{$j}-#{$c}: $directions,
+    ),
+    list: (list-style: $lists),
+    text: (font-family: (serif, sans-serif, consolas, arial, segoe-ui, calibri)),
+    t:  (
+        #{$ts}-#{$tf}: $timing,
+    ),
+    a:  (
+        #{$an}-#{$tf}: $timing,
+    ),
+);
+
+// Creacion de Clases
+@mixin classes ($prop, $key, $v, $vn:""){
+    .#{$prop}#{$vn}-#{$v}{
+        #{$key}: $v;
+    }
+}
+// Mapeo de array
+@mixin mapping($array, $vn:""){
+    @each $prop, $attributes in $array {
+    @each $key, $values in $attributes {
+    @each $v in $values {
+        @include classes($prop, $key, $v, $vn);
+    } } }
+}
+@mixin sizeMapping ($array: $units, $vn:""){
+    @each $class, $attrib, $unit in $array{
+    @for $i from 0 through 10{
+        .#{$class}#{$vn}-#{$i}{
+            #{$attrib}: $i * $unit; 
+        }
+    } }
+    
+}
+@mixin colorMapping($properties: $colorProps, $colors: $colorValues){
+    @each $prop, $attr in $properties{
+    @each $cname, $cval in $colors{
+        .#{$prop}-#{$cname}{
+            #{$attr}: $cval;
+            &-bold{
+                #{$attr}: darken($cval, 20%);
+            }
+            &-lite{
+                #{$attr}: lighten($cval, 20%);
+            }
+        }
+    }}
+}
+// Clases por media queries
+@each $vn, $vw, $vmax in $media{
+    @if $vn == -sm { 
+        @include mapping($properties); 
+        @include colorMapping;
+        @include sizeMapping;
+    }
+@media screen and (min-width: $vw){
+    .container, .container-#{$vn}{ max-width: $vmax; }
+    @include mapping($properties, $vn);
+    @include sizeMapping($vn: $vn);
+}}
