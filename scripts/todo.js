@@ -25,10 +25,13 @@ function render(){
     todoList.innerHTML = "";
     todos.forEach(function(item, index){
         const li = document.createElement('li');
+        li.setAttribute('class','d-flex flex-wrap flex-center | bg-light r-2 b-1 p-2 m-1');
         li.innerHTML = `
-            ${item} 
-            <button class="btn p-1 r-1 bg-none b-info text-info" onclick="editBtn(${index})">Editar</button>
-            <button class="btn p-1 r-1 bg-none b-danger text-danger" onclick="removeBtn(${index})">Eliminar</button>
+            <div class="w-10 w-sm-7">${item}</div>
+            <div class="d-flex w-10 w-sm-3 g-1">
+                <button class="w-5 p-1 r-1 bg-none b-info text-info" onclick="editBtn(${index})">Editar</button>
+                <button class="w-5 p-1 r-1 bg-none b-danger text-danger" onclick="removeBtn(${index})">Eliminar</button>
+            </div>
         `;
         todoList.append(li);
     })

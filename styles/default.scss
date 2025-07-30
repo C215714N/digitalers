@@ -54,7 +54,9 @@ $units:
     p       padding         .5rem,
     g       gap             .2rem,
     w       width           10%,
+    mw      min-width       10%,
     h       height          10vh,
+    mh      min-height      10vh,
     fs      font-size       .25rem,
     d       font-size       1vw,
     a-time  #{$an}-duration .2s,
@@ -84,6 +86,7 @@ $properties: (
         #{$f}-#{$d}: (row, row-reverse, column, column-reverse),
         #{$a}-items: $directions,
         #{$j}-#{$c}: $directions,
+        #{$f}-wrap: (wrap, nowrap, wrap-reverse),
     ),
     $g:     (
         #{$a}-items: $directions,
