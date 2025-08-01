@@ -1,0 +1,49 @@
+%flex{
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+        flex: unquote('1 0 min(100%, 120px)');
+    }
+}
+body{
+    perspective: 5rem;
+    perspective-origin: top center;
+}
+%btn{
+    background: radial-gradient(circle at top right, #eee, #ccc);
+}
+#calculator {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    'input   input'
+    'actions actions'
+    'numbers operations';
+    max-width: 540px;
+    margin: auto;
+    transform: rotateX(5deg);
+    input {
+        grid-area: input;
+    }
+    #numbers{
+        @extend %flex;
+        grid-area: numbers;
+        flex-wrap: wrap-reverse;
+        & > * {
+            flex-basis: 33.3%;
+            &:first-child { flex-basis: 100%; }
+        }
+    }
+    #operations{
+        @extend %flex;
+        grid-area: operations;
+    }
+    #actions{
+        @extend %flex;
+        grid-area: actions;
+        & > *{
+            flex-basis: 37.5%;
+            &:last-child { flex-basis: 25%; }
+        }
+    }
+}
