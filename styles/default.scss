@@ -1,3 +1,4 @@
+@import url("grid.css");
 // Variables
 $a: align;
 $b: block;
@@ -95,7 +96,10 @@ $properties: (
         #{$j}-#{$c}: $directions,
     ),
     list: (list-style: $lists),
-    text: (font-family: (serif, sans-serif, consolas, arial, segoe-ui, calibri)),
+    text: (
+        font-family: (serif, sans-serif, consolas, arial, segoe-ui, calibri),
+        text-align: (left, center, right, justify),
+    ),
     t:  (
         #{$ts}-#{$tf}: $timing,
     ),
