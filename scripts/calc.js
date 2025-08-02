@@ -30,9 +30,23 @@ const checkInput = () => calc.op === "" ? "n1" : "n2";
 const removeDigit = (key) => calc[key] = parseInt(calc[key] / 10);
 const writeNumber = (key, val) => calc[key] = Number(calc[key] + val);
 const writeOperation = (value) => calc.op = value;
+const calcResults = () => {
+    const { n1:a, n2:b, op:p } = calc
+    if (operations.find(item => p == item)) calc.n1 = eval(`${a}${p}${b}`)
+}
+const getResults = () => {
+    const {op:signo, n2:x} = calc;
+    const [sum, sus, prod, div] = operations;
+    switch(signo){
+        case sum:   return calc.n1 += x
+        case sus:   return calc.n1 -= x
+        case prod:  return calc.n1 *= x
+        case div:   return calc.n1 /= x
+    }
+}
 
 /** RENDERIZADO */
-calculator.append(input);
+calculator.append(calcInput);
 render(actions, "actions");
 render(numbers, "numbers");
 render(operations, "operations");
@@ -53,13 +67,14 @@ calculator.addEventListener('click', (event) => {
             case "/":
                 return writeOperation(value);
             case "=":
-                return
+                return calcResults();
             default:
                 return writeNumber(key, value)
         }
     }
 })
 calculator.addEventListener('click', event => {
-    const input = calculator.querySelector("input");
-    input.value = calc.n1
+    const btn = event.target.innerText
+    const calcInput = calculator.querySelector("input");
+    calcInput.value = calc[btn === "=" ? "n1" : checkInput()]
 })
