@@ -1,4 +1,4 @@
-### Expresiones y Operadores
+# Expresiones y Operadores
 
 Un operador es un símbolo o palabra clave que realiza una operación específica sobre uno o más valores, identificados como __operandos__. Estas operaciones pueden ser aritméticas, de asignación, comparación, lógicas, entre otras, y su propósito es _manipular o combinar datos_ para obtener un resultado. 
 
@@ -26,6 +26,5 @@ Un operador es un símbolo o palabra clave que realiza una operación específic
     | __&&__ | si "a" y "b" | 2<0 && 5>1 | false
     | __\|\|__ | si "a" o "b" | 2<0 \|\| 5>1 | true
     | __??__ | si no "a" | 2<0 ?? 5>1 | false
-
 
 [volver](../readme.md)

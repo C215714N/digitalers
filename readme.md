@@ -5,7 +5,10 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
 ## Tabla de Contenidos
 
 * [Lenguajes de Programacion](./docs/programming.md)
-* [Declaracion de Variables](./docs/datatypes.md)
-* [Tipos de Operadores](./docs/operators.md)
+* [Variables y tipos de datos](./docs/datatypes.md)
+* [Expresiones y Operadores](./docs/operators.md)
 * [Estructuras Condicionales](./docs/conditionals.md)
 * [Bucles e Iteraciones](./docs/loops.md)
+* [Comandos de Entrada y Salida](./docs/methods.md)
+* [Arreglos - Propiedades y Metodos](./docs/array.md)
+* [Eventos de Navegador](./docs/events.md)

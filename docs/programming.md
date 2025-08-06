@@ -21,3 +21,5 @@ Es un sistema que posee una sintaxis determina cuya finalidad es el desarrollo d
 * __Interpretado__ Lenguaje cuyas instrucciones son ejecutadas directamente por un programa, como por ejemplo el navegador con js.
 * __Compilado__ Aquellos que empaquetan el codigo resultante en un archivo ejecutable como c++, o java
 * __Transpilado__ Creados con algun framework o library que utiliza algun lenguaje que luego es traducido y compilado.
+
+[volver](../readme.md)
