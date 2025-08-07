@@ -56,8 +56,14 @@ $units:
     g       gap             .2rem,
     w       width           10%,
     mw      min-width       10%,
+    box     max-width       96px,
     h       height          10vh,
     mh      min-height      10vh,
+    start   left            10%,
+    end     right           10%,
+    top     top             10%,
+    clear   opacity         0.1,
+    base    bottom          10%,
     fs      font-size       .25rem,
     d       font-size       1vw,
     a-time  #{$an}-duration .2s,
@@ -75,6 +81,9 @@ $media:
 $properties: (
     d:     (
         display: ($b, $i, #{$i}-#{$b}, $f, $g, #{$i}-#{$f}, #{$i}-#{$g}, table, #{$i}-#{table}),
+    ),
+    m: (
+        margin: (auto),
     ),
     b:  (
         border-style: (none, solid, dotted, dashed, double, groove),
@@ -94,6 +103,12 @@ $properties: (
         #{$a}-#{$c}: $directions,
         #{$j}-items: $directions,
         #{$j}-#{$c}: $directions,
+    ),
+    table: (
+        border-collapse: (separate, collapse),
+    ),
+    p: (
+        #{$p}: (static, relative, absolute, fixed, sticky, inherit),
     ),
     list: (list-style: $lists),
     text: (

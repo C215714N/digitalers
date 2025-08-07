@@ -12,3 +12,7 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
 * [Comandos de Entrada y Salida](./docs/methods.md)
 * [Arreglos - Propiedades y Metodos](./docs/array.md)
 * [Eventos de Navegador](./docs/events.md)
+
+---
+
+## Ejercicios
