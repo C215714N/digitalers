@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body class="m-0 text-calibri mh-9">
+    <header class="p-2 | text-light-bold bg-primary">
+        <h1 class="m-0">Formularios</h1>
+        <p class="m-0">Envio y captura de Datos</p>
+    </header>
+    <main>
+        <form id="signup" class="d-flex flex-column g-1 m-auto p-2 | box-5">
+            <h2>Complete sus datos para el Registro</h2>
+            <label for="sign_username">Ingrese un Nombre de usuario</label>
+            <input class="b-2 b-solid o-0 r-2 p-1"
+                id="sign_username" 
+                name="username"
+                minlength="4"
+                maxlength="12"
+                pattern="[A-Za-z0-9]{4,12}"
+                title="Ingrese solamente letras y numeros, entre 3 y 12 caracteres"
+                type="text">
+            <label for="sign_email">Ingrese su correo electronico</label>
+            <input class="b-2 b-solid o-0 r-2 p-1"
+                id="sign_email" 
+                name="email"
+                minlength="8"
+                pattern="\S+@\S+(\.\w){1,3}"
+                title="Ingrese una direccion de correo valida ej: usuario@mail.com"
+                type="email">
+            <label for="sign_pass1">Escriba una contraseña</label>
+            <input class="b-2 b-solid o-0 r-2 p-1"
+                id="sign_pass1" 
+                name="password"
+                minlength="4"
+                maxlength="20"
+                type="password"
+                autocomplete="false">
+            <label for="sign_pass2">Repita la contraseña</label>
+            <input class="b-2 b-solid o-0 r-2 p-1"
+                id="sign_pass2" 
+                name="password"
+                minlength="4"
+                maxlength="20"
+                type="password"
+                autocomplete="false">
+            <div class="d-flex">
+                <button type="reset" class="w-5 | b-0 p-1 text-light bg-danger">Cancelar</button>
+                <button type="submit" class="w-5 | b-0 p-1 text-light bg-success">Confirmar</button>
+            </div>
+        </form>
+    </main>
+    <footer class="p-fixed start-0 top-10 w-10 | text-light-bold bg-primary-bold">
+        <p class="copy | m-0 p-2">Todos los derechos reservados</p>
+    </footer>
+    <script src="scripts/signup.js"></script>
+</body>
+</html>
