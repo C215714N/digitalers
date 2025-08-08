@@ -114,6 +114,7 @@ $properties: (
     text: (
         font-family: (serif, sans-serif, consolas, arial, segoe-ui, calibri),
         text-align: (left, center, right, justify),
+        text-transform: (lowercase, uppercase, capitalize)
     ),
     t:  (
         #{$ts}-#{$tf}: $timing,
