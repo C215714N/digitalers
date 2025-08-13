@@ -12,7 +12,22 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
 * [Comandos de Entrada y Salida](./docs/methods.md)
 * [Arreglos - Propiedades y Metodos](./docs/array.md)
 * [Eventos de Navegador](./docs/events.md)
+* [Expresiones Regulares](./docs/regexp.md)
 
 ---
 
 ## Ejercicios
+
+1. Realiza un script que determine si un numero ingresado es par o impar
+1. Calculadora de porcentajes:
+    1. Crear un formulario que posea los siguientes elementos 
+        * Campo Monto para el numero
+        * Campo de seleccion con las opciones Producto y Servicio
+        * Campo deshabilitado que muestre un porcentaje
+        * Campo deshabilitado que muestre el precio final
+    1. Armar un script para la interfaz que permita calcular el 10.5% para Producto o el 21% para  Servicio
+1. Calculadora de Superficie:
+    1. Crear un formulario con los siguientes Campos:
+        * Selector de Figura (rectangulo, triangulo)
+        * Numero para los Valores de Base y Altura
+    2. Desarrolla es script correspondiente para que se calcule el area correspondiente
