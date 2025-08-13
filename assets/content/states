@@ -1,0 +1,21 @@
+<h2>ReadyState</h2>
+
+<p>Estado que define en que etapa se encuenta una peticion asincrona, su valor cambia a medida que progresa la solicitud y son 5 valores correspondientes a los siguientes codigos</p>
+
+<ul>
+    <li> 
+        <strong>0 <em>(UNSENT)</em></strong>: La solicitud no ha sido inicializada con <code>open()</code>
+    </li>
+    <li> 
+        <strong>1 <em>(OPENED)</em></strong>: Se ha llamado a <code>open()</code>, pero aún no se ha enviado la solicitud
+    </li>
+    <li> 
+        <strong>2 <em>(HEADERS_RECEIVED)</em></strong>: Se han recibido las cabeceras de la respuesta
+    </li>
+    <li> 
+        <strong>3 <em>(LOADING)</em></strong>: El cuerpo de la respuesta está siendo recibido
+    </li>
+    <li> 
+        <strong>4 <em>(DONE)</em></strong>: La operación ha finalizado y la respuesta está disponible
+    </li>
+</ul>

@@ -1,0 +1,60 @@
+<h2>status</h2>
+
+<p>Codigo de estado HTTP correspondiente al resultado de la peticion realizada al servidor mediante metodos asincronos. existen muchos valores y se categorizan segun el rango numerico devuelto.</p>
+
+<ul>
+    <li><strong>1xx</strong>: Mensaje Informativo </li>
+    <li><strong>2xx</strong>: Resultado Exitoso </li>
+    <li><strong>3xx</strong>: Redireccionamiento </li>
+    <li><strong>4xx</strong>: Error de cliente </li>
+    <li><strong>5xx</strong>: Error de servidor </li>
+</ul>
+
+<h3> Codigos Comunes </h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Detalle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>200</td>
+            <td>OK</td>
+        </tr>
+        <tr>
+            <td>201</td>
+            <td>Created</td>
+        </tr>
+        <tr>
+            <td>204</td>
+            <td>No Content</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Bad Request</td>
+        </tr>
+        <tr>
+            <td>401</td>
+            <td>Unauthorized</td>
+        </tr>
+        <tr>
+            <td>403</td>
+            <td>Forbidde</td>
+        </tr>
+        <tr>
+            <td>404</td>
+            <td>Not Foun</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>Internal Server Erro</td>
+        </tr>
+        <tr>
+            <td>503</td>
+            <td>Service Unavailabl</td>
+        </tr>
+    </tbody>
+</table>

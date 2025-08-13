@@ -1,0 +1,24 @@
+<h2>method</h2>
+
+<p>valor que indica la forma en la que se realizan la peticiones. Corresponden a los siguientes verbos</p>
+
+<ul>
+    <li> 
+        <strong>GET</strong>: Solicita datos del servidor, enviando los parametros desde la url
+    </li>
+    <li> 
+        <strong>POST</strong>: Envía datos al servidor, para crear o modificar recursos
+    </li>
+    <li> 
+        <strong>PUT</strong>: Reemplaza completamente un recurso existente de manera idempotente
+    </li>
+    <li> 
+        <strong>DELETE</strong>: Elimina un recurso del servidor
+    </li>
+    <li> 
+        <strong>HEAD</strong>: Solicita solo las cabeceras de la respuesta
+    </li>
+    <li> 
+        <strong>OPTIONS</strong>: Solicita los métodos permitidos para un recurso
+    </li>
+<ul>
