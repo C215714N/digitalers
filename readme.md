@@ -30,4 +30,14 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
     1. Crear un formulario con los siguientes Campos:
         * Selector de Figura (rectangulo, triangulo)
         * Numero para los Valores de Base y Altura
-    2. Desarrolla es script correspondiente para que se calcule el area correspondiente
+    2. Desarrolla es script correspondiente para que se calcule el area de la figura seleccionada teniendo en cuenta lo siguiente
+        | Figura | Formula | Descripcion
+        |-|-|-|
+        | __Cuadrado__ | $b * h$ | Base por Altura |
+        | __Triangulo__ | $\dfrac{b * h}{2}$ | Base por altura sobre dos |
+    3. Opcionalmente puedes agregar las siguientes figuras, editando el formulario de ser necesario:
+        | Figura | Formula | Descipcion |
+        |-|-|-|
+        |__Rombo__ | $\dfrac{D * d}{2}$ | Diagonal Mayor por diagonal Menor sobre 2 |
+        | __Circulo__ | $\pi * r^2$ | Pi por radio al cuadrado
+        | __Poligono__ | $\dfrac{P * a}{2}$ | Perimetro por apotema sobre 2 |
