@@ -4,8 +4,9 @@ const handleError = (obj) => `
         Ha ocurrido un error y no se pudo llevar a cabo la accion <br>
         Pruebe otra cosa o intente nuevamente mas tarde
     </p>`
-
-const handleRender = (err, content) => 
-    root.innerHTML = err ? handleError(err) : content;
-
+const handleRender = (err, content) => {
+    const section = root.querySelector("section") || document.createElement("section");
+    section.innerHTML = err ? handleError(err) : content;
+    root.append(section)
+}
 export default handleRender
