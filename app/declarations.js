@@ -1,17 +1,44 @@
 export const 
     method = "GET", 
-    HOST = "/assets/content/",
+    HOST = {
+        local: "/assets/content/",
+        remote: "https://jsonplaceholder.typicode.com/",
+        default: ""
+    },
     navBarList = [
     {
         text: "Metodos",
-        href: "/methods"
+        path: "/methods",
+        type: "local"
     },
     {
         text: "Estados",
-        href: "/states"
+        path: "/states",
+        type: "local"
     },
     {
         text: "Codigos",
-        href: "/status"
+        path: "/status",
+        type: "local"
     },
+    {
+        text: "Error",
+        path: "/error",
+        type: "local"
+    },
+    {
+        text: "Usuarios",
+        path: "/users",
+        type: "remote"
+    },
+    {
+        text: "Publicaciones",
+        path: "/posts",
+        type: "remote"
+    },
+    {
+        text: "Galeria",
+        path: "/photos",
+        type: "remote"
+    }
 ]
