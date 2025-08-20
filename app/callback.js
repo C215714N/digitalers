@@ -3,11 +3,14 @@ function getData({method, url, callBack}){
     xhr.open(method, url) // readyState 1
     // readyState 0 - 4
     xhr.onreadystatechange = function () {
-        console.log(xhr)
-        if (xhr.readyState === 4) 
+        xhr.readyState === 4 && 
         xhr.status === 200 ? 
-            callBack(null, xhr.response) : 
+            callBack(null, xhr.responseText) : 
             callBack(xhr, null)
+    }
+    xhr.onprogress = function (ev) {
+        ev.lengthComputable && 
+        callBack(null, `<progress min="0" max="1" value="${ev.loaded / ev.total}">`)
     }
     // readyState 2
     xhr.send()
