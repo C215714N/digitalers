@@ -1,6 +1,6 @@
 function NavBarList (arr){
     let template = "";
-    arr.forEach(item => template += `<li><a href="${item.href}">${item.text}</a></li>`)
+    arr.forEach(item => template += `<li><a href="${item.path}" data-type="${item.type}">${item.text}</a></li>`)
     return template;
 }
 function NavBar (objArray) {
