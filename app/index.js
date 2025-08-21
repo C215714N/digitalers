@@ -1,7 +1,7 @@
-import {method, HOST, navBarList} from "./declarations.js"
+import { HOST, CONTENT, navBarList } from "./declarations.js"
+import { handleRender, handleRemote } from "./render.js";
+import getData from "./fetch.js";
 import NavBar from "./nav.js";
-import getData from "./callback.js";
-import handleRender from "./render.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar(navBarList);
@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         ev.preventDefault()
         if (tag === "A"){
             const type = target.dataset.type || "default";
+            const contentType = CONTENT[type || "default"];
+            history.pushState({}, "", path);
             getData({
-                method,
-                url: HOST[type] + path,
-                callBack: handleRender
+                url: HOST[type] + path, 
+                headers: {"Content-Type": contentType} 
             })
+            .then( response => type === "local" ? 
+                handleRender(null, response) : 
+                handleRemote(response)
+            )
         }
-    }) 
+    })
 })
