@@ -17,5 +17,5 @@ export const
         { text: "Error", path: "error", type: "local" },
         { text: "Usuarios", path: "users", type: "remote" },
         { text: "Publicaciones", path: "posts", type: "remote" },
-        { text: "Galeria", path: "albums", type: "remote" }
+        { text: "Galeria", path: "albums?userId=1", type: "remote" }
     ]
