@@ -1,5 +1,5 @@
 export const Comment = ({id, name, email, body}) => `
-    <li id="comment-${id}">
+    <li id="comment-${id}" class="list-group-item">
         <p>
             <strong>${name}</strong>
             <em>${body}</em>

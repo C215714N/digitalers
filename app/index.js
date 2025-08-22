@@ -2,6 +2,7 @@ import { HOST, CONTENT, navBarList } from "./declarations.js"
 import { handleRender, handleRemote } from "./render.js";
 import getData from "./fetch.js";
 import NavBar from "./components/nav.js";
+import * as bootstrap from "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar(navBarList);

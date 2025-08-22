@@ -10,6 +10,7 @@ switch (path) {
 }}
 export const getSection = () => {
     const section = root.querySelector("section") || document.createElement("section");
+    section.setAttribute("class", "col-md-10 col-xl-8 | m-2")
     section.innerHTML = "";
     root.append(section);
     return section;
