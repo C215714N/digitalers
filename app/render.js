@@ -13,5 +13,6 @@ export const handleRemote = (data) => {
     const section = getSection();
     const path = location.pathname;
     const Render = getComponent(path);
-    data.forEach(item => section.innerHTML += Render(item))
+    data.forEach(item => Render(item)
+        .then(result => section.innerHTML+= result))
 }
