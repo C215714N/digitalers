@@ -1,7 +1,7 @@
 import { HOST, CONTENT, navBarList } from "./declarations.js"
 import { handleRender, handleRemote } from "./render.js";
 import getData from "./fetch.js";
-import NavBar from "./nav.js";
+import NavBar from "./components/nav.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar(navBarList);
