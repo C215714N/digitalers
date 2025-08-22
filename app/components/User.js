@@ -1,4 +1,4 @@
-export const User = ({id, name, username, email, phone, website}) => 
+export const User = async ({id, name, username, email, phone, website}) => 
     `<article id="user-${id}">
         <header>
             <h3>${name} (${username})</h3>
