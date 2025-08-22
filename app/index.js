@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     root.addEventListener('click', (ev) => {
         const { target } = ev
-        const { tagName: tag, pathname:path } = target
+        const { tagName: tag, pathname:path, search } = target
         ev.preventDefault()
         if (tag === "A"){
             const type = target.dataset.type || "default";
             const contentType = CONTENT[type || "default"];
             history.pushState({}, "", path);
             getData({
-                url: HOST[type] + path, 
+                url: HOST[type] + path + (search||""), 
                 headers: {"Content-Type": contentType} 
             })
             .then( response => type === "local" ? 
