@@ -1,0 +1,21 @@
+*{
+    font-family: sans-serif;
+}
+table {
+    color: #eee;
+    text-shadow: -.1rem .1rem .1rem #333;
+    border-collapse: collapse;
+    background: linear-gradient(#c36, #448)
+}
+th, td{
+    padding: .5rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    border: 1px solid #333;
+}
+tr:nth-child(odd){
+    background-color: #eee5;
+}
+tr:nth-child(even){
+    background-color: #aaa5;
+}
