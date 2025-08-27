@@ -4,6 +4,11 @@ Esto es una guia para los alumnos de la capacitacion __Digitalers NodeJS__ que c
 
 ## Tabla de Contenidos
 
+* Modelos de Objetos
+    * [BOM](./docs/bom.md)
+    * [DOM](./docs/dom.md)
+* Interfaces de Programacion de Aplicacion
+    * [Api de Eventos](./docs/event.md)
 * Programacion Asincrona
     * [CallBack](./docs/cbfn.md)
     * [XMLHttpRequest](./docs/xhr.md)
