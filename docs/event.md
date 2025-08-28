@@ -4,21 +4,21 @@ Los eventos pueden representar cualquier cosa, como por ejemplo, interacciones b
 
 |Evento|Descripcion|
 |-|-|
-|_DOMContentLoaded_|El documento termino de cargar todo su contenido|
-|_load_| Se ha cargado correctament el contenido de un elemento HTML|
-|_progress_| Se esta descargando contenido Multimedia|
-|_mouseover_| Se ha posicionado el cursor sobre un elemento HTML|
-|_mouseout_| Se ha alejado el cursor de un elemento HTML|
-|_click_| Un elemento ha sido pulsado con el dispositivo señalador|
-|_contextmenu_| Se hizo click con el boton secundario del dispositivo señalador|
-|_scroll_| Se esta utilizando la Barra de desplazamiento de un elemento |
-|_focus_| Se ha enfocado un elemento HTML|
-|_blur_| Se ha perdido el foco de un elemento HTML|
-|_input_| El valor de un campo de formulario ha cambiado|
-|_keydown_| Se ha pulsado una tecla|
-|_keypress_| Se esta presionando una tecla|
-|_keyup_| Se ha soltado la tecla presionada|
-|_submit_| Se ha realizado el envio de un formulario HTML|
+| __DOMContentLoaded__ |El documento termino de cargar todo su contenido|
+| __load__ | Se ha cargado correctament el contenido de un elemento HTML|
+| __progress__ | Se esta descargando contenido Multimedia|
+| __mouseover__ | Se ha posicionado el cursor sobre un elemento HTML|
+| __mouseout__ | Se ha alejado el cursor de un elemento HTML|
+| __click__ | Un elemento ha sido pulsado con el dispositivo señalador|
+| __contextmenu__ | Se hizo click con el boton secundario del dispositivo señalador|
+| __scroll__ | Se esta utilizando la Barra de desplazamiento de un elemento |
+| __focus__ | Se ha enfocado un elemento HTML|
+| __blur__ | Se ha perdido el foco de un elemento HTML|
+| __input__ | El valor de un campo de formulario ha cambiado|
+| __keydown__ | Se ha pulsado una tecla|
+| __keypress__ | Se esta presionando una tecla|
+| __keyup__ | Se ha soltado la tecla presionada|
+| __submit__ | Se ha realizado el envio de un formulario HTML|
 
 ## Propagacion
 

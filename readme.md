@@ -13,5 +13,8 @@ Esto es una guia para los alumnos de la capacitacion __Digitalers NodeJS__ que c
     * [CallBack](./docs/cbfn.md)
     * [XMLHttpRequest](./docs/xhr.md)
     * [Promise](./docs/promise.md)
-    * [API fetch](./docs/fetch.md)
+    * [Fetch](./docs/fetch.md)
     * [Async/Await](./docs/async.md)
+* Paradigmas de Programacion
+    * [Prototype](./docs/proto.md)
+    * [Class](./docs/class.md)
