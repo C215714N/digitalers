@@ -5,7 +5,8 @@ export function clockButtons(clock){
     const tag = "button";
     const startBtn = create({
         tag, innerText: "Iniciar Reloj",
-        onclick: () => {
+        onclick: ({target}) => {
+            stopStart(target);
             start = setInterval(() => {
                 clock.addTime();
                 renderTime(clock)
@@ -22,15 +23,22 @@ export function clockButtons(clock){
     });
     const pauseBtn = create({
         tag, innerHTML: "Pausar Reloj",
-        onclick: () => clock.pauseTimer(start)
+        onclick: ({target}) => {
+            clock.pauseTimer(start);
+            start = null;
+            stopStart(target);
+        }
     })
     const stopBtn = create ({
         tag, innerHTML: "Detener Reloj",
-        onclick: () => {
-            pauseBtn.click();
+        onclick: ({target}) => {
+            clock.pauseTimer();
             clock.stopTimer();
+            stopStart(target)
             renderTime(clock);
         }
     })
-    return [ startBtn, markBtn, pauseBtn, stopBtn ]
+    const arrayBtns = [ startBtn, markBtn, pauseBtn, stopBtn ]
+    const stopStart = (target) => arrayBtns.forEach(btn => btn.disabled = btn === target)
+    return arrayBtns
 }
