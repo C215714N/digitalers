@@ -1,4 +1,4 @@
-class Persona {
+class Person {
 // Propiedades
     constructor(nombre, edad, genero){    
         this.nombre = nombre,
