@@ -3,9 +3,9 @@
         .checker{
             stroke: #eee;
             stroke-width: ".2rem";
-            fill: #333;
+            fill: transparent;
         }
-    </style>   
+    </style> 
     <circle class="checker" r="48" cx="50" cy="50"/>
     <circle class="checker" r="44" cx="50" cy="50"/>
     <circle class="checker" r="40" cx="50" cy="50"/>

@@ -1,0 +1,31 @@
+/* Tablero de Juego */
+#board{
+    display: grid;
+    max-width: calc(8 * 3rem);
+    grid-template-columns: repeat(8, 1fr);
+    margin: 1rem auto;
+    box-shadow: 0 0 .2rem .2rem #333;
+}
+#board div{
+    padding: .5rem;
+    height: 3rem;
+    width: 3rem;
+}
+.odd{
+    background-color: #333;
+}
+.even{
+    background-color: #eee;
+}
+/* Fichas de juego */
+.checker{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.red{
+    background-color: #a33;
+}
+.black{
+    background-color: #333;
+}
