@@ -9,7 +9,6 @@ Esto es una guia para los alumnos de la capacitacion __Digitalers NodeJS__ que c
     * [DOM](./docs/dom.md)
 * Interfaces de Programacion de Aplicacion
     * [Api de Eventos](./docs/event.md)
-    * [Drag N Drop](./docs/dragndrop.md)
     * [Symbols](./docs/symbol.md)
     * [Proxy](./docs/proxy.md)
 * Programacion Asincrona
@@ -22,6 +21,6 @@ Esto es una guia para los alumnos de la capacitacion __Digitalers NodeJS__ que c
     * [Prototype](./docs/proto.md)
     * [Class](./docs/class.md)
 * Patrones de Diseño
-    [Creacionales](./docs/creational.md)
-    [Estructurales](./docs/structure.md)
-    [Comportamiento](./docs/behavior.md)
+    * [Creacionales](./docs/creational.md)
+    * [Estructurales](./docs/structure.md)
+    * [Comportamiento](./docs/behavior.md)
