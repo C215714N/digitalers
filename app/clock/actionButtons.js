@@ -32,7 +32,7 @@ export function clockButtons(clock){
     const stopBtn = create ({
         tag, innerHTML: "Detener Reloj",
         onclick: ({target}) => {
-            clock.pauseTimer();
+            pauseBtn.click();
             clock.stopTimer();
             stopStart(target)
             renderTime(clock);
