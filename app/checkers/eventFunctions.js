@@ -1,15 +1,18 @@
-export function eventFunctions(){
-    return ({
-    onDragStart: (ev) => {
+export const eventFunctions = () => ({  
+    dragstart: (ev) => {
         ev.target.tagName === "IMG" &&
         ev.dataTransfer.setData('id', ev.target.id);
     },
-    onDragOver: (ev) => {
+    dragover: (ev) => {
         ev.preventDefault();
     },
-    onDrop: (ev) => {
+    drop: (ev) => {
+        const {target:t} = ev
         const id = ev.dataTransfer.getData('id')
         const target = document.getElementById(id);
-        ev.target.append(target)
+        
+        !t.childNodes.length && 
+        t.tagName === "DIV" &&
+        t.append(target)
     }
-})}
+})

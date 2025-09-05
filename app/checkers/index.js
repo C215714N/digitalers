@@ -4,7 +4,7 @@ import { eventFunctions } from "./eventFunctions.js";
 
 export default function checkersGame(){
     const checkers = new Game();
-    const {onDragStart, onDragOver, onDrop} = eventFunctions()
+    const events = eventFunctions()
 
     checkers.addPlayer({name: "c215714n", color:"red"});
     checkers.addPlayer({name: "John Doe", color:"black"});
@@ -26,10 +26,8 @@ export default function checkersGame(){
                 draggable
             />`})
         board.appendChild(box);
-
-        box.addEventListener('dragstart', onDragStart)
-        box.addEventListener('dragover', onDragOver)
-        box.addEventListener('drop', onDrop)
+        Object.entries(events).map(([event, callback]) => 
+            box.addEventListener(event, callback))
     })
     console.log(checkers);
     root.append(board);

@@ -1,5 +1,5 @@
 import { Player } from "./Player.js"
-import { Piece } from "./Piece.js"
+import { pieceProxy as Piece } from "./checkersProxy.js"
 
 export class Game {
     board = []
