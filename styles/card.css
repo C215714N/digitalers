@@ -1,0 +1,46 @@
+.card{
+    display: flex;
+    position: relative;
+    width: 7rem;
+    justify-content: center;
+    border: .25rem solid var(--color);
+    border-radius: .5rem;
+    padding: 4rem 2.5rem;
+    color: var(--color);
+    background-color: #eee;
+    font: bold 2.5rem sans-serif;
+    line-height: 1.75rem;
+}
+.card.red{
+    --color: #c33;
+}
+.card.black{
+    --color: #333;
+}
+/* Figuras */
+.card::before,
+.card::after{
+    content: var(--symbol);
+    position: absolute;
+    display: block;
+}
+.card::before{
+    top: .25rem;
+    left: .5rem;
+}
+.card::after{
+    bottom: .5rem;
+    right: .5rem;
+}
+.card.spade{
+    --symbol: "♠";
+}
+.card.club{
+    --symbol: "♣";
+}
+.card.heart{ 
+    --symbol: "♥";
+}
+.card.diamond{ 
+    --symbol: "♦"
+}
