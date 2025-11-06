@@ -38,7 +38,27 @@
             React.createElement('a', { className: style, href}, text));
 
     // Contenedores
-        
+        const Header = React.createElement('header', {
+            className: 'd-grid justify-content-center align-content-center | min-vh-100 | bg-dark bg-gradient text-light'
+            }, [
+            React.createElement('h1', {className: 'display-1 fw-bold'},'Aplicacion ReactJS'),
+            React.createElement('p', { className: 'h1 fw-light'},'Biblioteca javascript FrontEnd'),
+            React.createElement('div',{ className: 'btn-group'}, [
+                Button({text: 'iniciar sesion', variant: 'primary'}),
+                Button({text: 'Registrarse', variant: 'success'})
+            ])
+        ]);
+        const Nav = React.createElement('nav', { className: 'navbar navbar-dark navbar-expand-md | p-2 | bg-primary '},
+            Button({classlist: 'navbar-brand', text: 'App'}),
+            Button({
+                classlist:'navbar-toggler navbar-toggler-icon',
+                "data-bs-target": '#nav',
+                "data-bs-toggle": "collapse",
+            }),
+            React.createElement('div', {id:'nav', className: 'navbar-nav navbar-collapse collapse'}, Links(navigation) )
+        )
+        const Social = React.createElement('div', { className: 'btn-group'}, Links(social))
+
     // Punto de entrada
         
     // Renderizado App
