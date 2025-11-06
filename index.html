@@ -28,7 +28,15 @@
         ]
 
     // Componentes
-        
+        const Button = ({variant="lg", size="", text="", classlist="", ...props}) => 
+            React.createElement('button', {
+                className: `btn btn-${variant} ${size ? `btn-${size}`: ''} ${classlist}`,
+                type: 'button',
+                ...props
+            }, text );
+        const Links = (array) => array.map(({href, text, style=""}) =>
+            React.createElement('a', { className: style, href}, text));
+
     // Contenedores
         
     // Punto de entrada
