@@ -60,9 +60,15 @@
         const Social = React.createElement('div', { className: 'btn-group'}, Links(social))
 
     // Punto de entrada
-        
+        const App = [
+            Nav,
+            Header,
+            Social,
+        ]
+
     // Renderizado App
         ReactDOM.createRoot(document.getElementById('root'))
+            .render(App)
     </script>
 </body>
 </html>
