@@ -1,17 +1,24 @@
 import { useState } from 'react'
-import { Header } from './components/Header'
-import { NavBar } from './components/NavBar'
-import { Button } from './components/Button'
+import { HeaderComponent } from './components/Header'
+import { NavBarFeature } from './features/NavBar'
+import { ButtonComponent } from './components/Button'
+
 
 import './App.css'
 
 function App() {
+  const menuList = [
+    { id: 1, text: "inicio" },
+    { id: 2, text: "galeria" },
+    { id: 4, text: "contacto" },
+    { id: 3, text: "publicaciones" },
+  ]
   const onAction = () => console.log('me atrapaste');
   return (
     <>
-      <NavBar appName="Jsx" />
-      <Header title="ReactJS" subtitle="Server Sider Rendering"/>
-      <Button text='Click Me!' onAction={onAction} />
+      <NavBarFeature appName="Jsx" list={menuList}/>
+      <HeaderComponent title="ReactJS" subtitle="Server Sider Rendering" otraCosa="ok"/>
+      <ButtonComponent text='Click Me!' onAction={onAction} />
     </>
   )
 }
