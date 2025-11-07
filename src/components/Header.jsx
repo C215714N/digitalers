@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-export class Header extends Component {
+export class HeaderComponent extends Component {
     constructor(props){
         super(props);
     }
