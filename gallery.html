@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selector Simple: Etiqueta */
+        body {
+            margin: 0;
+            font-family: 'segoe-ui', 'calibri', sans-serif;
+        }
+        img {
+            max-width: 320px;
+            width: 100%;
+        }
+        /* Selector Multiple (,) */
+        header,
+        footer {
+            padding: 16px;
+            color: #eda; /*HEX: rrggbb  (00 a FF | 0 a 255)*/
+            background-color: #c60;
+            text-align: center;
+        }
+        /* Selector Compuesto /Especifico (padre hijo) */
+        nav ul{
+            list-style: none;
+            padding: 8px;
+            background-color: #a40;
+        }
+        nav li{
+            display: inline-block;
+        }
+        nav a{
+            color: #ecc;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER: Contenido Introductorio (Presentacion) -->
