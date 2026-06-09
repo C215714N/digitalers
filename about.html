@@ -25,24 +25,49 @@
                 <h2>Formularios HTML</h2>
             </header>
             <p>
-                Son elementos que permiten la <strong>interaccion entre el cliente (navegador) y el servidor</strong>, ya sea para enviar o recibir datos.
+                Son elementos que permiten la <strong>interaccion entre el cliente (navegador) y el servidor</strong>, ya sea para enviar o recibir datos. Se implementan dentro de una pagina <em>utilizando la etiqueta &lt;form&gt;</em> y colocando dentro de la misma todo los elementos que pertenezcan al mismo. Cabe destacar que solamente se enviaran los datos que se encuentren dentro de este, caso contrario, estos no llegaran a destino.
             </p>
             <section>
                 <header>
                     <h3>¿Como funcionan?</h3>
                 </header>
                 <p>
-
+                    <em>A la etiqueta mencionada anteriormente</em> debemos indicarle por los menos 2 atributos, <strong>action="..."</strong> el cual indica que debe suceder cuando se realiza el envio del formulario; y <strong>method="..."</strong> que especifica como se realizar el envio del mismo, es decir, cual de los metodos siguientes debe utilizar.
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> metodo poco seguro, debido a que la informacion es visible desde la barra de direccion, pero mucho mas rapido; cuya prioridad radica en la respuesta del servidor. <em>Se utiliza principalmente en buscadores</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> metodo mas lentom y seguro, debido a que la prioridad radica en la proteccion de los datos enviados por el cliente, ya que estos se cifran antes de realizar el envio. <em>Se utiliza en formularios de registro, sesion, contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
+            <section>
             <section>
                 <header>
                     <h3>¿Como estan compuestos?</h3>
                 </header>
                 <p>
-
+                    <em>En el interior del mismo</em> podemos colocar elementos como <strong>Etiquetas (LABEL)</strong> que funcionan a modo de rotulo, indicando que se debe seleccionar y/o completar; y <strong>Campos (INPUT/SELECT/TEXTAREA)</strong> que corresponden a los elementos con los que el usuario interactua, estos al menos deben poseer algunos de los siguientes atributos para ser funcionales.
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>type</strong> utilizado en los input, indica que tipo de campo es el que se debe utilizar, por ejemplo <em>number</em> para numeros o <em>checkbox</em> para cuadros de opcion.
+                    </li>
+                    <li>
+                        <strong>name</strong> identifica al campo de formulario, para utilizar su valor cuando este sea enviado. Varios campos pueden compartir nombre, indicando que corresponden a la misma opcion.
+                    </li>
+                    <li>
+                        <strong>value</strong> corresponde al dato enviado, normalmente es implicito, pero podemos establecer un valor predeterminado en caso de ser necesario.
+                    </li>
+                </ul>
             </section>
+            <footer>
+                <p>
+                    Pueden obtener mas informacion sobre formularios en <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools</a> 
+                </p>
+            </footer>
         </article>
     </main>
     <footer id="footer">
