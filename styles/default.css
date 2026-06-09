@@ -1,0 +1,35 @@
+/* Reglas Generales */
+
+/* Navegacion */
+
+/* Cabecera */
+
+/* Contenido */
+
+/* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+    }
+    #contact :is(
+        input,
+        select,
+        textarea,
+        button
+    ){
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    #contact button{
+        cursor: pointer;
+        border: 1px solid #248; /*width style color*/
+        color: #248;
+    }
+    #contact button:hover{
+        background-color: #248;
+        color: #eee;
+    }
