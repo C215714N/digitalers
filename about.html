@@ -72,8 +72,34 @@
     </main>
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="">
+        <form id="contact" action="" method="">
             <h2>Llena el Formulario</h2>
+            <!-- Campo Nombre -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                required>
+            <!-- Campo Correo -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                required>
+            <!-- Campo Asunto -->
+            <label for="contact_subject">Elija un Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructuras con HTML</option>
+                <option value="css">Estilos con CSS</option>
+                <option value="js">Logica con Javascript</option>
+            </select>
+            <!-- Campo Consulta -->
+            <label for="contact_consult">Escriba su Consulta</label>
+            <textarea id="contact_consult" name="consult" required></textarea>
+            <!-- Boton de confirmacion -->
+            <button>ENVIAR</button>
         </form>
         <p class="copy">&copy;2026 Todos los derechos reservados | Cristian Racedo & Compañia</p>
     </footer>
