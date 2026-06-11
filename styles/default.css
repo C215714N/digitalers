@@ -1,9 +1,76 @@
 /* Reglas Generales */
-
+    * {
+        box-sizing: border-box;
+        /* 
+            content-box: 
+                - content-width: width;
+                - final-width: width + padding + border;
+            border-box:
+                - final-width: width;
+                - content-width: width - padding - border;
+        */
+        scroll-behavior: smooth;
+        font-family: 'Raleway', 'calibri', 'segoe ui', sans-serif;
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Bordes */
+    iframe{
+        border: none;
+    }
+    /* Estilos */
+    .menu,
+    .example,
+    .list-unstyled {
+        list-style: none;
+    }
+    :is(
+        .menu,
+        .social
+    ) a{
+        text-decoration: none;
+    }
 /* Navegacion */
-
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: .5rem; /* separacion entre elementos*/
+    padding: .5rem 1rem; /* Relativo al Tamaño en Root (HTML) - por defecto 16px */
+    background-color: #248;
+}
+.menu a{
+    color: #ccc;
+    font-weight: bold;
+}
+.menu a:is(:hover, .active){
+    color: #eee;
+    text-shadow: 0 0 .2rem; /*-x+ -y+ blur color*/
+}
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 1rem;
+        text-shadow: -.1rem .1rem .1rem #333;
+        text-align: center;
+        background-image: url('/assets/bg/osx-monterrey-dark.jpg');
+        background-position: center; /* x y | left right top bottom center  */
+        background-size: cover; /* width | contain cover*/
+    }
+    .header{
+        padding: .5rem 1rem;
+        color: #eee;
+        background-color: #248;
+    }
+    header{
+        color: #248;
+        border-bottom: .15rem solid;
+    }
 /* Contenido */
 
 /* Pie de Pagina */
@@ -21,12 +88,12 @@
         textarea,
         button
     ){
-        padding: 8px;
+        padding: 8px 16px; /* top right bottom left */
         margin-bottom: 8px;
     }
     #contact button{
         cursor: pointer;
-        border: 1px solid #248; /*width style color*/
+        border: 1px solid #248; /*SHORTHAND: width style color*/
         color: #248;
     }
     #contact button:hover{
