@@ -59,7 +59,7 @@
         text-shadow: -.1rem .1rem .1rem #333;
         text-align: center;
         background-image: url('/assets/bg/osx-monterrey-dark.jpg');
-        background-position: center; /* x y | left right top bottom center  */
+        background-position: center; /* x y | left right top bottom center */
         background-size: cover; /* width | contain cover*/
     }
     .header{
