@@ -17,7 +17,6 @@ Aqui dejo una lista de algunos editores que pueden utilizar para trabajar y algu
 | [Brackets](https://brackets.io) | Desarrollado con Javascript y pensado para ser utilizado por diseñadores web. |
 | [VIM](https://www.vim.org/) | Para desarrolladores hardcore capaces de abandonar la GUI y concentrarse en el codigo. |
 
-
 ## Desarrollo frontend
 
 En el mundo del __desarrollo web__ existen varias entidades que funcionan como reguladores del lenguaje, asi como referentes a la hora de escribir codigo, estableciendo lo que se conoce como __buenas practicas__.
@@ -61,6 +60,24 @@ Una vez definida la estructura de la pagina debemos pasar implementar el diseño
     * **inblock**: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
 * **_estilo externo_** Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
 
+## Formularios Web
+
+Son herramientas que facilitan el intercambio de datos entre cliente y servidor mediante solicitudes HTTP (HyperText Tranfer Protocol) con la intervencion del usuario ya que es quien completa los datos a enviarse.
+
+En un formulario encontraremos campos que indican que valores podemos ingresar. Las etiquetas correspondientes a los mismos son `<input>` para la mayoria de los campos monolinea, `<textarea>` para campos multilinea y `<select>` para listas de opciones; algunos de los tipo de datos mas comunes son:
+
+|Tipo|Valor|
+|----|----------|
+|text | Cristian Racedo
+|number|35336446|
+|email|cristiandracedo@hotmail.com|
+|password|******** |
+| date|1991-04-18|
+|radio|(O) masculino ( ) femenino|
+|checkbox|[X] Español [X] Ingles [ ] Portugües |
+|textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
+|select| seleccione un lenguaje <br> html <br> css <br> js |
+
 ___
 
 ## Actividades
@@ -85,3 +102,18 @@ En este apartado se podran realizar diferentes ejercicios relacionados con los t
 3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion
 4. Agregar hipervinculos de las redes sociales a eleccion e informacion de copyright
 5. Colocar contenido, a eleccion, dentro de las diferentes paginas.
+
+### Formularios
+
+1. Crear un formulario de inicio de sesion utilizando los siguientes elementos
+   * un campo de tipo __email__
+   * un campo de tipo __password__.
+2. Crear un formulario de registro que respete los siguientes criterios:
+   * nombre y apellido __(obligatorio)__
+   * fecha de nacimiento
+   * telefono y celular
+   * correo y contraseña __(obligatorio)__
+3. Crear un formulario para una red social que posea:
+   * campo para __nombre__
+   * campo de __comentario__
+   * opcion para elegir entre _publica o privada_.
