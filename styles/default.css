@@ -18,11 +18,13 @@
     h2,
     h3,
     header p,
-    .menu{
+    #header,
+    .container figure,
+    .menu {
         margin: 0;
     }
     /* Bordes */
-    iframe{
+    iframe {
         border: none;
     }
     /* Estilos */
@@ -63,6 +65,7 @@
         background-size: cover; /* width | contain cover*/
     }
     .header{
+        margin: -1rem -1rem 0;
         padding: .5rem 1rem;
         color: #eee;
         background-color: #248;
@@ -72,7 +75,46 @@
         border-bottom: .15rem solid;
     }
 /* Contenido */
-
+main {
+    max-width: 960px;
+    margin: auto;
+    padding: 1rem;
+}
+article {
+    overflow: hidden;
+    margin: .5rem 0 1rem; /* top right bottom left */
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 0 0 .5rem #ccc;
+}
+    /* Secciones de Ejemplo */
+    .example {
+        max-width: 720px;
+        margin: 1rem auto;
+        border-left: .25rem solid #248;
+        padding: .5rem 1rem;
+        line-height: 1.5;
+        background-color: #eee;
+        box-shadow: -.25rem .25rem .5rem #333
+    }
+    .container {
+        display: flex;
+        gap: 1rem;
+        overflow: auto;
+    }
+    .container figure {
+        min-width: min(90%, 640px);
+    }
+    video, iframe {
+        width: 100%;
+        min-height: 360px;
+        /* ratio    height  width  example
+            4:3     75%     1.33   640x480
+            16:9    56.25%  1.77   640x360
+            16:10   62.5%   1.6    640x400
+            21:9    42.85%  2.33   640x274
+        */
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
