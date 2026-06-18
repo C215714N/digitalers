@@ -142,3 +142,37 @@ article {
         background-color: #248;
         color: #eee;
     }
+    /* Redes Sociales */
+    .social {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        padding: .5rem;
+        gap: .5rem;
+    }
+    .social a {
+        border-radius: .5rem;
+        padding: 2rem;
+        background-color: #ccc;
+        background-size: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .social a:hover {
+        background-color: #eee;
+        background-size: 2.5rem;
+        box-shadow: 0 .2rem .5rem #333;
+    }
+    /* Iconos Redes Sociales */
+    .instagram {
+        background-image: url(  '/assets/icon/instagram.svg');
+    }
+    .linkedin {
+        background-image: url(  '/assets/icon/linkedin.svg');
+    }
+    .github {
+        background-image: url(  '/assets/icon/github.svg');
+    }
+    .whatsapp {
+        background-image: url(  '/assets/icon/whatsapp.svg');
+    }
