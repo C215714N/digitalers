@@ -115,6 +115,47 @@ article {
             21:9    42.85%  2.33   640x274
         */
     }
+    /* Tablas */
+    table caption {
+        border-radius: .5rem .5rem 0 0; /* tl tr br bl*/
+    }
+    table caption,
+    th,
+    td {
+        padding: .25rem .5rem;
+    }
+    .classic,
+    .classic :is(
+        caption,
+        th,
+        td
+    ) {
+        border: .2rem solid #448;
+        border-collapse: collapse;
+    }
+    .classic caption {
+        color: #448; /* RGB: 444488 -> DEC: RGB(68, 68, 136) */
+        font-weight: bold;
+        border-bottom: none;
+    }
+    .modern, 
+    .modern :is(
+        caption,
+        tr,
+        th
+    ){
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5);
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #3c6;
+    }
+    .semantic tfoot{
+        background-color: #248;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
