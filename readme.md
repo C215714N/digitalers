@@ -78,6 +78,21 @@ En un formulario encontraremos campos que indican que valores podemos ingresar. 
 |textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
 |select| seleccione un lenguaje <br> html <br> css <br> js |
 
+## Contenido Multimedia y Embebido
+
+Las paginas web no solo estan compuestas por texto, sino que tambien pueden incluir elementos multimedia que enriquecen la experiencia del usuario. HTML provee diferentes etiquetas para incorporar imagenes, videos, audios y contenido embebido de fuentes externas.
+
+| Etiqueta | Descripcion |
+|--|--|
+| **img** | Permite incluir imagenes en la pagina, requiere el atributo `src` para indicar la ruta y `alt` para texto alternativo |
+| **video** | Reproduce contenido de video en la pagina, soporta `controls`, `autoplay`, `loop`, `muted`, `poster` |
+| **audio** | Reproduce contenido de audio en la pagina, soporta `controls`, `autoplay`, `loop`, `preload` |
+| **source** | Define multiples fuentes para elementos de video y audio, permite especificar formato con `type` |
+| **iframe** | Incrusta contenido externo como videos de YouTube, mapas de Google, o paginas web dentro de la pagina |
+| **embed** | Incrusta contenido externo como plugins o aplicaciones |
+| **object** | Incrusta objetos multimedia con soporte para contenido alternativo |
+| **picture** | Permite definir diferentes fuentes de imagenes para diferentes tamanos de pantalla (responsive) |
+
 ___
 
 ## Actividades
@@ -117,3 +132,11 @@ En este apartado se podran realizar diferentes ejercicios relacionados con los t
    * campo para __nombre__
    * campo de __comentario__
    * opcion para elegir entre _publica o privada_.
+   
+### Contenido Multimedia
+
+1. Crear una pagina que muestre una galeria de al menos 3 imagenes utilizando la etiqueta `<img>` con el atributo `alt` descriptivo.
+2. Insertar un video en una pagina web con los controles visibles y un poster personalizado, ademas de agregar una fuente alternativa en formato WebM.
+3. Incrustar un video de YouTube en una pagina utilizando la etiqueta `<iframe>`.
+4. Crear un reproductor de audio que soporte multiples formatos (MP3 y OGG) utilizando las etiquetas `<audio>` y `<source>`.
+5. Utilizar la etiqueta `<picture>` para mostrar una imagen diferente segun el tamanio de la pantalla (movil, tablet, escritorio).
