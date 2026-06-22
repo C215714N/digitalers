@@ -156,6 +156,114 @@
                 Se puede verificar la compatiblidad de estos elementos en el sitio <a href="https://www.caniuse.com/">Can I Use</a>, ingresando el nombre en el buscador.
             </p>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son elementos que permiten <strong>organizar los datos de manera tabular</strong> y utilizan <em>el modelo de cajas para su representacion</em> debiendo colocar la etiqueta <strong>&lt;table&gt;</strong> para la creacion de las mismas y dentro de esta, las etiquetas <strong>&lt;tr&gt; y &lt;td&gt;</strong> que corresponden a las <em>filas y celdas, respectivamente.</em>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen Estructura semantica?</h3>
+                </header>
+                <p>
+                    En la version actual de html5, se incorporaron nuevas etiquetas,<strong>que permiten identificar las partes de la tabla</strong>, facilitando la organizacion de los datos y dicha estructura se compone de las siguientes etiquetas:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD: </strong> corresponde a la fila de encabezados, que indica cuales son los datos a representar. En su interior se utilizan <em>celdas de encabezado &lt;th&gt; (table heading)</em>
+                    </li>
+                    <li>
+                        <strong>TBODY</strong> Es el cuerpo de tabla y contiene los datos a representar, normalmente se divide en multiples filas y, en algunos casos, puede conteneder celdas de encabezado.
+                    </li>
+                    <li>
+                        <strong>TFOOT</strong> Parte opcional de la tabla que posee informacion complementaria al cuerpo, como por ejemplo, totales, promedios u otro valores generales.
+                    </li>
+                </ul>
+                <div class="example container">
+                    <table class="classic">
+                        <caption>cuentas de usuario</caption>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d477714n</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="modern">
+                        <caption>Rutina Semanal</caption>
+                        <thead>
+                            <tr>
+                                <th>Turno</th>
+                                <th>L</th>
+                                <th>M</th>
+                                <th>X</th>
+                                <th>J</th>
+                                <th>V</th>
+                                <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ma</th>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>ta</th>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>no</th>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </article>
     </main>
     <footer id="footer">
         <!-- Formulario de Contacto -->
