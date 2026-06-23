@@ -119,6 +119,10 @@ article {
     table caption {
         border-radius: .5rem .5rem 0 0; /* tl tr br bl*/
     }
+    th,
+    td {
+        width: 160px;
+    }
     table caption,
     th,
     td {
