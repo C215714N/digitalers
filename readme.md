@@ -5,3 +5,4 @@ Esto es una guia para los alumnos de la capacitacion __Digitalers NodeJS__ que c
 ## Tabla de Contenidos
 
 * [Introduccion a la Maquetacion](docs/intro.md)
+* [Planificacion del Diseño](docs/design.md)
