@@ -1,9 +1,10 @@
 /* Enlaces Externos */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Open+sans');
 /* Global */
+@import url('fonts.css');
 @import url('global.css');
 /* Cabecera */
-
+@import url('header.css');
 /* Navegacion */
 
 /* Contenido */
