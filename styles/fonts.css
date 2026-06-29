@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('/assets/fonts/pixel.ttf');
+}
+@font-face {
+    font-family: '8-bits';
+    src: url('/assets/fonts/digits.ttf');
+}
+@font-face {
+    font-family: 'recharge';
+    src: url('/assets/fonts/recharge.otf');
+}
+@font-face {
+    font-family: 'orbitron';
+    src: url('/assets/fonts/orbitron.otf');
+}
+/* FORMATOS SOPORTADOS
+    ttf     (TrueType Font)
+    otf     (OpenType Font)
+    eot     (Ethernet OpenType)
+    woff    (Web Open FontFile)
+    svg     (Scalable Vector Graphics)
+*/
