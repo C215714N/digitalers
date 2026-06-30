@@ -1,0 +1,49 @@
+/* VARIABLE: Dato que se almacena temporalmente en la memoria del dispositivo y cuyo valor puede cambiar */
+:root {
+    /* Colores */
+    --primary: hsl(220, 50%, 30%); /*Tono, Saturacion, Brillo*/
+    --secondary: hsl(220, 30%, 30%);
+    --tertiary: hsl(220, 30%, 60%);
+    --light: #eee;
+    --dark: #333;
+    --success: rgb(51, 204, 102); /*Rojo, Verde, Azul (0-255)*/
+    --danger: rgb(204, 51, 51);
+    /* Tamaños */
+    --xs: 120px;
+    --sm: 240px;
+    --md: 360px;
+    --lg: 480px;
+    --xl: 640px;
+    /* Estilos */
+    --heading: '8-bits', 'orbitron', 'recharge', monospace;
+    --content: 'Open Sans', 'Raleway', sans-serif;
+}
+/*
+    COLOR    HEX   RGB (DEC)     HSL    
+    Red      #F00  (255,0,0)     (0deg, 100%, 50%)  
+    Green    #0F0  (0,255,0)     (120deg, 100%, 50%)
+    Blue     #00F  (0,0,255)     (240deg, 100%, 50%)
+    Cyan     #0FF  (0,255,255)   (180deg, 100%, 50%)
+    Magenta  #F0F  (255,0,255)   (300deg, 100%, 50%)
+    Yellow   #FF0  (255,255,0)   (60deg, 100%, 50%)
+    White    #FFF  (255,255,255) (0, 0, 100%)
+    Black    #000  (0,0,0)       (0, 0, 0)
+    grey     #888  (128,128,128) (0, 0, 50%)
+
+    RGB (16.777.216 Combinaciones) => 256^3 (RGB)
+    HSL (3.600.000 Combinaciones) => 360 * 100 * 100
+*/
+
+/* UNIDADES
+    Absolutas: Siempre valen lo mismo indistintamente del medio en el que visualicen.
+        - distancia: cm, mm, in(2.54cm)
+        - tipografia: pt (1/72in), pc (1/6in)
+        - hibrida: px (1/96in) - depende de la resolucion
+    Relativas: Su tamaño depende de otro elemento, por lo general el contendor o etiqueta padre.
+        - tamaño: % (porcentaje)
+        - tipografia: em (ancho "M"), ex (alto "x"), ch (tamaño "0")
+        - hibrida: rem (em en la RAIZ HTML) - definido por :root
+    Flexibles (Viewport): Dependen de la dimension del dispositivo en el que se visualiza.
+        - diposicion: vh (alto), vw (ancho)
+        - tamaño: vmin, vmax
+*/
