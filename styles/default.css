@@ -1,12 +1,14 @@
 /* Enlaces Externos */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Open+sans');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Open+Sans');
 /* Global */
 @import url('fonts.css');
+@import url('variables.css');
 @import url('global.css');
 /* Cabecera */
 @import url('header.css');
 /* Navegacion */
-
+@import url('nav.css');
 /* Contenido */
 
 /* Pie de Pagina */
+@import url('footer.css');
