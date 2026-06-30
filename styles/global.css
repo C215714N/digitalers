@@ -1,5 +1,30 @@
 * {
     box-sizing: border-box;
-    font-family: 'Raleway', 'Segoe ui', sans-serif;
+    font-family: var(--content);
     scroll-behavior: smooth;
+}
+/* Margenes */
+.m-0,
+body,
+.menu {
+    margin: 0;
+}
+/* Bordes */
+.border-0,
+iframe {
+    border: 0;
+}
+/* Rellenos */
+.p-0,
+.menu {
+    padding: 0;
+}
+/* Estilos */
+.unstyled,
+:is(nav, .social) a{
+    text-decoration: none;
+}
+.unstyled,
+.menu{
+    list-style: none
 }
