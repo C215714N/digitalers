@@ -3,7 +3,6 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     padding: .5rem max(1rem, calc(50vw - 660px));
     background: /* color image size/position repeat */
         var(--primary)
@@ -13,7 +12,7 @@ nav {
             /* Colores y porcentaje*/
             var(--primary),
             var(--tertiary)
-        ); 
+        );
 }
 nav a {
     color: var(--light);
@@ -37,12 +36,19 @@ nav a {
     button.nav-expand {
         display: none;
     }
+    nav,
+    .menu {
+        flex-direction: column;
+        max-height: 100vh;
+    }
     .menu {
         width: auto;
     }
 }
 @media screen and (width >=1200px){
+    nav,
     .menu {
+        flex-direction: row;
         height: auto;
     }
 }
