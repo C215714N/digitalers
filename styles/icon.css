@@ -1,0 +1,77 @@
+[class*="icon"]{
+    &::before{
+        content: var(--icon);
+        font-size: 1.5rem;
+        filter: grayscale(100%);
+    }
+    &:hover{
+        text-shadow: 0 0 .5rem var(--light);
+        &::before {
+            filter: grayscale(70%);
+        }
+    }
+}
+.icon-copy { 
+    --icon: "©️"
+}
+.icon-toggler {
+    --icon: "≡";
+}
+.icon-home {
+    --icon: "🏠";
+}
+.icon-projects {
+    --icon: "📰";
+}
+.icon-contact {
+    --icon: "🧑‍💼";
+}
+/* Redes Sociales */
+.social-media {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: .5rem;
+    padding: 1rem;
+    & a {
+        --color: var(--light);
+        --size: 2rem;
+        --shadow: 0;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        background: 
+            var(--color)
+            var(--icon)
+            center/var(--size)
+            no-repeat;
+        box-shadow: 0 0 var(--shadow) var(--dark);
+        &:hover{
+            --size: 2.5rem;
+            --shadow: .5rem;
+        }    
+        &:focus{
+            --shadow: 1rem;
+        }
+    }
+}
+[href*="facebook"]{
+    --icon: url('/assets/icon/facebook.svg');
+}
+[href*="github"]{
+    --icon: url('/assets/icon/github.svg');
+}
+[href*="instagram"]{
+    --icon: url('/assets/icon/instagram.svg');
+}
+[href*="linkedin"]{
+    --icon: url('/assets/icon/linkedin.svg');
+}
+[href*="twitter"]{
+    --icon: url('/assets/icon/twitter.svg');
+}
+[href*="whatsapp"]{
+    --icon: url('/assets/icon/whatsapp.svg');
+}
+[href*="youtube"]{
+    --icon: url('/assets/icon/youtube.svg');
+}
