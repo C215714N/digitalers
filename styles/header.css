@@ -1,3 +1,6 @@
 [class*="header"] {
     font-family: var(--heading);
 }
+#header {
+    font-size: clamp(.5rem, 2vmax, 2rem); /* Tipografia Flexible */
+}
