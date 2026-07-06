@@ -2,7 +2,6 @@
     font-family: var(--heading);
 }
 #header {
-    --bg: url('/assets/bg/prod.jpg');
     display: grid;
     min-height: min(100vh, 720px);
     font-size: clamp(.5rem, 2vmax, 2rem); /* Tipografia Flexible */
@@ -36,8 +35,16 @@
 }
 @media screen and (width >= 768px) {
     #header {
-        --bg: url('/assets/bg/dev.jpg');
         grid-template-columns: 1fr 2fr;
-        background-image
+    }
+}
+@media screen and (orientation: portrait){ 
+    #header {
+        --bg: url('/assets/bg/prod.jpg');
+    }    
+}
+@media screen and (orientation: landscape){
+    #header {
+        --bg: url('/assets/bg/dev.jpg');
     }
 }
