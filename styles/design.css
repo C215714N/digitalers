@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.flex > * {
+    flex: 1 1 min(100%, var(--size)); 
+    /* SHORTHAND 
+        * GROW: cuanto debe crecer en relacion a sus hermanos
+        * SHRINK: cuanto debe reducir su tamaño para encajar
+        * BASIS: establece el tamaño base para los elementos
+    */
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--size)), 1fr));
+    /*  EXPLICACION
+        * REPEAT(N,M): aplica N cantidad de veces el valor de M
+        * AUTO-FIT: determina la cantidad de columnas a implementar en base al contenido
+        * AUTO-FILL: ubica las columnas en el espacio y las redimensiona para encajar
+        * MINMAX(A,B): establece los limites de tamaño para las columnas utilizando un rango entre A y B
+    */
+    gap: .5rem;
+}
+/* Tamaños */
+.xs {
+    --size: var(--xs);
+}
+.sm {
+    --size: var(--sm);
+}
+.md {
+    --size: var(--md);
+}
+.lg {
+    --size: var(--lg);
+}
+.xl {
+    --size: var(--xl);
+}
