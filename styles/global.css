@@ -6,6 +6,7 @@
 /* Margenes */
 .m-0,
 body,
+.card *,
 .menu {
     margin: 0;
 }

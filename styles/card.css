@@ -1,0 +1,15 @@
+.card {
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 0 0 .5rem var(--light);
+}
+.card-header{
+    margin: -1rem -1rem .5rem;
+    padding: 1rem;
+}
+.card-body{
+    padding: 0 1rem 1rem;
+}
+.card-footer {
+    border-top: .1rem solid var(--light);
+}
