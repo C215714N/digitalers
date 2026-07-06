@@ -2,20 +2,42 @@
     font-family: var(--heading);
 }
 #header {
+    --bg: url('/assets/bg/prod.jpg');
     display: grid;
+    min-height: min(100vh, 720px);
     font-size: clamp(.5rem, 2vmax, 2rem); /* Tipografia Flexible */
     padding: 1rem max(1rem, calc(50vw - 480px));
     align-items: center;
     gap: 1rem;
-    & * {
-        margin: .5rem 0;
+    color: var(--light);
+    text-shadow: 0 0 .5rem var(--dark);
+    background-image: 
+        radial-gradient(
+            circle at top left,
+            rgb(var(--secondary-rgb), .7),
+            rgb(var(--primary-rgb), .7)
+        ),
+        url('/assets/icon/cr.svg'),
+        var(--bg);
+    background-size: 
+        cover, /* Cover | Contain */
+        clamp(2rem, 10vw, 3rem); /* width height */
+    background-position: 
+        top right, /* Left Right Center Top Bottom*/
+        calc(100% - 1rem) calc(100% - 1rem); /* eje-x eje-y */
+    background-repeat: no-repeat;
+    & div * {
+        line-height: 1;
     }
     & img {
-        width: 100%;
+        margin: auto;
+        width: min(100%, 320px);
     }
 }
 @media screen and (width >= 768px) {
     #header {
+        --bg: url('/assets/bg/dev.jpg');
         grid-template-columns: 1fr 2fr;
+        background-image
     }
 }
