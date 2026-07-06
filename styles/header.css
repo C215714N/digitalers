@@ -2,5 +2,20 @@
     font-family: var(--heading);
 }
 #header {
+    display: grid;
     font-size: clamp(.5rem, 2vmax, 2rem); /* Tipografia Flexible */
+    padding: 1rem max(1rem, calc(50vw - 480px));
+    align-items: center;
+    gap: 1rem;
+    & * {
+        margin: .5rem 0;
+    }
+    & img {
+        width: 100%;
+    }
+}
+@media screen and (width >= 768px) {
+    #header {
+        grid-template-columns: 1fr 2fr;
+    }
 }
