@@ -1,0 +1,28 @@
+// Variable: Datos que se almacenan en memoria y cuyo valor puede cambiar
+$dark: #333;
+$light: #eee;
+// Datos Complejos: Mutables
+$colors:
+    primary   #63c,
+    secondary #c36,
+    tertiary  #248,
+    success   #284,
+    warning   #da3,
+    danger    #c33,
+    info      #38c,
+;
+.button {
+    border-radius: .25rem;
+    padding: .5rem;
+    background-color: transparent;
+}
+@each $name, $value in $colors {
+    .button-#{$name}{
+        border: 1px solid $value;
+        color: $value;
+        &:hover{
+            color: $light;
+            background-color: $value;
+        }
+    }
+}
