@@ -1,0 +1,31 @@
+$positions: 
+static  "STATIC: Position predeterminada, donde el elemento no puede alterar su ubicacion original en el espacio",
+relative "RELATIVE: El elemento de posiciona con respecto a si mismo y su ubicacion original en el espacio",
+absolute "ABSOLUTE: Se ubica con respecto a su ancestro mas proximo que no sea 'static' y deja de ocupar lugar en el espacio",
+fixed  "FIXED: Similar a Absolute, el elemento se ubica con respecto a la ventana y necesita una posicion definida",
+sticky "STICKY: El elemento se ubica en el espacio, hasta que se cumple determinada condicion de posicionamiento",
+;
+$directions: top left bottom right;
+// Bucle: Repiticion de acciones en base a una condicion
+@each $p,$comment in $positions {
+    .p-#{$p}{
+        position: $p;
+        /* #{$comment} */
+}}
+@each $d in $directions {
+@for $i from 0 through 20 {
+    .#{$d}-#{$i * 5}{
+        #{$d}: $i * 5%;
+    }
+}}
+@for $i from 0 through 10 {
+    .z-#{$i}{
+        z-index: $i;
+    }
+    .opacity-#{$i * 10}{
+        opacity: $i / 10;
+    @if $i <= 6 {
+    &:hover {
+        opacity: ($i * 1.5) / 10;
+    }}
+}}
