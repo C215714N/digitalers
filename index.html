@@ -9,17 +9,18 @@
 <body>
     <!-- Cabecera -->
     <header id="header">
-        <img src="assets/img/profile.jpg" alt="Foto de Perfil">
+        <img src="assets/icon/cr.svg" alt="Foto de Perfil">
         <div>
             <h1 class="header">Cristian Racedo</h1>
             <p>Web Developer</p>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta esse dolore eaque molestias, eum iusto nesciunt quod! Ipsa, recusandae provident! Distinctio deserunt mollitia quidem consequuntur velit cupiditate minima accusamus tenetur.
             </p>
+            <a class="button button-info" href="#contact">Contactar</a>
         </div>
     </header>
     <!-- Navegacion -->
-    <nav>
+    <nav class="p-sticky top-0 bottom-0">
         <a class="nav-expand" href="#">CR</a>
         <button class="icon-toggler nav-expand"></button>
         <ul class="menu">
@@ -100,7 +101,25 @@
             <p>
                 he aqui una pequeña coleccion de mis trabajos realizados
             </p>
-            <div class="flex md">
+            <div class="grid md">
+                <article class="card">
+                    <h3 class="card-header">Titulo</h3>
+                    <p class="card-body">descripcion</p>
+                    <ul class="card-footer">
+                        <li class="rounded-pill">lenguaje</li>
+                        <li class="rounded-pill">lenguaje</li>
+                        <li class="rounded-pill">lenguaje</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3 class="card-header">Titulo</h3>
+                    <p class="card-body">descripcion</p>
+                    <ul class="card-footer">
+                        <li class="rounded-pill">lenguaje</li>
+                        <li class="rounded-pill">lenguaje</li>
+                        <li class="rounded-pill">lenguaje</li>
+                    </ul>
+                </article>
                 <article class="card">
                     <h3 class="card-header">Titulo</h3>
                     <p class="card-body">descripcion</p>
@@ -230,7 +249,7 @@
             <p>
                 he aqui una pequeña coleccion de mis trabajos realizados
             </p>
-            <div class="flex md">
+            <div class="grid md">
                 <article class="card">
                     <h3 class="card-header">Titulo</h3>
                     <p class="card-body">descripcion</p>
@@ -331,7 +350,7 @@
                 required ></textarea>
             <p class="validation">Escriba entre 30 y 1500 caracteres</p>
 
-            <button>Realizar consulta</button>
+            <button class="button button-success">Realizar consulta</button>
         </form>
         <address class="social-media">
             <a href="https://instagram.com/profile"
@@ -351,6 +370,7 @@
                 title="Accede a mis proyectos en GitHub">
             </a>
             <a href="https://web.whatsapp.com/send?phone=1103034567&text=buenas+necesito+un+presupuesto"
+                class="p-fixed bottom-10 right-5 opacity-50"
                 target="_blank"
                 title="Mensajeame por Whatsapp">
             </a>
