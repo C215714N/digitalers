@@ -12,9 +12,15 @@ $colors:
     info      #38c,
 ;
 .button {
+    position: relative;
     border-radius: .25rem;
     padding: .5rem;
+    text-decoration: none;
     background-color: transparent;
+    &:hover{
+        top: .5rem;
+        left: .5rem;
+    }
 }
 @each $name, $value in $colors {
     .button-#{$name}{
@@ -23,6 +29,7 @@ $colors:
         &:hover{
             color: $light;
             background-color: $value;
+            box-shadow: -.5rem -.5rem darken($value, 15%);
         }
     }
 }
