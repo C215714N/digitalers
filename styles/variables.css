@@ -8,6 +8,9 @@
     --dark: #333;
     --success: rgb(51, 204, 102); /*Rojo, Verde, Azul (0-255)*/
     --danger: rgb(204, 51, 51);
+    /* Transparencias */
+    --primary-rgb: 17, 34, 68;
+    --secondary-rgb: 34, 68, 68; 
     /* Tamaños */
     --xs: 120px;
     --sm: 240px;
