@@ -33,9 +33,9 @@ main {
 @media screen and (width >=992px){
     body{
         grid-template-areas: 
-            'header nav'
-            'main   nav'
-            'footer nav'
+            'nav header'
+            'nav main  '
+            'nav footer'
         ;
     }
 }
