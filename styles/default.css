@@ -4,11 +4,18 @@
 @import url('fonts.css');
 @import url('variables.css');
 @import url('global.css');
+@import url('icon.css');
+@import url('layout.css');
 /* Cabecera */
 @import url('header.css');
 /* Navegacion */
 @import url('nav.css');
 /* Contenido */
-
+@import url('design.css');
+@import url('position.css');
+@import url('main.css');
+@import url('card.css');
+@import url('buttons.css');
 /* Pie de Pagina */
 @import url('footer.css');
+@import url('contact.css');
