@@ -322,7 +322,10 @@
             <input 
                 id="contact_name" 
                 name="name"
-                type="text" 
+                type="text"
+                placeholder="Nombre: Cristian Racedo"
+                maxlength="50"
+                pattern="[A-Z a-z]{3,50}"
                 required>
             <p class="validation">Escriba solamente letras y utilice entre 3 y 50 caracteres</p>
 
@@ -331,22 +334,28 @@
                 id="contact_email" 
                 name="email"
                 type="email" 
+                placeholder="Email: CristianDRacedo@hotmail.com"
+                minlength="8"
                 required>
             <p class="validation">Escriba una direccion valida de al menos 7 caracteres respetando el formato "usuario@servidor"</p>
 
             <label for="contact_phone">Ingrese un telefono</label>
             <input 
                 id="contact_phone" 
-                name="phone" 
+                name="phone"
+                placeholder="Telefono: (5411) 15-0303-4567"
+                maxlength="20"
+                pattern="(\(\d{2,6}\)([\- ]{1}\d{4}){2,3})|\W{6,20}"
                 type="tel">
-            <p class="validation">Escriba su la caracteristica entre parentesis y utilice un guion cada 4 caracteres como en el ejemplo: (5411)0303-4567, o escriba solamente numeros</p>
+            <p class="validation">Escriba su la caracteristica entre parentesis y utilice un guion cada 4 caracteres como en el ejemplo: (5411) 0303-4567, o escriba solamente numeros</p>
 
             <label for="contact_consult">Escriba su consulta</label>
             <textarea 
                 id="contact_consult"
                 name="consult"
                 minlength="30"
-                maxlength="1500" 
+                maxlength="1500"
+                placeholder="Consulta: Buenas, necesito un presupuesto"
                 required ></textarea>
             <p class="validation">Escriba entre 30 y 1500 caracteres</p>
 
