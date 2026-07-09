@@ -1,0 +1,71 @@
+// Declaraciones
+$danger: lighten(#c33, 25%);
+$success: lighten(#3c6, 25%);
+$light: #eee;
+
+// Mixin: Estilos que se aplican como atributos
+@mixin box($p: 0, $m: 0, $b: 0, $r: 0){
+    margin: $m;
+    border-radius: $r;
+    border: $b;
+    padding: $p;
+}
+// Hidden Class: Clases validas unicamente para el preprocesador ya que no se compilan
+%light {
+    --status: #{$light}; 
+}
+%success {
+    --status: #{$success}; 
+}
+%danger {
+    --status: #{$danger}; 
+}
+%form-control {
+    @extend %light;
+    @include box(.5rem 1rem, $b:1px solid var(--status), $r: .25rem);
+    outline: none;
+    box-shadow: 0 0 .1rem var(--status);
+    font-size: 1rem;
+    &:not(:placeholder-shown){
+        &:valid { 
+            @extend %success; 
+            & + .validation { 
+                @extend %success;
+        }}
+        &:invalid { 
+            @extend %danger; 
+            & + .validation {
+                @extend %danger;
+        }}
+    }
+    & + .validation {
+        height: 0;
+        margin: 0 0 .5rem;
+        font: normal bold .8rem var(--content);
+        overflow: hidden;
+        color: var(--status);
+    }
+    &:focus + .validation {
+        height: auto;
+    }
+}
+/* Formulario de contacto */
+#contact {
+    display: grid;
+    max-width: 720px;
+    @include box(1rem 1.5rem, 1rem auto, .5rem);
+    color: var(--light);
+    background: radial-gradient(
+        circle at top right,
+        var(--tertiary),
+        var(--primary)
+    );
+    text-shadow: 
+        -.1rem .1rem .2rem var(--dark),
+        .1rem -.1rem var(--dark);
+    input,
+    textarea,
+    select {
+        @extend %form-control;
+    }
+}
