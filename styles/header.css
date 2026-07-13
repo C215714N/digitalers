@@ -25,9 +25,18 @@
         top right, /* Left Right Center Top Bottom*/
         calc(100% - 1rem) calc(100% - 1rem); /* eje-x eje-y */
     background-repeat: no-repeat;
-    & div * {
-        line-height: 1;
+    perspective: 5rem;
+    perspective-origin: top center;
+    overflow: hidden;
+    &:hover div{
+        transform: translateZ(-2rem) rotateX(5deg);
     }
+    & div {
+        transform: translateZ(2.5rem);
+        transition: all 1s ease-out;
+        & * {
+        line-height: 1;
+    } }
     & img {
         margin: auto;
         width: min(100%, 320px);
