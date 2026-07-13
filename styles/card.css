@@ -1,7 +1,12 @@
 .card {
     border-radius: .5rem;
     padding: 1rem;
+    background-color: white;
     box-shadow: 0 0 .5rem var(--light);
+    transition: all .25s ease;
+    &:hover {
+        transform: skew(10deg, 2.5deg);
+    }
 }
 .card-header{
     margin: -1rem -1rem .5rem;
