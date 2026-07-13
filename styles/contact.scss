@@ -39,14 +39,14 @@ $light: #eee;
         }}
     }
     & + .validation {
-        height: 0;
+        max-height: 0;
         margin: 0 0 .5rem;
         font: normal bold .8rem var(--content);
         overflow: hidden;
         color: var(--status);
     }
     &:focus + .validation {
-        height: auto;
+        max-height: 100vh;
     }
 }
 /* Formulario de contacto */
