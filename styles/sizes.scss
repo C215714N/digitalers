@@ -1,17 +1,17 @@
 $sizes: 
-    w   width         10%,
-    h   height        10%,
-    vw  width         10vw,
-    vh  height        10vh,
-    m   margin        .25rem,
-    r   border-radius .1rem,
-    b   border-width  1px,
-    p   padding       .25rem,
-    fs  font-size     .5rem,
-    fw  font-weight   10,
+    w  width         10%,
+    h  height        10%,
+    vw width         10vw,
+    vh height        10vh,
+    m  margin        .25rem,
+    r  border-radius .1rem,
+    b  border-width  1px,
+    p  padding       .25rem,
+    fs font-size     .5rem,
+    fw font-weight   10,
 ;
 @each $className, $property, $unit in $sizes {
-/* Clases propiedad #{$property} con nombre #{$className} */
+/* Clases con nombre #{$className} para la propiedad #{$property} */
 @for $i from 0 through 10 {
     .#{$className}-#{$i}{
         #{$property}: $i * $unit;
