@@ -31,6 +31,9 @@ nav a {
     .nav-expand {
         display: block;
     }
+    .menu {
+        flex-direction: column;
+    }
 }
 @media screen and (width >= 992px) {
     button.nav-expand {
