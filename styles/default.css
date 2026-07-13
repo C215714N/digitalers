@@ -5,6 +5,7 @@
 @import url('utilities/variables.css');
 @import url('utilities/global.css');
 @import url('utilities/icon.css');
+@import url('utilities/transitions.css');
 @import url('components/layout.css');
 /* Cabecera */
 @import url('components/header.css');

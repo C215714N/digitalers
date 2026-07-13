@@ -1,0 +1,21 @@
+@use 'sass:list';
+$transitionProps: 
+    t   --duration,
+    dy  --delay,
+;
+$timing: ease, ease-in, ease-out, ease-in-out, linear;
+.transition {
+    --duration: 0s;
+    --delay: 0s;
+    --timing: #{list.nth($timing, 1)};
+    transition: all var(--duration) var(--timing) var(--delay);
+}
+@each $t in $timing {
+    .#{$t}{ --timing: #{$t}; }
+}
+@each $className, $property in $transitionProps{
+@for $i from 1 through 25 {
+    .#{$className}-#{$i} {
+        #{$property}: $i * 0.1s;
+    }   
+}}
