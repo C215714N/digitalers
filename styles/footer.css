@@ -1,0 +1,8 @@
+#footer {
+    padding: 1rem;
+    color: var(--light);
+    background-image: conic-gradient(
+        rgba(var(--primary-rgb), .7),
+        rgba(var(--secondary-rgb), .7)
+    );
+}
