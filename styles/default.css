@@ -13,9 +13,11 @@
 /* Contenido */
 @import url('design.css');
 @import url('position.css');
+@import url('sizes.css');
 @import url('main.css');
 @import url('card.css');
 @import url('buttons.css');
 /* Pie de Pagina */
 @import url('footer.css');
 @import url('contact.css');
+@import url('social.css');
