@@ -17,6 +17,8 @@ $colors:
     padding: .5rem;
     text-decoration: none;
     background-color: transparent;
+    top: 0;
+    left: 0;
     &:hover{
         top: .5rem;
         left: .5rem;
@@ -26,6 +28,7 @@ $colors:
     .button-#{$name}{
         border: 1px solid $value;
         color: $value;
+        box-shadow: 0 0 0 $value;
         &:hover{
             color: $light;
             background-color: $value;
