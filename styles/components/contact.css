@@ -1,0 +1,60 @@
+#contact input,
+#contact textarea,
+#contact select {
+  --status: #eee;
+}
+
+#contact input:not(:placeholder-shown):valid + .validation,
+#contact textarea:not(:placeholder-shown):valid + .validation,
+#contact select:not(:placeholder-shown):valid + .validation, #contact input:not(:placeholder-shown):valid,
+#contact textarea:not(:placeholder-shown):valid,
+#contact select:not(:placeholder-shown):valid {
+  --status: #99e6b3;
+}
+
+#contact input:not(:placeholder-shown):invalid + .validation,
+#contact textarea:not(:placeholder-shown):invalid + .validation,
+#contact select:not(:placeholder-shown):invalid + .validation, #contact input:not(:placeholder-shown):invalid,
+#contact textarea:not(:placeholder-shown):invalid,
+#contact select:not(:placeholder-shown):invalid {
+  --status: #e69999;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+  margin: 0;
+  border-radius: 0.25rem;
+  border: 1px solid var(--status);
+  padding: 0.5rem 1rem;
+  outline: none;
+  box-shadow: 0 0 0.1rem var(--status);
+  font-size: 1rem;
+}
+#contact input + .validation,
+#contact textarea + .validation,
+#contact select + .validation {
+  max-height: 0;
+  margin: 0 0 0.5rem;
+  font: normal bold 0.8rem var(--content);
+  overflow: hidden;
+  color: var(--status);
+}
+#contact input:focus + .validation,
+#contact textarea:focus + .validation,
+#contact select:focus + .validation {
+  max-height: 100vh;
+}
+
+/* Formulario de contacto */
+#contact {
+  display: grid;
+  max-width: 720px;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 1rem 1.5rem;
+  color: var(--light);
+  background: radial-gradient(circle at top right, var(--tertiary), var(--primary));
+  text-shadow: -0.1rem 0.1rem 0.2rem var(--dark), 0.1rem -0.1rem var(--dark);
+}

@@ -1,0 +1,10 @@
+.social-media {
+  perspective: 10rem;
+  perspective-origin: center;
+}
+.social-media a {
+  transition: all 0.25s ease;
+}
+.social-media a:hover {
+  transform: translate(0, -0.5rem) scale(1.2) rotate(375deg);
+}

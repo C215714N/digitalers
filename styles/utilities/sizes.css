@@ -1,0 +1,449 @@
+/* Clases con nombre w para la propiedad width */
+.w-0 {
+  width: 0%;
+}
+
+.w-1 {
+  width: 10%;
+}
+
+.w-2 {
+  width: 20%;
+}
+
+.w-3 {
+  width: 30%;
+}
+
+.w-4 {
+  width: 40%;
+}
+
+.w-5 {
+  width: 50%;
+}
+
+.w-6 {
+  width: 60%;
+}
+
+.w-7 {
+  width: 70%;
+}
+
+.w-8 {
+  width: 80%;
+}
+
+.w-9 {
+  width: 90%;
+}
+
+.w-10 {
+  width: 100%;
+}
+
+/* Clases con nombre h para la propiedad height */
+.h-0 {
+  height: 0%;
+}
+
+.h-1 {
+  height: 10%;
+}
+
+.h-2 {
+  height: 20%;
+}
+
+.h-3 {
+  height: 30%;
+}
+
+.h-4 {
+  height: 40%;
+}
+
+.h-5 {
+  height: 50%;
+}
+
+.h-6 {
+  height: 60%;
+}
+
+.h-7 {
+  height: 70%;
+}
+
+.h-8 {
+  height: 80%;
+}
+
+.h-9 {
+  height: 90%;
+}
+
+.h-10 {
+  height: 100%;
+}
+
+/* Clases con nombre vw para la propiedad width */
+.vw-0 {
+  width: 0vw;
+}
+
+.vw-1 {
+  width: 10vw;
+}
+
+.vw-2 {
+  width: 20vw;
+}
+
+.vw-3 {
+  width: 30vw;
+}
+
+.vw-4 {
+  width: 40vw;
+}
+
+.vw-5 {
+  width: 50vw;
+}
+
+.vw-6 {
+  width: 60vw;
+}
+
+.vw-7 {
+  width: 70vw;
+}
+
+.vw-8 {
+  width: 80vw;
+}
+
+.vw-9 {
+  width: 90vw;
+}
+
+.vw-10 {
+  width: 100vw;
+}
+
+/* Clases con nombre vh para la propiedad height */
+.vh-0 {
+  height: 0vh;
+}
+
+.vh-1 {
+  height: 10vh;
+}
+
+.vh-2 {
+  height: 20vh;
+}
+
+.vh-3 {
+  height: 30vh;
+}
+
+.vh-4 {
+  height: 40vh;
+}
+
+.vh-5 {
+  height: 50vh;
+}
+
+.vh-6 {
+  height: 60vh;
+}
+
+.vh-7 {
+  height: 70vh;
+}
+
+.vh-8 {
+  height: 80vh;
+}
+
+.vh-9 {
+  height: 90vh;
+}
+
+.vh-10 {
+  height: 100vh;
+}
+
+/* Clases con nombre m para la propiedad margin */
+.m-0 {
+  margin: 0rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 0.75rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
+}
+
+.m-7 {
+  margin: 1.75rem;
+}
+
+.m-8 {
+  margin: 2rem;
+}
+
+.m-9 {
+  margin: 2.25rem;
+}
+
+.m-10 {
+  margin: 2.5rem;
+}
+
+/* Clases con nombre r para la propiedad border-radius */
+.r-0 {
+  border-radius: 0rem;
+}
+
+.r-1 {
+  border-radius: 0.1rem;
+}
+
+.r-2 {
+  border-radius: 0.2rem;
+}
+
+.r-3 {
+  border-radius: 0.3rem;
+}
+
+.r-4 {
+  border-radius: 0.4rem;
+}
+
+.r-5 {
+  border-radius: 0.5rem;
+}
+
+.r-6 {
+  border-radius: 0.6rem;
+}
+
+.r-7 {
+  border-radius: 0.7rem;
+}
+
+.r-8 {
+  border-radius: 0.8rem;
+}
+
+.r-9 {
+  border-radius: 0.9rem;
+}
+
+.r-10 {
+  border-radius: 1rem;
+}
+
+/* Clases con nombre b para la propiedad border-width */
+.b-0 {
+  border-width: 0px;
+}
+
+.b-1 {
+  border-width: 1px;
+}
+
+.b-2 {
+  border-width: 2px;
+}
+
+.b-3 {
+  border-width: 3px;
+}
+
+.b-4 {
+  border-width: 4px;
+}
+
+.b-5 {
+  border-width: 5px;
+}
+
+.b-6 {
+  border-width: 6px;
+}
+
+.b-7 {
+  border-width: 7px;
+}
+
+.b-8 {
+  border-width: 8px;
+}
+
+.b-9 {
+  border-width: 9px;
+}
+
+.b-10 {
+  border-width: 10px;
+}
+
+/* Clases con nombre p para la propiedad padding */
+.p-0 {
+  padding: 0rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+/* Clases con nombre fs para la propiedad font-size */
+.fs-0 {
+  font-size: 0rem;
+}
+
+.fs-1 {
+  font-size: 0.5rem;
+}
+
+.fs-2 {
+  font-size: 1rem;
+}
+
+.fs-3 {
+  font-size: 1.5rem;
+}
+
+.fs-4 {
+  font-size: 2rem;
+}
+
+.fs-5 {
+  font-size: 2.5rem;
+}
+
+.fs-6 {
+  font-size: 3rem;
+}
+
+.fs-7 {
+  font-size: 3.5rem;
+}
+
+.fs-8 {
+  font-size: 4rem;
+}
+
+.fs-9 {
+  font-size: 4.5rem;
+}
+
+.fs-10 {
+  font-size: 5rem;
+}
+
+/* Clases con nombre fw para la propiedad font-weight */
+.fw-0 {
+  font-weight: 0;
+}
+
+.fw-1 {
+  font-weight: 10;
+}
+
+.fw-2 {
+  font-weight: 20;
+}
+
+.fw-3 {
+  font-weight: 30;
+}
+
+.fw-4 {
+  font-weight: 40;
+}
+
+.fw-5 {
+  font-weight: 50;
+}
+
+.fw-6 {
+  font-weight: 60;
+}
+
+.fw-7 {
+  font-weight: 70;
+}
+
+.fw-8 {
+  font-weight: 80;
+}
+
+.fw-9 {
+  font-weight: 90;
+}
+
+.fw-10 {
+  font-weight: 100;
+}

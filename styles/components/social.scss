@@ -1,0 +1,13 @@
+.social-media {
+    perspective: 10rem;
+    perspective-origin: center;
+    a { 
+        transition: all .25s ease;
+        &:hover {
+            transform: // TRANSFORMACIONES 2D
+                translate(0, -.5rem) // x y | translateX translateY
+                scale(1.2) // proporcion de tamaño
+                rotate(375deg); // grados en sentido horario (predeterminado)
+        }
+    }
+}

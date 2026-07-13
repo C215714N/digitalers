@@ -1,23 +1,23 @@
 /* Enlaces Externos */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Open+Sans');
 /* Global */
-@import url('fonts.css');
-@import url('variables.css');
-@import url('global.css');
-@import url('icon.css');
-@import url('layout.css');
+@import url('utilities/fonts.css');
+@import url('utilities/variables.css');
+@import url('utilities/global.css');
+@import url('utilities/icon.css');
+@import url('components/layout.css');
 /* Cabecera */
-@import url('header.css');
+@import url('components/header.css');
 /* Navegacion */
-@import url('nav.css');
+@import url('components/nav.css');
 /* Contenido */
-@import url('design.css');
-@import url('position.css');
-@import url('sizes.css');
-@import url('main.css');
-@import url('card.css');
-@import url('buttons.css');
+@import url('utilities/design.css');
+@import url('utilities/position.css');
+@import url('utilities/sizes.css');
+@import url('components/main.css');
+@import url('components/card.css');
+@import url('components/buttons.css');
 /* Pie de Pagina */
-@import url('footer.css');
-@import url('contact.css');
-@import url('social.css');
+@import url('components/footer.css');
+@import url('components/contact.css');
+@import url('components/social.css');

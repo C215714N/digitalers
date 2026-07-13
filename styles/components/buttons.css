@@ -1,0 +1,90 @@
+.button {
+  position: relative;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+}
+.button:hover {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.button-primary {
+  border: 1px solid #63c;
+  color: #63c;
+  box-shadow: 0 0 0 #63c;
+}
+.button-primary:hover {
+  color: #eee;
+  background-color: #63c;
+  box-shadow: -0.5rem -0.5rem #47248f;
+}
+
+.button-secondary {
+  border: 1px solid #c36;
+  color: #c36;
+  box-shadow: 0 0 0 #c36;
+}
+.button-secondary:hover {
+  color: #eee;
+  background-color: #c36;
+  box-shadow: -0.5rem -0.5rem #8f2447;
+}
+
+.button-tertiary {
+  border: 1px solid #248;
+  color: #248;
+  box-shadow: 0 0 0 #248;
+}
+.button-tertiary:hover {
+  color: #eee;
+  background-color: #248;
+  box-shadow: -0.5rem -0.5rem #13254b;
+}
+
+.button-success {
+  border: 1px solid #284;
+  color: #284;
+  box-shadow: 0 0 0 #284;
+}
+.button-success:hover {
+  color: #eee;
+  background-color: #284;
+  box-shadow: -0.5rem -0.5rem #134b25;
+}
+
+.button-warning {
+  border: 1px solid #da3;
+  color: #da3;
+  box-shadow: 0 0 0 #da3;
+}
+.button-warning:hover {
+  color: #eee;
+  background-color: #da3;
+  box-shadow: -0.5rem -0.5rem #a87e1c;
+}
+
+.button-danger {
+  border: 1px solid #c33;
+  color: #c33;
+  box-shadow: 0 0 0 #c33;
+}
+.button-danger:hover {
+  color: #eee;
+  background-color: #c33;
+  box-shadow: -0.5rem -0.5rem #8f2424;
+}
+
+.button-info {
+  border: 1px solid #38c;
+  color: #38c;
+  box-shadow: 0 0 0 #38c;
+}
+.button-info:hover {
+  color: #eee;
+  background-color: #38c;
+  box-shadow: -0.5rem -0.5rem #245f8f;
+}

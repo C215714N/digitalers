@@ -1,0 +1,40 @@
+main {
+  margin: auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  main,
+.container,
+.container-sm {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main,
+.container,
+.container-md {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main,
+.container,
+.container-lg {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main,
+.container,
+.container-xl {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main,
+.container,
+.container-xxl {
+    max-width: 1320px;
+  }
+}

@@ -1,0 +1,513 @@
+.p-static {
+  position: static;
+  /* STATIC: Position predeterminada, donde el elemento no puede alterar su ubicacion original en el espacio */
+}
+
+.p-relative {
+  position: relative;
+  /* RELATIVE: El elemento de posiciona con respecto a si mismo y su ubicacion original en el espacio */
+}
+
+.p-absolute {
+  position: absolute;
+  /* ABSOLUTE: Se ubica con respecto a su ancestro mas proximo que no sea 'static' y deja de ocupar lugar en el espacio */
+}
+
+.p-fixed {
+  position: fixed;
+  /* FIXED: Similar a Absolute, el elemento se ubica con respecto a la ventana y necesita una posicion definida */
+}
+
+.p-sticky {
+  position: sticky;
+  /* STICKY: El elemento se ubica en el espacio, hasta que se cumple determinada condicion de posicionamiento */
+}
+
+.top-0 {
+  top: 0%;
+}
+
+.top-5 {
+  top: 5%;
+}
+
+.top-10 {
+  top: 10%;
+}
+
+.top-15 {
+  top: 15%;
+}
+
+.top-20 {
+  top: 20%;
+}
+
+.top-25 {
+  top: 25%;
+}
+
+.top-30 {
+  top: 30%;
+}
+
+.top-35 {
+  top: 35%;
+}
+
+.top-40 {
+  top: 40%;
+}
+
+.top-45 {
+  top: 45%;
+}
+
+.top-50 {
+  top: 50%;
+}
+
+.top-55 {
+  top: 55%;
+}
+
+.top-60 {
+  top: 60%;
+}
+
+.top-65 {
+  top: 65%;
+}
+
+.top-70 {
+  top: 70%;
+}
+
+.top-75 {
+  top: 75%;
+}
+
+.top-80 {
+  top: 80%;
+}
+
+.top-85 {
+  top: 85%;
+}
+
+.top-90 {
+  top: 90%;
+}
+
+.top-95 {
+  top: 95%;
+}
+
+.top-100 {
+  top: 100%;
+}
+
+.left-0 {
+  left: 0%;
+}
+
+.left-5 {
+  left: 5%;
+}
+
+.left-10 {
+  left: 10%;
+}
+
+.left-15 {
+  left: 15%;
+}
+
+.left-20 {
+  left: 20%;
+}
+
+.left-25 {
+  left: 25%;
+}
+
+.left-30 {
+  left: 30%;
+}
+
+.left-35 {
+  left: 35%;
+}
+
+.left-40 {
+  left: 40%;
+}
+
+.left-45 {
+  left: 45%;
+}
+
+.left-50 {
+  left: 50%;
+}
+
+.left-55 {
+  left: 55%;
+}
+
+.left-60 {
+  left: 60%;
+}
+
+.left-65 {
+  left: 65%;
+}
+
+.left-70 {
+  left: 70%;
+}
+
+.left-75 {
+  left: 75%;
+}
+
+.left-80 {
+  left: 80%;
+}
+
+.left-85 {
+  left: 85%;
+}
+
+.left-90 {
+  left: 90%;
+}
+
+.left-95 {
+  left: 95%;
+}
+
+.left-100 {
+  left: 100%;
+}
+
+.bottom-0 {
+  bottom: 0%;
+}
+
+.bottom-5 {
+  bottom: 5%;
+}
+
+.bottom-10 {
+  bottom: 10%;
+}
+
+.bottom-15 {
+  bottom: 15%;
+}
+
+.bottom-20 {
+  bottom: 20%;
+}
+
+.bottom-25 {
+  bottom: 25%;
+}
+
+.bottom-30 {
+  bottom: 30%;
+}
+
+.bottom-35 {
+  bottom: 35%;
+}
+
+.bottom-40 {
+  bottom: 40%;
+}
+
+.bottom-45 {
+  bottom: 45%;
+}
+
+.bottom-50 {
+  bottom: 50%;
+}
+
+.bottom-55 {
+  bottom: 55%;
+}
+
+.bottom-60 {
+  bottom: 60%;
+}
+
+.bottom-65 {
+  bottom: 65%;
+}
+
+.bottom-70 {
+  bottom: 70%;
+}
+
+.bottom-75 {
+  bottom: 75%;
+}
+
+.bottom-80 {
+  bottom: 80%;
+}
+
+.bottom-85 {
+  bottom: 85%;
+}
+
+.bottom-90 {
+  bottom: 90%;
+}
+
+.bottom-95 {
+  bottom: 95%;
+}
+
+.bottom-100 {
+  bottom: 100%;
+}
+
+.right-0 {
+  right: 0%;
+}
+
+.right-5 {
+  right: 5%;
+}
+
+.right-10 {
+  right: 10%;
+}
+
+.right-15 {
+  right: 15%;
+}
+
+.right-20 {
+  right: 20%;
+}
+
+.right-25 {
+  right: 25%;
+}
+
+.right-30 {
+  right: 30%;
+}
+
+.right-35 {
+  right: 35%;
+}
+
+.right-40 {
+  right: 40%;
+}
+
+.right-45 {
+  right: 45%;
+}
+
+.right-50 {
+  right: 50%;
+}
+
+.right-55 {
+  right: 55%;
+}
+
+.right-60 {
+  right: 60%;
+}
+
+.right-65 {
+  right: 65%;
+}
+
+.right-70 {
+  right: 70%;
+}
+
+.right-75 {
+  right: 75%;
+}
+
+.right-80 {
+  right: 80%;
+}
+
+.right-85 {
+  right: 85%;
+}
+
+.right-90 {
+  right: 90%;
+}
+
+.right-95 {
+  right: 95%;
+}
+
+.right-100 {
+  right: 100%;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.zn-0 {
+  z-index: 0;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-0:hover {
+  opacity: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.zn-1 {
+  z-index: -1;
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-10:hover {
+  opacity: 0.15;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.zn-2 {
+  z-index: -2;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+.opacity-20:hover {
+  opacity: 0.3;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.zn-3 {
+  z-index: -3;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-30:hover {
+  opacity: 0.45;
+}
+
+.z-4 {
+  z-index: 4;
+}
+
+.zn-4 {
+  z-index: -4;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-40:hover {
+  opacity: 0.6;
+}
+
+.z-5 {
+  z-index: 5;
+}
+
+.zn-5 {
+  z-index: -5;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-50:hover {
+  opacity: 0.75;
+}
+
+.z-6 {
+  z-index: 6;
+}
+
+.zn-6 {
+  z-index: -6;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-60:hover {
+  opacity: 0.9;
+}
+
+.z-7 {
+  z-index: 7;
+}
+
+.zn-7 {
+  z-index: -7;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.z-8 {
+  z-index: 8;
+}
+
+.zn-8 {
+  z-index: -8;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.z-9 {
+  z-index: 9;
+}
+
+.zn-9 {
+  z-index: -9;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.zn-10 {
+  z-index: -10;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
