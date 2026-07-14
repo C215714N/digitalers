@@ -1,0 +1,226 @@
+.transition {
+  --duration: 0s;
+  --delay: 0s;
+  --timing: ease;
+  transition: all var(--duration) var(--timing) var(--delay);
+}
+
+.ease {
+  --timing: ease;
+}
+
+.ease-in {
+  --timing: ease-in;
+}
+
+.ease-out {
+  --timing: ease-out;
+}
+
+.ease-in-out {
+  --timing: ease-in-out;
+}
+
+.linear {
+  --timing: linear;
+}
+
+.t-1 {
+  --duration: 0.1s;
+}
+
+.t-2 {
+  --duration: 0.2s;
+}
+
+.t-3 {
+  --duration: 0.3s;
+}
+
+.t-4 {
+  --duration: 0.4s;
+}
+
+.t-5 {
+  --duration: 0.5s;
+}
+
+.t-6 {
+  --duration: 0.6s;
+}
+
+.t-7 {
+  --duration: 0.7s;
+}
+
+.t-8 {
+  --duration: 0.8s;
+}
+
+.t-9 {
+  --duration: 0.9s;
+}
+
+.t-10 {
+  --duration: 1s;
+}
+
+.t-11 {
+  --duration: 1.1s;
+}
+
+.t-12 {
+  --duration: 1.2s;
+}
+
+.t-13 {
+  --duration: 1.3s;
+}
+
+.t-14 {
+  --duration: 1.4s;
+}
+
+.t-15 {
+  --duration: 1.5s;
+}
+
+.t-16 {
+  --duration: 1.6s;
+}
+
+.t-17 {
+  --duration: 1.7s;
+}
+
+.t-18 {
+  --duration: 1.8s;
+}
+
+.t-19 {
+  --duration: 1.9s;
+}
+
+.t-20 {
+  --duration: 2s;
+}
+
+.t-21 {
+  --duration: 2.1s;
+}
+
+.t-22 {
+  --duration: 2.2s;
+}
+
+.t-23 {
+  --duration: 2.3s;
+}
+
+.t-24 {
+  --duration: 2.4s;
+}
+
+.t-25 {
+  --duration: 2.5s;
+}
+
+.dy-1 {
+  --delay: 0.1s;
+}
+
+.dy-2 {
+  --delay: 0.2s;
+}
+
+.dy-3 {
+  --delay: 0.3s;
+}
+
+.dy-4 {
+  --delay: 0.4s;
+}
+
+.dy-5 {
+  --delay: 0.5s;
+}
+
+.dy-6 {
+  --delay: 0.6s;
+}
+
+.dy-7 {
+  --delay: 0.7s;
+}
+
+.dy-8 {
+  --delay: 0.8s;
+}
+
+.dy-9 {
+  --delay: 0.9s;
+}
+
+.dy-10 {
+  --delay: 1s;
+}
+
+.dy-11 {
+  --delay: 1.1s;
+}
+
+.dy-12 {
+  --delay: 1.2s;
+}
+
+.dy-13 {
+  --delay: 1.3s;
+}
+
+.dy-14 {
+  --delay: 1.4s;
+}
+
+.dy-15 {
+  --delay: 1.5s;
+}
+
+.dy-16 {
+  --delay: 1.6s;
+}
+
+.dy-17 {
+  --delay: 1.7s;
+}
+
+.dy-18 {
+  --delay: 1.8s;
+}
+
+.dy-19 {
+  --delay: 1.9s;
+}
+
+.dy-20 {
+  --delay: 2s;
+}
+
+.dy-21 {
+  --delay: 2.1s;
+}
+
+.dy-22 {
+  --delay: 2.2s;
+}
+
+.dy-23 {
+  --delay: 2.3s;
+}
+
+.dy-24 {
+  --delay: 2.4s;
+}
+
+.dy-25 {
+  --delay: 2.5s;
+}

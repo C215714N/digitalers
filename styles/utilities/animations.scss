@@ -1,0 +1,19 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+}
+@keyframes intro {
+    to {
+        transform: translateZ(-1.2rem) rotateX(5deg);
+    }
+}
+@keyframes clickme {
+    from {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
