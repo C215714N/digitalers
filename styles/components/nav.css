@@ -16,6 +16,11 @@ nav {
 }
 nav a {
     color: var(--light);
+    &:hover::before {
+        display: inline-block;
+        transform-origin: bottom center;
+        animation: clickme .25s linear infinite alternate;
+    }
 }
 .nav-expand{
     display: none;
