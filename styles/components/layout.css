@@ -2,7 +2,8 @@ body{
     display: grid;
     grid-template-areas: 
         'header' 
-        'main' 
+        'main'
+        'section'
         'footer' 
         'nav'
     ;
@@ -17,6 +18,9 @@ main {
     display: grid;
     grid-area: main;
 }
+section.sea {
+    grid-area: section;
+}
 #footer {
     grid-area: footer;
 }
@@ -26,6 +30,7 @@ main {
             'nav'
             'header'
             'main'
+            'section'
             'footer'
         ;
     }
@@ -35,6 +40,7 @@ main {
         grid-template-areas: 
             'nav header'
             'nav main  '
+            'nav section'
             'nav footer'
         ;
     }
@@ -45,6 +51,7 @@ main {
             'header'
             'nav'
             'main'
+            'section'
             'footer'
         ;
     }

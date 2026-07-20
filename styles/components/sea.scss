@@ -1,29 +1,104 @@
 @use "sass:math";
+@use "sass:list";
+$totalBubbles: 6;
 $functions: 
-    lineal              // ax + b
-    cuadratica          // ax^2 + bx + c
-    trigonometrica      // sin(x)
-    exponencial         // n^x
-    limite              // 1 / x
-    logaritmica;        // log n(x)
+    lineal,             // ax + b
+    cuadratica,         // ax^2 + bx + c
+    trigonometrica,     // sin(x)
+    exponencial,        // n^x
+    logaritmica,        // log n(x)
+    limite,             // 1 / x
+;
+@mixin bubbleStyle($i: 0, $alt:"") {
+    animation: $alt + list.nth($functions, $i) 5s alternate infinite linear;
+    background-image: radial-gradient(
+        circle at top right,
+        hsl($i * 60, 50%, 90%),
+        hsl($i * 90, 50%, 50%),
+        hsl($i * 60, 50%, 30%)
+    );
+}
+@function getValues ($i, $f) {
+    $x: $i; $y: $i;
+    @if $f == "cuadratica" {
+        $x: $x - 50;
+        $y: (math.pow($x, 2)) / 25;
+    }
+    @if $f == "trigonometrica" {
+        $y: math.round(math.sin($x) * 8);
+    }
+    @if $f == "exponencial" {
+        $n: 1.04;
+        $y: math.pow($n, $x)
+    }
+    @if $f == "logaritmica" {
+        $n: 1.04;
+        @if $x == 0 { $y: 0; }
+        @else { $y: math.round(math.log($x, $n) * 85/100); }
+    }
+    @if $f == "limite" {
+        $x: $x - 50;
+        @if $x == 0 { $y: 0; }
+        @else { $y: (1 / $x) * 100; }
+    }
+    @return $y;
+}
+.sea {
+    overflow: hidden;
+    animation: sea 10s alternate infinite ease-in-out;
+    div.vh-10 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+        animation: rotate 360s alternate infinite ease-in-out;
+        &:nth-child(even){
+            .bubble{
+            @for $i from 1 through $totalBubbles {
+            &:nth-child(#{$i}n){
+                @include bubbleStyle($i, "alternative-");
+            }}
+        }}
+    }
+    .bubble{
+        margin: .5rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        box-shadow: 
+            0 0 1rem var(--light),
+            -.5rem -.25rem rgb(var(--light-rgb), .2) inset,
+            .25rem -.25rem rgb(var(--light-rgb), .2) inset
+        ;
+        @for $i from 1 through $totalBubbles {
+            &:nth-child(#{$i}n){
+                @include bubbleStyle($i);
+            }
+        }
+    }
+}
 
+/* Animaciones */
+@keyframes sea {
+    @for $i from 0 through 100 {
+    #{$i}%{
+        background-image: linear-gradient(
+            $i * .15deg,
+            hsl(240, 50%, 30%),
+            hsl(240, 50%, 50%),
+            hsl(240, 50%, 70%),
+        );
+}}}
+@keyframes rotate {
+    to { transform: rotate(360deg); }
+}
 @each $f in $functions{
 @keyframes #{$f} {
     @for $i from 0 through 100 {
-        $x: $i; $y: $i;
-        @if $f == "cuadratica" {
-            $x: $x - 50;
-            $y: (math.pow($x, 2)) / 25;
-        }
-        @if $f == "trigonometrica" {
-            $y: (math.sin($x) * 25);
-        }
-        @if $f == "exponencial" {
-            $n: 1.04;
-            $y: math.pow($n, $x)
-        }
         #{$i}%{
-            transform: translate($x * 1vw,$y * 1vh);
-        }
-    }
-}}
+            transform: translate($i * 1vw, getValues($i, $f) * 1vh);
+    }}}
+@keyframes alternative-#{$f} {
+    @for $i from 0 through 100 {
+        #{$i}%{
+            transform: translate(getValues($i, $f) * 1vh, $i * 1vw);
+    }}}
+}
