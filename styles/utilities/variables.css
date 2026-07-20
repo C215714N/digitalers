@@ -11,6 +11,7 @@
     /* Transparencias */
     --primary-rgb: 17, 34, 68;
     --secondary-rgb: 34, 68, 68; 
+    --light-rgb: 238, 238, 238;
     /* Tamaños */
     --xs: 120px;
     --sm: 240px;
