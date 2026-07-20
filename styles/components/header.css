@@ -28,18 +28,30 @@
     perspective: 5rem;
     perspective-origin: top center;
     overflow: hidden;
-    &:hover div{
-        transform: translateZ(-2rem) rotateX(5deg);
-    }
     & div {
         transform: translateZ(2.5rem);
-        transition: all 1s ease-out;
+        animation: intro 1s 2s ease-out forwards;
+        /* SHORTHAND
+        ANIMATION-*
+            name:       nombre de la animacion
+            duration:   tiempo que tardara la animacion
+            delay:      tiempo de retraso para la animacion
+            timing:     estilo de la animacion
+            fill-mode:  como implementa la animacion
+                - normal (vuelve a su estado original)
+                - backwards (inicia como indica la animacion)
+                - forwards (permanece como determine la animacion)
+            iteration-count cantidad de repeticiones permitidas
+            direction:  sentido en el que sera reproducida la pelicula
+        */
         & * {
         line-height: 1;
-    } }
+   } }
     & img {
-        margin: auto;
         width: min(100%, 320px);
+        margin: auto;
+        opacity: 1;
+        animation: appear 1s 2s ease-out backwards;
     }
 }
 @media screen and (width >= 768px) {
