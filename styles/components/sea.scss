@@ -1,0 +1,29 @@
+@use "sass:math";
+$functions: 
+    lineal              // ax + b
+    cuadratica          // ax^2 + bx + c
+    trigonometrica      // sin(x)
+    exponencial         // n^x
+    limite              // 1 / x
+    logaritmica;        // log n(x)
+
+@each $f in $functions{
+@keyframes #{$f} {
+    @for $i from 0 through 100 {
+        $x: $i; $y: $i;
+        @if $f == "cuadratica" {
+            $x: $x - 50;
+            $y: (math.pow($x, 2)) / 25;
+        }
+        @if $f == "trigonometrica" {
+            $y: (math.sin($x) * 25);
+        }
+        @if $f == "exponencial" {
+            $n: 1.04;
+            $y: math.pow($n, $x)
+        }
+        #{$i}%{
+            transform: translate($x * 1vw,$y * 1vh);
+        }
+    }
+}}

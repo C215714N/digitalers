@@ -2,7 +2,6 @@
     box-sizing: border-box;
     font-family: var(--content);
     scroll-behavior: smooth;
-    transition: all .25s linear;
 }
 /* Margenes */
 .m-0,

@@ -8,6 +8,7 @@
 @import url('utilities/transitions.css');
 @import url('components/layout.css');
 /* Cabecera */
+@import url('utilities/animations.css');
 @import url('components/header.css');
 /* Navegacion */
 @import url('components/nav.css');
@@ -18,6 +19,7 @@
 @import url('components/main.css');
 @import url('components/card.css');
 @import url('components/buttons.css');
+@import url('components/sea.css');
 /* Pie de Pagina */
 @import url('components/footer.css');
 @import url('components/contact.css');
