@@ -1,21 +1,27 @@
+// Importacion de Modulos
 @use "sass:math";
 @use "sass:list";
-$totalBubbles: 6;
+// Declaraciones
 $functions: 
     lineal,             // ax + b
+    modular,            // x mod n   
     cuadratica,         // ax^2 + bx + c
+    cubica,             // ax^3 + bx^2 + cx + d
     trigonometrica,     // sin(x)
     exponencial,        // n^x
     logaritmica,        // log n(x)
     limite,             // 1 / x
+    irracional          // sqrt(x)
 ;
+$totalBubbles: list.length($functions);
+// Mixins y Funciones
 @mixin bubbleStyle($i: 0, $alt:"") {
     animation: $alt + list.nth($functions, $i) 5s alternate infinite linear;
     background-image: radial-gradient(
         circle at top right,
-        hsl($i * 60, 50%, 90%),
-        hsl($i * 90, 50%, 50%),
-        hsl($i * 60, 50%, 30%)
+        hsl($i * (360 / $totalBubbles), 50%, 90%),
+        hsl($i * (360 / $totalBubbles + 1/2) + 120, 50%, 50%),
+        hsl($i * (360 / $totalBubbles) + 240, 50%, 30%)
     );
 }
 @function getValues ($i, $f) {
@@ -24,8 +30,12 @@ $functions:
         $x: $x - 50;
         $y: (math.pow($x, 2)) / 25;
     }
+    @if $f == "cubica" {
+        $x: $x - 50;
+        $y: (math.pow($x, 3)) / 1250;
+    }
     @if $f == "trigonometrica" {
-        $y: math.round(math.sin($x) * 8);
+        $y: math.round(math.sin($x) * 3);
     }
     @if $f == "exponencial" {
         $n: 1.04;
@@ -41,16 +51,21 @@ $functions:
         @if $x == 0 { $y: 0; }
         @else { $y: (1 / $x) * 100; }
     }
+    @if $f == "irracional" {
+        $y: math.sqrt($x);
+    }
     @return $y;
 }
+// Estilos Anidados
 .sea {
     overflow: hidden;
     animation: sea 10s alternate infinite ease-in-out;
     div.vh-10 {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
-        animation: rotate 360s alternate infinite ease-in-out;
+        animation: rotate 10s infinite linear;
         &:nth-child(even){
+            animation-direction: reverse;
             .bubble{
             @for $i from 1 through $totalBubbles {
             &:nth-child(#{$i}n){
@@ -69,13 +84,9 @@ $functions:
             .25rem -.25rem rgb(var(--light-rgb), .2) inset
         ;
         @for $i from 1 through $totalBubbles {
-            &:nth-child(#{$i}n){
-                @include bubbleStyle($i);
-            }
-        }
-    }
+            &:nth-child(#{$i}n){ @include bubbleStyle($i); }
+    }}
 }
-
 /* Animaciones */
 @keyframes sea {
     @for $i from 0 through 100 {
@@ -86,19 +97,20 @@ $functions:
             hsl(240, 50%, 50%),
             hsl(240, 50%, 70%),
         );
-}}}
+    }}
+}
 @keyframes rotate {
     to { transform: rotate(360deg); }
 }
 @each $f in $functions{
 @keyframes #{$f} {
     @for $i from 0 through 100 {
-        #{$i}%{
-            transform: translate($i * 1vw, getValues($i, $f) * 1vh);
+    #{$i}%{
+        transform: translate($i * 1vw, getValues($i, $f) * 1vh);
     }}}
 @keyframes alternative-#{$f} {
     @for $i from 0 through 100 {
-        #{$i}%{
-            transform: translate(getValues($i, $f) * 1vh, $i * 1vw);
+    #{$i}%{
+        transform: translate(getValues($i, $f) * 1vw, $i * 1vh);
     }}}
 }
