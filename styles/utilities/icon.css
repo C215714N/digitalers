@@ -17,6 +17,15 @@
 .icon-toggler {
     --icon: "≡";
 }
+.icon-close {
+    --icon: "⤫";
+}
+.icon-expand {
+    --icon: "◥";
+}
+.icon-collapse {
+    --icon: "◣";
+}
 .icon-home {
     --icon: "🏠";
 }
