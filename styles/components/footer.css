@@ -5,4 +5,12 @@
         rgba(var(--primary-rgb), .7),
         rgba(var(--secondary-rgb), .7)
     );
+    & [id^="map"] {
+        position: absolute;
+        &.active,
+        &.active + button#mapButton {
+            position: fixed;
+            z-index: 1;
+        }
+    }
 }
