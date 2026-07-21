@@ -37,7 +37,13 @@ nav a {
         display: block;
     }
     .menu {
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
+        transition: all .25s ease-in;
+        &.active {
+            max-height: 100vh;
+        }
     }
 }
 @media screen and (width >= 992px) {
