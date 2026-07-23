@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operadores JS</title>
+    <script>
+        /* Manipulacion del Documento */
+        var nombre = "Cristian Racedo";
+        var curso = "Javascript desde Cero";
+        var mensaje = "Bienvenido al curso de " + curso + "<br>Presentado por " + nombre ;
+        // Escribir contenido en el Body
+        document.write("<h1>" + mensaje + "</h1>");
+        /* Operadores */
+        var a=5, b=2, c="10"; // Declaracion Multiple
+        console.log(
+            "DECLARACIONES",
+            "\na =", a, "Number",
+            "\nb =", b, "Number",
+            "\nc =", c, "String",
+        );
+        console.log(
+            "OPERADORES ARITMETICOS",
+            "\na + b =", a+b,  // suma
+            "\na - b =", a-b,  // resta 
+            "\na * b =", a*b,  // multiplicacion
+            "\na / b =", a/b,  // division
+            "\na**b =",  a**b, // potencia 
+            "\na % b =", a%b,  //residuo (resto)
+        );
+        console.log(
+            "OPERADORES LOGICOS",
+            "\na >= b",a >= b, // true
+            "\na <= b",a <= b, // false
+            "\na == b",a == b, // false
+            "\na != b",a != b, // true
+            "\n!c", !c, //false
+        );
+        // Unarios
+        console.log(
+            "OPERADORES UNARIOS",
+            "\na+=10", a+=10, // a = a + 10
+            "\na-=c",  a-=c,  // a = a - c
+            "\nb*=10", b*=10, // b = b * 10
+            "\nb/=5",  b/=5,  // b = b / 5
+            "\nb**=2", b**=2, // b = b**2
+            "\nc++",   c++,   // devuelve c; luego c = c + 1;
+            "\na--",   a--,   // devuelve a; luego a = a - 1;
+            "\n--b",   --b,   // devuelve b = b - 1
+            "\n++c",   ++c,   // devuelve c = c + 1
+        );
+    </script>
 </head>
 <body>
-    <script>
-        
-    </script>
+    <p>
+        Realiza un click secundario sobre la pagina y presiona la opcion <em>inspeccionar</em> o pulsa la tecla <kbd>f12</kbd> para acceder a las <strong>herramientas de desarrollador</strong> y luego haz click en el apartado <em>console</em> para ver el contenido de la pagina.
+    </p>
     <a href="../index.html">volver</a>
 </body>
 </html>
