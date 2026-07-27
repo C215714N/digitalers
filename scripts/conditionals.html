@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales JS</title>
+    <script>
+    /*  ==================ESTRUCTURA CONDICIONAL SIMPLE==================
+        var message = confirm("Bienvenido al Curso de JS\n¿Ha cometido un crimen y desea confesarlo?"); // Boolean
+
+        if (message) message = "Estamos felices por su decision";
+        else message = "Cometio un crimen y no desea confesarlo";
+
+        message+="\nAguarde tranquilo... Enseguida llegaremos por usted";
+        alert(message);
+    */
+    </script>
+</head>
+<body> 
+    <p>
+        Realiza un click secundario sobre la pagina y selecciona la opcion <em>inspeccionar</em> o presiona la tecla <kbd>f12</kbd> para acceder a las <strong>herramientas de desarrollador</strong> y luego haz click en el apartado <em>console</em> para ver el contenido de la pagina.
+    </p>
+    <a href="../index.html">volver</a>
+    <script>
+        message = confirm('¿Deseas evaluar algun rendimiento?');
+        if (message){
+            var valor = prompt('Ingrese un numero entero del 1 al 10:'); // string
+            var nota = parseInt(valor); // number
+            // Comprobacion Logica (AND: Todas las condiciones deben cumplirse)
+            if (!isNaN(nota) && nota > 0 && nota <=10) {    
+                if (nota >= 9) message = "EXCELENTE"
+                else if (nota >= 7) message = "APROBADO" 
+                else if (nota >= 4) message = "REGULAR"
+                else message = "DESAPROBADO"
+                message = "La situacion de rendimiento para " + valor + " es " + message;
+            } else {
+                message = "Para evaluar el rendimiento es necesario que ingrese un numero valido, ya que " + valor + " no corresponde a un numero entero entre 1 y 10."
+            }
+            alert(message);
+        }
+    </script>
+</body>
+</html>
