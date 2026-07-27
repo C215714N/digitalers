@@ -31,11 +31,11 @@ Si bien a las variables se les puede reasignar su valor, entre los tipos de dato
 | tipo | descripcion | Ejemplo |
 |-|-|-| 
 | String | Cadena de texto (escrito entre comillas) | name = "cristian" |
-| Number | Digitos de cualquier tipo (entero, decimal, hex, binario) | age = 34
+| Number | Digitos de cualquier tipo (entero, decimal, hex, binario) | age = 35
 | Boolean | Valor binario (1 bit) | isTeacher = true |
 | undefined | tipo de dato sin definir | var address; |
 | null | valor inexistente (nulo) | faults = null |
-| NaN | valor no numerico (no operable) | curses = 10 - "diez" |
+| NaN | valor no numerico (no operable) | courses = 10 - "diez" |
 
 ## Datos Complejos
 
@@ -44,7 +44,7 @@ Los objetos en JavaScript son colecciones de pares clave-valor, donde las claves
 | tipo | descripcion | ejemplo|
 |-|-|-|
 | array | matriz de datos con indices numericos, es aconsejable que almacene datos del mismo tipo | languages = ["html", "css", "js", "php", "sql"]
-| object | conjunto de pares clave, valor que pueden pertenecer a cualquier tipo de dato | data = { name: "cristian", age: 34 }
+| object | conjunto de pares clave, valor que pueden pertenecer a cualquier tipo de dato | data = { name: "cristian", age: 35, isTeacher: true }
 | function | bloque de codigo que se invoca y normalmente devuelve un resultado | function sum(a,b){ return a + b } |
 
 [volver](../readme.md)
