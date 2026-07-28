@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Condicionales JS</title>
     <script>
-    /*  ==================ESTRUCTURA CONDICIONAL SIMPLE==================
+    /* ================== ESTRUCTURA CONDICIONAL SIMPLE ================== */
         var message = confirm("Bienvenido al Curso de JS\n¿Ha cometido un crimen y desea confesarlo?"); // Boolean
 
         if (message) message = "Estamos felices por su decision";
         else message = "Cometio un crimen y no desea confesarlo";
-
+        
         message+="\nAguarde tranquilo... Enseguida llegaremos por usted";
         alert(message);
-    */
     </script>
 </head>
 <body> 
@@ -35,6 +34,61 @@
                 message = "La situacion de rendimiento para " + valor + " es " + message;
             } else {
                 message = "Para evaluar el rendimiento es necesario que ingrese un numero valido, ya que " + valor + " no corresponde a un numero entero entre 1 y 10."
+            }
+            alert(message);
+        }
+        message = confirm ('¿Deseas realizar algun calculo matematico?');
+        if (message){
+            var operacion = prompt("Escriba el nombre o numero de alguna de las siguientes Operaciones:\n1) SUMA\n2) RESTA\n3) PRODUCTO\n4) DIVISION\n5) POTENCIA"),
+            op = operacion.toUpperCase();
+            var rta;
+            switch (op){
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "SUMA":
+                case "RESTA":
+                case "PRODUCTO":
+                case "DIVISION":
+                case "POTENCIA":
+                    numeroA = prompt("Ingrese un Numero");
+                    a = parseFloat(numeroA);
+                    numeroB = prompt("Ingrese otro Numero");
+                    b = parseFloat(numeroB);
+                    message = "El resultado para la operacion " + op + " utilizando los valores " + numeroA + " y " + numeroB
+                break;
+                default: 
+                    message = "ERROR 404: Operacion No Encontrada.\nLa aplicacion No responde";
+            }
+            if (!isNaN(a) && !isNaN(b)) {
+                switch (op) {
+                    case "1":
+                    case "SUMA":
+                        rta = a + b;
+                    break;
+                    case "2":
+                    case "RESTA":
+                        rta = a - b;
+                    break;
+                    case "3":
+                    case "PRODUCTO":
+                        rta = a * b;
+                    break;
+                    case "4":
+                    case "DIVISION":
+                        if (b != 0) rta = a / b;
+                        else rta = "INDETERMINADO";
+                    break;
+                    case "5":
+                    case "POTENCIA":
+                        rta = a ** b;
+                    break;
+                }
+                message += " da como resultado " + rta;
+            } else {
+                message = "ERROR 500: Error Interno del servidor\nAlguno de los valores utilizados entre " + numeroA + " y " + numeroB + " no corresponde a un numero";
             }
             alert(message);
         }
