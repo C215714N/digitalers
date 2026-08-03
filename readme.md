@@ -8,6 +8,9 @@ Esto es una guia para los alumnos de la capacitacion __digitalers nodejs__ que c
 * [Variables y tipos de datos](docs/datatypes.md)
 * [Expresiones y Operadores](docs/operators.md)
 * [Estructuras Condicionales](docs/conditionals.md)
+* [Bucles e Iteraciones](./docs/loops.md)
+* [Comandos de Entrada y Salida](./docs/methods.md)
+* [Arreglos - Propiedades y Metodos](./docs/array.md)
 
 ---
 
