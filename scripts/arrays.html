@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="col-md-9 col-lg-6 col-xxl-4 | mx-auto p-3 | text-center">
+        <h1 class="h6">Lista de Tareas</h1>
+        <label class="visually-hidden" for="todoInput">Ingrese una tarea a realizar</label>
+        <fieldset class="input-group mx-auto">
+            <input class="form-control" id="todoText" name="tarea" type="text" placeholder="Ingrese una tarea a realizar">
+            <button id="todoAdd" class="btn btn-primary">agregar</button>
+        </fieldset>
+    </header>
+    <main class="container p-3">
+        <h2 class="fs-5">Tareas Registradas</h2>
+        <ul id="todoList" class="list-group">
+        </ul>
+    </main>
+    <footer class="position-fixed bottom-0 end-0">
+        <a class="btn btn-link" href="../index.html">Volver</a>
+    </footer>
+    <script src="todo.js"></script>
+</body>
+</html>
