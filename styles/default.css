@@ -19,10 +19,11 @@ body {
     max-width: 540px;
     height: min(720px, 50vh);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: 
         "viewer  viewer"
         "actions symbols"
+        "numbers symbols"
         "numbers symbols"
         "numbers symbols";
     gap: .25rem;
