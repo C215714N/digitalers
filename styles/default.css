@@ -1,0 +1,102 @@
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'century gothic', 'segoe ui', sans-serif;
+}
+:root {
+    --primary: #bbe;
+    --secondary: #669;
+    --light: #eee;
+    --dark: #333;
+}
+body {
+    padding: 1rem max(1.5rem, 10vw);
+    perspective: 10rem;
+    perspective-origin: top center;
+}
+#root {
+    max-width: 540px;
+    height: min(720px, 50vh);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "viewer  viewer"
+        "actions symbols"
+        "numbers symbols"
+        "numbers symbols";
+    gap: .25rem;
+    margin: 1rem auto;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    transform: rotateX(5deg);
+    background: var(--primary)
+        linear-gradient(
+            to bottom right,
+            var(--primary),
+            var(--secondary)
+        )
+}
+#viewer {
+    grid-area: viewer;
+}
+#numbers {
+    grid-area: numbers;
+}
+#actions {
+    grid-area: actions;
+}
+#symbols {
+    grid-area: symbols;
+}
+
+#numbers,
+#actions,
+#symbols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    & button {
+        flex: 1 0 var(--size);
+        position: relative;
+        border: none;
+        border-radius: .25rem;
+        color: var(--light);
+        background: var(--secondary)
+            radial-gradient(
+                ellipse at top center,
+                var(--primary),
+                var(--secondary)
+            );
+        text-shadow: 0 0 .25rem var(--dark);
+        box-shadow: 
+            0 .25rem var(--secondary),
+            0 0 .1rem var(--dark);
+        &:focus {
+            top: .25rem;
+            box-shadow: 0 0 var(--secondary);
+        }
+    }
+}
+#actions {
+    --size: calc(50% - .5rem);
+}
+#symbols {
+    --size: 1rem;
+    flex-direction: column;
+}
+#numbers {
+    --size: calc((100% / 3) - .5rem);
+    flex-wrap: wrap-reverse;
+    & *:first-child {
+        flex: 1 0 100%;
+    }
+}
+#viewer {
+    outline: none;
+    border-radius: .2rem;
+    border: 1px solid var(--secondary);
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
