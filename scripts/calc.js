@@ -20,7 +20,10 @@ const current = () => {
 }
 const addNumber = (n) => 
     calc[current()] += n;
-const setOperation = (symbol) => calc.op = symbol
+const setNumber = (n) =>
+    calc[current()] = n
+const setOperation = (symbol) => 
+    calc.op = symbol
 const renderNumber = () =>
     viewer.value = calc[current()]
 const clearNumber = () => 
@@ -32,7 +35,6 @@ const calcOperation = () => {
     calc.result = eval(`${numA} ${op} ${numB}`);
     calc.numA = calc.result
 }
-
 function renderSection([id, data]){
     const eval = typeof data === "object";
     const section = document.createElement(eval ? "section" : data);
@@ -42,6 +44,9 @@ function renderSection([id, data]){
     root.appendChild(section);
 }
 Object.entries(content).forEach((el) => renderSection(el))
+viewer.addEventListener('input', ({target}) => {
+    setNumber(target.value)
+})
 numbers.addEventListener('click', ({target}) => {
 if (isButton(target)) {
     const {innerText:n} = target;
